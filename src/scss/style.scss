@@ -1,14 +1,14 @@
-$font-primary: 'Work Sans', Arial, sans-serif;
-$font-secondary: 'Sacramento', Arial, serif;
-
+$font-primary: 'Open Sans', Arial, sans-serif;
+$font-secondary: 'Marmelad', sans-serif;
 
 // Overrides
 $grid-gutter-width: 40px !default; 
 $border-radius-base:  4px !default;
 $padding-base-vertical: 14px !default;
 
-$brand-primary: #F14E95 !default;
+$brand-primary: #E37777 !default; //logo: #90406E
 $brand-secondary: #118DF0 !default; 
+$brand-danger: #E37777 !default; //logo: #90406E
 
 $brand-white: #fff;
 $brand-black: #000;
@@ -109,7 +109,7 @@ $form-group-margin-bottom:       30px !default;
 body {
 	font-family: $font-primary;
 	font-weight: 400;
-	font-size: 16px;
+	font-size: 18px;
 	line-height: 1.7;
 	color: #828282;
 	background: #fff;
@@ -874,7 +874,7 @@ form {
 		}
 		h1 {
 			margin-bottom: 0px;
-			font-size: 100px;
+			font-size: 80px;
 			line-height: 1.5;
 			font-family: $font-secondary;
 			@media screen and (max-width: $screen-sm) {
