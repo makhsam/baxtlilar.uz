@@ -98,7 +98,80 @@ $form-group-margin-bottom:       30px !default;
 @import 'bootstrap/variables';
 
 
+/*
+================================
+    My custom style
+================================
+*/
+.home-contact-wrap {
+	color: #fff;
+	margin-right: 2em;
+  }
+  .home-contact-wrap p {
+	color: #fff;
+  }
+  .home-contact-wrap h3 {
+	color: #fff;
+  }
+  .home-contact-person {
+	margin-bottom: 1em;
+	padding: 1em; 
+	background-color: rgba(255, 255, 255, 0.2);
+  }
+  .home-contact-number > a {
+	display: block;
+	color: #fff;
+	font-weight: 300;
+	font-size: 1.5em;
+	margin-top: 10px;
+	margin-bottom: 10px;
+  }
+  .home-contact-1x {
+	margin-right: 15px;
+	font-size: 1.2em;
+  } 
+  .home-contact-2x {
+	margin-right: 65px;
+  }
 
+  /* Login 5 images */
+  .image-wrapper::after {
+	content: "";
+    clear: both;
+    display: table;
+  }
+
+  .image-upload {
+	float: left;
+	width: 20%;
+	padding-right: 6px;
+  }
+
+  
+  .image-upload > input{
+	display: none;
+  }
+
+  .image-upload img {
+	cursor: pointer;
+  }
+	  
+  .img-responsive {
+	  background-color: #999999;
+  }
+
+  /*For login form*/
+  .box-shadow-effect {
+	background-color: #fff;
+	padding: 3em;
+	-webkit-box-shadow: 6px 6px 30px 0px rgba(85,85,85,0.65);
+	-moz-box-shadow: 6px 6px 30px 0px rgba(85,85,85,0.65);
+	box-shadow: 6px 6px 30px 0px rgba(85,85,85,0.65);
+  }
+  .col-centered{
+    float: none;
+    margin: 0 auto;
+  }
 
 /* =======================================================
 *
@@ -109,7 +182,7 @@ $form-group-margin-bottom:       30px !default;
 body {
 	font-family: $font-primary;
 	font-weight: 400;
-	font-size: 18px;
+	font-size: 17px;
 	line-height: 1.7;
 	color: #828282;
 	background: #fff;
@@ -416,17 +489,17 @@ h1, h2, h3, h4, h5, h6, figure {
 	}	
 
 	&.fh5co-cover-sm {
-		height: 600px;
+		height: 300px;
 		@media screen and (max-width: $screen-sm) {
-			height: 400px;
+			height: 200px;
 		}
 		.display-t,
 		.display-tc {
-			height: 600px;
+			height: 300px;
 			display: table;
 			width: 100%;
 			@media screen and (max-width: $screen-sm) {
-				height: 400px;
+				height: 200px;
 			}
 		}	
 	}
@@ -460,7 +533,7 @@ h1, h2, h3, h4, h5, h6, figure {
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background: rgba(0, 0, 0, .4);
+		background: rgba(0, 0, 0, .6);
 	}
 	@media screen and (max-width: $screen-sm) {
 		height: inherit;
@@ -1010,10 +1083,10 @@ form {
 #fh5co-couple,
 #fh5co-gallery,
 .fh5co-section {
-	padding: 7em 0;
+	padding: 2em;
 	clear: both;
 	@media screen and (max-width: $screen-sm) {
-		padding: 3em 0;
+		padding: 1em 0;
 	}
 }
 
@@ -1316,7 +1389,7 @@ form {
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background: rgba(0, 0, 0, .4);
+		background: rgba(0, 0, 0, .6);
 	}
 	.fh5co-heading {
 		h2 {
@@ -1627,128 +1700,7 @@ form {
   }
 }
 
-// Buttons
-.btn {
-	margin-right: 4px;
-	margin-bottom: 4px;
-	font-family: $font-primary;
-	font-size: 16px;
-	font-weight: 400;
-	@include border-radius(30px);
-	@include transition(.5s);
-	padding: 8px 20px;
-	&.btn-md {
-		padding: 8px 20px!important;
-	}
-	&.btn-lg {
-		padding: 18px 36px!important;
-	}
-	&:hover, &:active, &:focus {
-		box-shadow: none!important;
-		outline: none!important;
-	}
-}
-.btn-primary {
-	background: $brand-primary;
-	color: $brand-white;
-	border: 2px solid $brand-primary;
-	&:hover, &:focus, &:active {
-		background: lighten($brand-primary, 5%)!important;
-		border-color: lighten($brand-primary, 5%)!important;
-	}
-	&.btn-outline {
-		background: transparent;
-		color: $brand-primary;
-		border: 2px solid $brand-primary;
-		&:hover, &:focus, &:active {
-			background: $brand-primary;
-			color: $brand-white;
-		}
-	}
-}
-.btn-success {
-	background: $brand-success;
-	color: $brand-white;
-	border: 2px solid $brand-success;
-	&:hover, &:focus, &:active {
-		background: darken($brand-success, 5%)!important;
-		border-color: darken($brand-success, 5%)!important;
-	}
-	&.btn-outline {
-		background: transparent;
-		color: $brand-success;
-		border: 2px solid $brand-success;
-		&:hover, &:focus, &:active {
-			background: $brand-success;
-			color: $brand-white;
-		}
-	}
-}
-.btn-info {
-	background: $brand-info;
-	color: $brand-white;
-	border: 2px solid $brand-info;
-	&:hover, &:focus, &:active {
-		background: darken($brand-info, 5%)!important;
-		border-color: darken($brand-info, 5%)!important;
-	}
-	&.btn-outline {
-		background: transparent;
-		color: $brand-info;
-		border: 2px solid $brand-info;
-		&:hover, &:focus, &:active {
-			background: $brand-info;
-			color: $brand-white;
-		}
-	}
-}
-.btn-warning {
-	background: $brand-warning;
-	color: $brand-white;
-	border: 2px solid $brand-warning;
-	&:hover, &:focus, &:active {
-		background: darken($brand-warning, 5%)!important;
-		border-color: darken($brand-warning, 5%)!important;
-	}
-	&.btn-outline {
-		background: transparent;
-		color: $brand-warning;
-		border: 2px solid $brand-warning;
-		&:hover, &:focus, &:active {
-			background: $brand-warning;
-			color: $brand-white;
-		}
-	}
-}
-.btn-danger {
-	background: $brand-danger;
-	color: $brand-white;
-	border: 2px solid $brand-danger;
-	&:hover, &:focus, &:active {
-		background: darken($brand-danger, 5%)!important;
-		border-color: darken($brand-danger, 5%)!important;
-	}
-	&.btn-outline {
-		background: transparent;
-		color: $brand-danger;
-		border: 2px solid $brand-danger;
-		&:hover, &:focus, &:active {
-			background: $brand-danger;
-			color: $brand-white;
-		}
-	}
-}
-
-.btn-outline {
-	background: none;
-	border: 2px solid lighten($brand-black, 50%);
-	font-size: 16px;
-	@include transition(.3s);
-	&:hover, &:focus, &:active {
-		box-shadow: none;
-	}
-}
-
+//Buttons
 .btn.with-arrow {
 	position: relative;
 	@include transition(.3s);
