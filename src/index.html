@@ -64,6 +64,45 @@
 	<div class="fh5co-loader"></div>
 	
 	<div id="page">
+	<!-- Navbar: slide down on.scroll -->
+	<nav class="fh5co-nav-fixed" role="navigation">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-2">
+					<div id="fh5co-logo-colorful"><a href="index.html">
+						<img src="images/logo_light.png" style="width: 120px; height: auto"/>
+					</a></div>
+				</div>
+				<div class="col-xs-10 text-right menu-1">
+					<ul>
+						<li class="active"><a href="index.html">Home</a></li>
+						<li><a href="about.html">Story</a></li>
+						<li class="has-dropdown-fixed">
+							<a href="services.html">Services</a>
+							<ul class="dropdown-fixed">
+								<li><a href="#">Web Design</a></li>
+								<li><a href="#">eCommerce</a></li>
+								<li><a href="#">Branding</a></li>
+								<li><a href="#">API</a></li>
+							</ul>
+						</li>
+						<li class="has-dropdown-fixed">
+							<a href="gallery.html">Gallery</a>
+							<ul class="dropdown-fixed">
+								<li><a href="#">HTML5</a></li>
+								<li><a href="#">CSS3</a></li>
+								<li><a href="#">Sass</a></li>
+								<li><a href="#">jQuery</a></li>
+							</ul>
+						</li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+	</nav>
+	<!-- Navbar transparent on top -->
 	<nav class="fh5co-nav" role="navigation">
 		<div class="container">
 			<div class="row">
@@ -102,21 +141,63 @@
 		</div>
 	</nav>
 
-	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/mega_love_01.jpg);" data-stellar-background-ratio="0.5">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center">
-					<div class="display-t">
-						<div class="display-tc animate-box" data-animate-effect="fadeIn">
-							<h1>Найдите свою пару</h1>
-							<h2>83% девушек идут на свидание в течение 60 дней с момента начала сотрудничества с нами</h2>
-							<p><a href="#" class="btn btn-default btn-sm">Бесплатная регистрация</a></p>
+	<header id="header-slideshow" class="slideshow-container fadein">
+		<!--Slider one-->
+		<div class="slideshow-cover" role="banner" style="background-image:url(images/mega_love_01.jpg);" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center">
+						<div class="display-t">
+							<div class="display-tc">
+								<h1>Найдите свою пару</h1>
+								<h2>83% девушек идут на свидание в течение 60 дней с момента начала сотрудничества с нами</h2>
+								<p><a href="#" class="btn btn-default btn-sm">Бесплатная регистрация</a></p>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<!--Slider two-->
+		<div class="slideshow-cover" role="banner" style="background-image:url(images/mega_love_02.jpg);" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center">
+						<div class="display-t">
+							<div class="display-tc">
+								<h1>Индивидуальный подбор пары</h1>
+								<h2>Регистрация на самых надежных ресурсах</h2>
+								<p><a href="#" class="btn btn-default btn-sm">Бесплатная регистрация</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Slider three-->
+		<div class="slideshow-cover" role="banner" style="background-image:url(images/mega_love_03.jpg);" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center">
+						<div class="display-t">
+							<div class="display-tc">
+								<h1>9 лет работы</h1>
+								<h2>148 официальных браков</h2>
+								<p><a href="#" class="btn btn-default btn-sm">Бесплатная регистрация</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<a id="slide-prev" class="prev" onclick="nextSlides(-1)">&#10094;</a>
+		<a id="slide-next" class="next" onclick="nextSlides(1)">&#10095;</a>
 	</header>
 
 	<div id="fh5co-couple">
