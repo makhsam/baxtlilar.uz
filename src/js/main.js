@@ -1,43 +1,8 @@
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function nextSlides(n) {
-	showSlides(slideIndex += n);
-}
-
-function showSlides(n) {
-	var i;
-	var slides = document.getElementsByClassName("slideshow-cover");
-	//var slides = $(".slideshow-cover");
-	if (n > slides.length) {slideIndex = 1}    
-	if (n < 1) {slideIndex = slides.length}
-	//slides.css("display", "none");
-	for (i = 0; i < slides.length; i++) {
-		slides[i].style.display = "none";  
-	}
-	
-	slides[slideIndex-1].style.display = "block";  
-	//slides.eq(slideIndex-1).css("display", "block");
-}
-
 
 /* ---- JQuery ---- */
 ;(function () {
 	
 	'use strict';
-
-	/** Navbar fixed top */
-	var navbarFixed = function() {
-
-		$(window).scroll(function () {
-			if ($(window).scrollTop() >= 200) {
-				$('.fh5co-nav-fixed').css('top','0');
-			} else {
-				$('.fh5co-nav-fixed').css('top','-100px');
-			}
-		});
-	}
-
 
 	var mobileMenuOutsideClick = function() {
 
@@ -177,32 +142,7 @@ function showSlides(n) {
 
 	};
 
-	// FOR FIXED NAVBAR (slide down on.scroll)
-	var dropdown_fixed = function() {
-
-		$('.has-dropdown-fixed').mouseenter(function(){
-			console.log("Dropdown Mouse Enter");
-
-			var $this = $(this);
-			$this
-				.find('.dropdown-fixed')
-				.css('display', 'block')
-				.addClass('animated-fast fadeInUpMenu');
-
-		}).mouseleave(function(){
-			console.log("Dropdown Mouse leave");
-
-			var $this = $(this);
-
-			$this
-				.find('.dropdown-fixed')
-				.css('display', 'none')
-				.removeClass('animated-fast fadeInUpMenu');
-		});
-
-	};
-
-
+	
 	var testimonialCarousel = function(){
 		var owl = $('.owl-carousel-fullwidth');
 		owl.owlCarousel({
@@ -250,13 +190,6 @@ function showSlides(n) {
 		$(".fh5co-loader").fadeOut("slow");
 	};
 
-	var counter = function() {
-		$('.js-counter').countTo({
-			 formatter: function (value, options) {
-	      return value.toFixed(options.decimals);
-	    },
-		});
-	};
 
 	var counterWayPoint = function() {
 		if ($('#fh5co-counter').length > 0 ) {
@@ -277,18 +210,17 @@ function showSlides(n) {
 
 	
 	$(function(){
-		navbarFixed();
+		//navbarFixed();
 		mobileMenuOutsideClick();
 		parallax();
 		offcanvasMenu();
 		burgerMenu();
 		contentWayPoint();
 		dropdown();
-		dropdown_fixed();
+		//dropdown_fixed();
 		testimonialCarousel();
 		goToTop();
 		loaderPage();
-		counter();
 		counterWayPoint();
 	});
 

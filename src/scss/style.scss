@@ -23,6 +23,7 @@ $brand-bg-color: $brand-white;
 $input-border-focus:  $brand-primary !default;
 $form-group-margin-bottom:       30px !default;
 
+$navbar-default-bg: #fff;
 
 
 // Mixin
@@ -77,6 +78,19 @@ $form-group-margin-bottom:       30px !default;
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'FontAwesome';
+	src:url('../fonts/font-awesome/fontawesome.eot?v=4.7.0');
+	src:url('../fonts/font-awesome/fontawesome.eot?#iefix&v=4.7.0') format('embedded-opentype'),
+		url('../fonts/font-awesome/fontawesome.woff2?v=4.7.0') format('woff2'),
+		url('../fonts/font-awesome/fontawesome.woff?v=4.7.0') format('woff'),
+		url('../fonts/font-awesome/fontawesome.ttf?v=4.7.0') format('truetype'),
+		url('../fonts/font-awesome/fontawesome.svg?v=4.7.0#fontawesomeregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
 @mixin icomoon() {
 	
 	font-family: 'icomoon';
@@ -106,79 +120,117 @@ $form-group-margin-bottom:       30px !default;
 .home-contact-wrap {
 	color: #fff;
 	margin-right: 2em;
-  }
-  .home-contact-wrap p {
+}
+.home-contact-wrap p {
 	color: #fff;
-  }
-  .home-contact-wrap h3 {
+}
+.home-contact-wrap h3 {
 	color: #fff;
-  }
-  .home-contact-person {
+}
+.home-contact-person {
 	margin-bottom: 1em;
 	padding: 1em; 
 	background-color: rgba(255, 255, 255, 0.2);
-  }
-  .home-contact-number > a {
+}
+.home-contact-number > a {
 	display: block;
 	color: #fff;
 	font-weight: 300;
 	font-size: 1.5em;
 	margin-top: 10px;
 	margin-bottom: 10px;
-  }
-  .home-contact-1x {
+}
+.home-contact-1x {
 	margin-right: 15px;
 	font-size: 1.2em;
-  } 
-  .home-contact-2x {
+} 
+.home-contact-2x {
 	margin-right: 65px;
-  }
+}
 
-  /* Login 5 images */
-  .image-wrapper::after {
+/* Login 5 images */
+.image-wrapper::after {
 	content: "";
-    clear: both;
-    display: table;
-  }
+	clear: both;
+	display: table;
+}
 
-  .image-upload {
+.image-upload {
 	float: left;
 	width: 20%;
 	padding-right: 6px;
-  }
+}
 
-  
-  .image-upload > input{
+
+.image-upload > input{
 	display: none;
-  }
+}
 
-  .image-upload img {
+.image-upload img {
 	cursor: pointer;
-  }
-	  
-  .img-responsive {
-	  background-color: #999999;
-  }
+}
+	
+.img-responsive {
+	background-color: #999999;
+}
 
-  /*For login form*/
-  .box-shadow-effect {
+/*For login form*/
+.box-shadow-effect {
 	background-color: #fff;
 	padding: 3em;
 	-webkit-box-shadow: 6px 6px 30px 0px rgba(85,85,85,0.65);
 	-moz-box-shadow: 6px 6px 30px 0px rgba(85,85,85,0.65);
 	box-shadow: 6px 6px 30px 0px rgba(85,85,85,0.65);
-  }
-  .col-centered{
-    float: none;
-    margin: 0 auto;
-  }
+}
+.col-centered{
+	float: none;
+	margin: 0 auto;
+}
 
 
+
+/* template.html: Navbar fixed top */
+.navbar-default {
+	background-color: $navbar-default-bg;
+} 
+
+#navbar-template {
+	.navbar-logo {
+		float: left;
+		padding: 12px 15px;
+		//line-height: 20px;
+		height: 55px;
+	}
+
+	.navbar-nav {
+		a {
+			font-size: 14px;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.navbar-shadow {
+	-webkit-box-shadow: 0px 2px 6px -2px rgba(170,170,170,1);
+	-moz-box-shadow: 0px 2px 6px -2px rgba(170,170,170,1);
+	box-shadow: 0px 2px 6px -2px rgba(170,170,170,1);
+}
+
+.main-wrapper {
+	background: rgba($brand-black,.04);
+	padding-top: 70px;
+}
+
+
+ 
 /* =======================================================
 *
 * 	Template Style 
 *
 * ======================================================= */
+*, *:before, *:after {
+	box-sizing: border-box;
+}
 
 body {
 	font-family: $font-primary;
@@ -230,7 +282,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	font-weight: 400;
 	margin: 0 0 20px 0;
 }
-::-webkit-selection {
+/* ::-webkit-selection {
   color: $brand-white;
   background: $brand-primary;
 }
@@ -242,7 +294,7 @@ h1, h2, h3, h4, h5, h6, figure {
 ::selection {
   color: $brand-white;
   background: $brand-primary;
-}
+} */
 
 .fh5co-nav {
 	position: absolute;
@@ -1293,57 +1345,6 @@ form {
 }
 
 
-// COUNTDOWN CUSTOM
-.simply-countdown {
-    /* The countdown */
-    margin-bottom: 2em;
-}
-.simply-countdown > .simply-section {
-    /* coutndown blocks */
-    display: inline-block;
-    width: 100px;
-    height: 100px;
-    background: rgba($brand-primary,.8);
-    margin: 0 4px;
-    @include border-radius(50%);
-    position: relative;
-
-    animation: pulse 1s ease infinite, 
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
-}
-
-.simply-countdown > .simply-section > div {
-    /* countdown block inner div */
-    display: table-cell;
-    vertical-align: middle;
-    height: 100px;
-    width: 100px;
-}
-
-.simply-countdown > .simply-section .simply-amount,
-.simply-countdown > .simply-section .simply-word {
-	display: block;
-	color: rgba($brand-white,1);
-    /* amounts and words */
-}
-
-.simply-countdown > .simply-section .simply-amount {
-	font-size: 30px;
-    /* amounts */
-}
-
-.simply-countdown > .simply-section .simply-word {
-	color: rgba($brand-white,.7);
-	text-transform: uppercase;
-	font-size: 12px;
-    /* words */
-}
-
 #fh5co-testimonial,
 #fh5co-services,
 #fh5co-started,
@@ -1829,6 +1830,7 @@ form {
 	}
 }
 
+
 .uppercase {
 	font-size: 14px;
 	color: $brand-black;
@@ -1857,6 +1859,7 @@ form {
 		text-align: center;
 		@include border-radius(4px);
 		i {
+			font-size: 24px;
 			height: 50px;
 			display: table-cell;
 			vertical-align: middle;
@@ -1994,10 +1997,10 @@ form {
 	}
 }
 // Form Input Field
-.form-control {
+.form-control-custom {
 	box-shadow: none;
 	background: transparent;
-	border: 2px solid rgba(0, 0, 0, 0.1);
+	border: 2px solid rgba(245, 124, 124, 0.1);
 	height: 54px;
 	font-size: 18px;
 	font-weight: 300;
@@ -2005,8 +2008,9 @@ form {
   		outline: none;
 		box-shadow: none;
 		border-color: $brand-primary;
-  }
+  	}
 }
+
 
 .row-pb-md {
 	padding-bottom: 4em!important;

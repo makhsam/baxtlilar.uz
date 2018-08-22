@@ -1,0 +1,182 @@
+/* chat.html: Chatting widget */
+html, body {
+  overflow-y: hidden;
+  height: 100%; }
+
+/* * {
+ -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+         border-radius: 0 !important;
+} */
+#chat-wrapper:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+#chat-wrapper {
+  height: calc(100vh - 245px);
+  min-height: 300px;
+  margin-bottom: 20px; }
+  #chat-wrapper .navigation-bar {
+    height: 50px;
+    margin: 0;
+    background-color: #337AB7; }
+    #chat-wrapper .navigation-bar .nav-left, #chat-wrapper .navigation-bar .nav-right {
+      position: relative;
+      float: left;
+      overflow: hidden;
+      padding: 11px 15px;
+      color: #fff; }
+      #chat-wrapper .navigation-bar .nav-left span, #chat-wrapper .navigation-bar .nav-right span {
+        font-size: .9em; }
+    #chat-wrapper .navigation-bar .nav-left {
+      width: 300px; }
+    #chat-wrapper .navigation-bar .nav-right {
+      width: calc(100% - 300px); }
+      #chat-wrapper .navigation-bar .nav-right .nav-icons i {
+        font-size: 1.25em;
+        margin-left: 15px;
+        vertical-align: middle;
+        cursor: pointer; }
+  #chat-wrapper .sidebar, #chat-wrapper .main {
+    position: relative;
+    overflow: hidden;
+    float: left;
+    height: 100%;
+    transition: all .3s ease-out; }
+  #chat-wrapper .sidebar {
+    width: 300px;
+    font-size: .8em;
+    background-color: #fff; }
+    #chat-wrapper .sidebar .search {
+      padding: 12px; }
+      #chat-wrapper .sidebar .search input {
+        font-family: 'FontAwesome', 'Open Sans';
+        font-size: 15px;
+        padding: 5px 10px;
+        color: #333;
+        background: #f1f1f1;
+        width: 100%;
+        border-radius: 3px;
+        border: 1px solid #f1f1f1;
+        outline: none; }
+      #chat-wrapper .sidebar .search input:active, #chat-wrapper .sidebar .search input:focus {
+        background: #fff;
+        border: 1px solid #ddd; }
+      #chat-wrapper .sidebar .search input::placeholder {
+        color: #bbb; }
+    #chat-wrapper .sidebar .list-group {
+      height: calc(100% - 61px);
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding: 0; }
+      #chat-wrapper .sidebar .list-group a {
+        padding-left: 15px;
+        padding-right: 15px;
+        border: none;
+        border-radius: 0; }
+        #chat-wrapper .sidebar .list-group a .pull-left {
+          padding-right: 15px; }
+          #chat-wrapper .sidebar .list-group a .pull-left img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%; }
+        #chat-wrapper .sidebar .list-group a .list-group-body {
+          display: block;
+          padding: 2px 0; }
+          #chat-wrapper .sidebar .list-group a .list-group-body span {
+            color: #aaa;
+            font-size: .9em; }
+          #chat-wrapper .sidebar .list-group a .list-group-body .title {
+            font-weight: 600; }
+          #chat-wrapper .sidebar .list-group a .list-group-body .description {
+            color: #aaa; }
+      #chat-wrapper .sidebar .list-group a.active .title, #chat-wrapper .sidebar .list-group a.active .description, #chat-wrapper .sidebar .list-group a.active span {
+        color: #fff; }
+  #chat-wrapper .main {
+    width: calc(100% - 300px);
+    border-left: 1px solid #eee;
+    background-color: #fff; }
+    #chat-wrapper .main div.messages {
+      height: calc(100% - 58px);
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding: 20px; }
+      #chat-wrapper .main div.messages ul {
+        list-style-type: none;
+        padding-left: 15px;
+        padding-right: 15px; }
+        #chat-wrapper .main div.messages ul li {
+          display: block;
+          clear: both;
+          width: 100%; }
+          #chat-wrapper .main div.messages ul li img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%; }
+          #chat-wrapper .main div.messages ul li p {
+            display: inline-block;
+            font-size: .9em;
+            color: #555;
+            padding: 10px 15px;
+            line-height: 120%; }
+          @media (min-width: 768px) {
+            #chat-wrapper .main div.messages ul li p {
+              width: 100%; } }
+          @media (min-width: 992px) {
+            #chat-wrapper .main div.messages ul li p {
+              width: 70%; } }
+          @media (min-width: 1200px) {
+            #chat-wrapper .main div.messages ul li p {
+              width: 60%; } }
+        #chat-wrapper .main div.messages ul li.sent img {
+          float: left; }
+        #chat-wrapper .main div.messages ul li.sent p {
+          background: #E5FFD0;
+          margin-left: 10px;
+          border-radius: 0 10px 10px; }
+        #chat-wrapper .main div.messages ul li.replies img {
+          float: right; }
+        #chat-wrapper .main div.messages ul li.replies p {
+          float: right;
+          background: #f5f5f5;
+          margin-right: 10px;
+          border-radius: 10px 0 10px 10px; }
+    #chat-wrapper .main div.message-input {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      z-index: 99; }
+      #chat-wrapper .main div.message-input .wrap {
+        position: relative; }
+        #chat-wrapper .main div.message-input .wrap input {
+          float: left;
+          width: calc(100% - 65px);
+          border: none;
+          border-radius: 0;
+          background-color: #f8f8f8;
+          margin: 5px;
+          padding: 10px 20px;
+          outline: none; }
+        #chat-wrapper .main div.message-input .wrap button {
+          font-size: inherit;
+          float: right;
+          border: none;
+          border-radius: 0;
+          width: 50px;
+          padding: 10px;
+          margin: 5px;
+          margin-left: 0;
+          cursor: pointer;
+          outline: none;
+          background: #32465a;
+          color: #f5f5f5; }
+  @media (max-width: 768px) {
+    #chat-wrapper .sidebar {
+      width: 100%; }
+    #chat-wrapper .main {
+      width: 100%; } }
+
+#fh5co-footer {
+  padding-top: 1em;
+  padding-bottom: 1em; }

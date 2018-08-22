@@ -5,6 +5,13 @@
   font-weight: normal;
   font-style: normal; }
 
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../fonts/font-awesome/fontawesome.eot?v=4.7.0");
+  src: url("../fonts/font-awesome/fontawesome.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/font-awesome/fontawesome.woff2?v=4.7.0") format("woff2"), url("../fonts/font-awesome/fontawesome.woff?v=4.7.0") format("woff"), url("../fonts/font-awesome/fontawesome.ttf?v=4.7.0") format("truetype"), url("../fonts/font-awesome/fontawesome.svg?v=4.7.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 /*
 ================================
     My custom style
@@ -72,11 +79,36 @@
   float: none;
   margin: 0 auto; }
 
+/* template.html: Navbar fixed top */
+.navbar-default {
+  background-color: #fff; }
+
+#navbar-template .navbar-logo {
+  float: left;
+  padding: 12px 15px;
+  height: 55px; }
+
+#navbar-template .navbar-nav a {
+  font-size: 14px;
+  text-transform: uppercase; }
+
+.navbar-shadow {
+  -webkit-box-shadow: 0px 2px 6px -2px #aaaaaa;
+  -moz-box-shadow: 0px 2px 6px -2px #aaaaaa;
+  box-shadow: 0px 2px 6px -2px #aaaaaa; }
+
+.main-wrapper {
+  background: rgba(0, 0, 0, 0.04);
+  padding-top: 70px; }
+
 /* =======================================================
 *
 * 	Template Style 
 *
 * ======================================================= */
+*, *:before, *:after {
+  box-sizing: border-box; }
+
 body {
   font-family: "Open Sans", Arial, sans-serif;
   font-weight: 400;
@@ -128,18 +160,19 @@ h1, h2, h3, h4, h5, h6, figure {
   font-weight: 400;
   margin: 0 0 20px 0; }
 
-::-webkit-selection {
-  color: #fff;
-  background: #E37777; }
+/* ::-webkit-selection {
+  color: $brand-white;
+  background: $brand-primary;
+}
 
 ::-moz-selection {
-  color: #fff;
-  background: #E37777; }
-
+  color: $brand-white;
+  background: $brand-primary;
+}
 ::selection {
-  color: #fff;
-  background: #E37777; }
-
+  color: $brand-white;
+  background: $brand-primary;
+} */
 .fh5co-nav {
   position: absolute;
   top: 0;
@@ -1057,55 +1090,6 @@ form label {
         text-align: center;
         margin-left: 3px; }
 
-.simply-countdown {
-  /* The countdown */
-  margin-bottom: 2em; }
-
-.simply-countdown > .simply-section {
-  /* coutndown blocks */
-  display: inline-block;
-  width: 100px;
-  height: 100px;
-  background: rgba(227, 119, 119, 0.8);
-  margin: 0 4px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  border-radius: 50%;
-  position: relative;
-  animation: pulse 1s ease infinite; }
-
-@keyframes pulse {
-  0% {
-    transform: scale(1); }
-  50% {
-    transform: scale(1.05); }
-  100% {
-    transform: scale(1); } }
-
-.simply-countdown > .simply-section > div {
-  /* countdown block inner div */
-  display: table-cell;
-  vertical-align: middle;
-  height: 100px;
-  width: 100px; }
-
-.simply-countdown > .simply-section .simply-amount,
-.simply-countdown > .simply-section .simply-word {
-  display: block;
-  color: white;
-  /* amounts and words */ }
-
-.simply-countdown > .simply-section .simply-amount {
-  font-size: 30px;
-  /* amounts */ }
-
-.simply-countdown > .simply-section .simply-word {
-  color: rgba(255, 255, 255, 0.7);
-  text-transform: uppercase;
-  font-size: 12px;
-  /* words */ }
-
 #fh5co-testimonial,
 #fh5co-services,
 #fh5co-started,
@@ -1552,6 +1536,7 @@ form label {
     -ms-border-radius: 4px;
     border-radius: 4px; }
     .gototop a i {
+      font-size: 24px;
       height: 50px;
       display: table-cell;
       vertical-align: middle; }
@@ -1665,14 +1650,14 @@ form label {
       visibility: visible;
       opacity: 1; }
 
-.form-control {
+.form-control-custom {
   box-shadow: none;
   background: transparent;
-  border: 2px solid rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(245, 124, 124, 0.1);
   height: 54px;
   font-size: 18px;
   font-weight: 300; }
-  .form-control:active, .form-control:focus {
+  .form-control-custom:active, .form-control-custom:focus {
     outline: none;
     box-shadow: none;
     border-color: #E37777; }
