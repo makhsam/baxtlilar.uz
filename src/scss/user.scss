@@ -1,5 +1,16 @@
 $font-primary: 'Open Sans', Arial, sans-serif;
 
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	   -moz-border-radius: $radius;
+		-ms-border-radius: $radius;
+			border-radius: $radius;
+}
+
+@import 'bootstrap/variables';
+@import 'template-style';
+
+
 /* user.html: User profile */
 .profile {
 	margin: 20px 0;
@@ -14,9 +25,7 @@ $font-primary: 'Open Sans', Arial, sans-serif;
 			margin: 0 auto;
 			width: 120px;
 			height: 120px;
-			-webkit-border-radius: 50% !important;
-			-moz-border-radius: 50% !important;
-			border-radius: 50% !important;
+			@include border-radius(50%); 
 		}
 		  
 		.profile-usertitle {
@@ -49,6 +58,7 @@ $font-primary: 'Open Sans', Arial, sans-serif;
 				font-weight: 600;
 				padding: 6px 15px;
 				margin-right: 5px;
+				@include border-radius(0);
 			}
 			  
 			.btn:last-child {
@@ -137,6 +147,7 @@ $font-primary: 'Open Sans', Arial, sans-serif;
 					font-size: 12px;
 					font-weight: 600;
 					padding: 6px 15px;
+					@include border-radius(0);
 				}
 			}
 		}

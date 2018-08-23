@@ -1,0 +1,76 @@
+$font-primary: 'Open Sans', Arial, sans-serif;
+$font-secondary: 'Marmelad', sans-serif;
+
+$brand-primary: #00ADB5 !default;
+$brand-secondary: #151f2c !default;
+$brand-white: #fff;
+$brand-black: #000;
+$brand-tertiary: #2D4059 !default; 
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	   -moz-border-radius: $radius;
+		-ms-border-radius: $radius;
+			border-radius: $radius;
+}
+
+@mixin transition($transition) {
+    -moz-transition:    all $transition ease;
+    -o-transition:      all $transition ease;
+    -webkit-transition: all $transition ease;
+    -ms-transition: 	all $transition ease;
+    transition:         all $transition ease;
+}
+
+@import 'bootstrap/variables';
+@import 'template-style';
+
+.jumbotron-cover {
+	margin-top: 60px;
+	height: 300px;
+	background-size: cover;
+	// background-position: center center;
+	background-repeat: no-repeat;
+	position: relative;
+	width: 100%;
+	.overlay {
+		z-index:0;
+		position: absolute;
+		bottom: 0;
+		top: 0;
+		left: 0;
+		right: 0;
+		background: rgba(0, 0, 0, .55);
+	}
+	> .jumbotron-container {
+		position: relative;
+		z-index: 10;
+
+		.display-t {
+			display: table;
+			text-align: center;
+			width: 100%;
+			height: 300px;
+
+			.display-tc {
+				display: table-cell;
+				vertical-align: middle;
+				h1 {
+					margin: 0;
+					padding: 0;
+					color: rgba(255,255,255,1);
+
+					font-size: 80px;
+					line-height: 1.5;
+					font-family: $font-secondary;
+					@media screen and (max-width: $screen-sm) {
+						font-size: 40px;
+					}
+					@media screen and (max-width: $screen-xs) {
+						font-size: 30px;
+					}
+				}
+			}	
+		}
+	}
+}

@@ -9,6 +9,25 @@ $message-sent-bg: #E5FFD0;
 $message-receive-bg: #f5f5f5;
 $message-text-color: #555;
 
+@mixin transition($transition) {
+    -moz-transition:    all $transition ease-out;
+    -o-transition:      all $transition ease-out;
+    -webkit-transition: all $transition ease-out;
+    -ms-transition: 	all $transition ease-out;
+    transition:         all $transition ease-out;
+}
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	   -moz-border-radius: $radius;
+		-ms-border-radius: $radius;
+			border-radius: $radius;
+}
+
+@import 'bootstrap/variables';
+@import 'template-style';
+
+
 html, body {
     overflow-y:hidden;
     height:100%;
@@ -71,7 +90,7 @@ html, body {
 		overflow: hidden;
 		float: left;
 		height: 100%;
-		transition: all .3s ease-out;
+		@include transition(.3s);
 	}
 
 	.sidebar {
@@ -90,9 +109,9 @@ html, body {
                 color: #333;
                 background: #f1f1f1;
                 width: 100%;
-                border-radius: 3px;
                 border: 1px solid #f1f1f1;
-                outline: none;
+				outline: none;
+				@include border-radius(3px);
             }
 
             input:active, input:focus {
@@ -115,14 +134,14 @@ html, body {
 				padding-left: 15px;
 				padding-right: 15px;
 				border: none;
-				border-radius: 0;
+				@include border-radius(0);
                 
                 .pull-left {
 					padding-right: 15px;
 					img {
 						width: 50px;
 						height: 50px;
-						border-radius: 50%;
+						@include border-radius(50%);
 					}
 				}
 
@@ -176,7 +195,7 @@ html, body {
 					img {
 						width: 50px;
 						height: 50px;
-						border-radius: 50%;
+						@include border-radius(50%);
 					}
 					p {
 						display: inline-block;
@@ -202,7 +221,7 @@ html, body {
 					p {
 						background: $message-sent-bg;
 						margin-left: 10px;
-						border-radius: 0 10px 10px;
+						@include border-radius(0 10px 10px);
 					}
 				}
 				li.replies {
@@ -213,8 +232,7 @@ html, body {
 						float: right;
 						background: $message-receive-bg;
 						margin-right: 10px;
-						border-radius: 10px 0 10px 10px;
-
+						@include border-radius(10px 0 10px 10px); 
 					}
 				}
 			}
@@ -232,17 +250,16 @@ html, body {
 					float: left;
 					width: calc(100% - 65px);
 					border: none;
-					border-radius: 0;
 					background-color: #f8f8f8;
 					margin: 5px;
 					padding: 10px 20px;
 					outline: none;
+					@include border-radius(0);
 				}
 				button {
 					font-size: inherit;
 					float: right;
 					border: none;
-					border-radius: 0;
 					width: 50px;
 					padding: 10px;
 					margin: 5px;
@@ -251,7 +268,7 @@ html, body {
 					outline: none;
 					background: #32465a;
 					color: #f5f5f5;
-					
+					@include border-radius(0);
 				}
 				
 			}
