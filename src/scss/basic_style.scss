@@ -1,0 +1,18 @@
+
+@mixin transition($transition) {
+    -moz-transition:    all $transition ease-out;
+    -o-transition:      all $transition ease-out;
+    -webkit-transition: all $transition ease-out;
+    -ms-transition: 	all $transition ease-out;
+    transition:         all $transition ease-out;
+}
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	   -moz-border-radius: $radius;
+		-ms-border-radius: $radius;
+			border-radius: $radius;
+}
+
+@import 'bootstrap/variables';
+@import 'template-style';

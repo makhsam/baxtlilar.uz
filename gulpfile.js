@@ -11,11 +11,11 @@ gulp.task('sass', function() {
 });
 
 // Move the javascript files into our /src/js folder
-/* gulp.task('js', function() {
-    return gulp.src(['node_modules/bootstrap/dist/js/bootstrap.min.js', 'node_modules/jquery/dist/jquery.min.js', 'node_modules/popper.js/dist/umd/popper.min.js'])
+ gulp.task('js', function() {
+    return gulp.src(['node_modules/jquery-validation/dist/jquery.validate.min.js', 'node_modules/jquery-validation/dist/additional-methods.js'])
         .pipe(gulp.dest("src/js"))
         .pipe(browserSync.stream());
-}); */
+}); 
 
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass'], function() {
@@ -28,4 +28,4 @@ gulp.task('serve', ['sass'], function() {
     gulp.watch("src/*.html").on('change', browserSync.reload);
 });
 
-gulp.task('default', ['serve']);
+gulp.task('default', ['js', 'serve']);

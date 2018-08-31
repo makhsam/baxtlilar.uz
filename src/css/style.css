@@ -17,38 +17,6 @@
     My custom style
 ================================
 */
-/* Login -- Register (images) */
-.image-wrapper::after {
-  content: "";
-  clear: both;
-  display: table; }
-
-.image-upload {
-  float: left;
-  width: 20%;
-  padding-right: 6px; }
-
-.image-upload > input {
-  display: none; }
-
-.image-upload img {
-  cursor: pointer; }
-
-.img-responsive {
-  background-color: #999999; }
-
-/* Login -- Register (box shadow) */
-.box-shadow-effect {
-  background-color: #fff;
-  padding: 3em;
-  -webkit-box-shadow: 6px 6px 30px 0px rgba(85, 85, 85, 0.65);
-  -moz-box-shadow: 6px 6px 30px 0px rgba(85, 85, 85, 0.65);
-  box-shadow: 6px 6px 30px 0px rgba(85, 85, 85, 0.65); }
-
-.col-centered {
-  float: none;
-  margin: 0 auto; }
-
 /* =======================================================
 *
 * 	Template Style 

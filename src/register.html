@@ -4,124 +4,96 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Регистрация</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
-	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
-	<meta name="author" content="FREEHTML5.CO" />
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>Baxtlilar.uz</title>
 
+        <!--Favicon icon-->
+        <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="images/favicon/favicon.ico" type="image/x-icon">
 
-  	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Marmelad&amp;subset=cyrillic" rel="stylesheet">
+        <!--Google Material Icons (Sacramento)-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Font Awesome-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!--Favicon icon-->
-	<link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="images/favicon/favicon.ico" type="image/x-icon">
+        
+        <!-- Bootstrap  -->
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <!-- Bootstrap 3 Material Design -->
+        <link rel="stylesheet" href="md/css/bootstrap-material-design.css">
+        <link rel="stylesheet" href="md/css/ripples.min.css">
+        <!-- Theme style  -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/register.css">
 
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Marmelad&amp;subset=cyrillic" rel="stylesheet">
-	<!--Google Material Icons (Sacramento)-->
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<!--Font Awesome-->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Bootstrap  -->
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <!-- Bootstrap 3 Material Design -->
-    <link rel="stylesheet" href="md/css/bootstrap-material-design.min.css">
-	<link rel="stylesheet" href="md/css/ripples.min.css">
-	<!-- DateTimePicker -->
-	<link rel="stylesheet" href="" />
-
-	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css">
-
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
-
-	</head>
+        <!-- Modernizr JS -->
+        <script src="js/modernizr-2.6.2.min.js"></script>
+        <!-- FOR IE9 below -->
+        <!--[if lt IE 9]>
+        <script src="js/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    
 	<body>
-		
-	<div class="fh5co-loader"></div>
+	<!--<div class="fh5co-loader"></div>-->
+    
+    <script type="text/javascript">
+        window.onbeforeunload = function() {
+            return "Изменения, которые вы внесли, не могут быть сохранены.";
+        }
+    </script>
+
 	
-	<div id="page">
-	<nav class="fh5co-nav" role="navigation">
+	<div id="template-page">
+	<!-- Fixed navbar -->
+    <nav id="navbar-template" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar top-bar"></span>
+                    <span class="icon-bar middle-bar"></span>
+                    <span class="icon-bar bottom-bar"></span>
+                </button>
+                <a class="navbar-logo" href="index.html">
+                    <img src="images/logo_light.png" style="width: 120px; height: auto"/>
+                </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right nav-animation">
+                    <li class="active"><a href="#about">Register</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">Nav header</li>
+                            <li><a href="#">Separated link</a></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+
+	<div id="registration-section" class="main-wrapper" style="min-height: 500px;">
 		<div class="container">
-			<div class="row">
-				<div class="col-xs-2">
-					<div id="fh5co-logo"><a href="index.html">
-						<img src="images/logo-white.png" style="width: 150px; height: auto"/>
-					</a></div>
-				</div>
-				<div class="col-xs-10 text-right menu-1">
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="about.html">Story</a></li>
-						<li class="has-dropdown">
-							<a href="services.html">Services</a>
-							<ul class="dropdown">
-								<li><a href="#">Web Design</a></li>
-								<li><a href="#">eCommerce</a></li>
-								<li><a href="#">Branding</a></li>
-								<li><a href="#">API</a></li>
-							</ul>
-						</li>
-						<li class="has-dropdown">
-							<a href="gallery.html">Gallery</a>
-							<ul class="dropdown">
-								<li><a href="#">HTML5</a></li>
-								<li><a href="#">CSS3</a></li>
-								<li><a href="#">Sass</a></li>
-								<li><a href="#">jQuery</a></li>
-							</ul>
-						</li>
-						<li class="active"><a href="contact.html">Contact</a></li>
-					</ul>
-				</div>
-			</div>
 			
-		</div>
-	</nav>
-
-	<header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url(images/contactUS.jpg);">
-		<div class="overlay"></div>
-		<div class="fh5co-container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center">
-					<div class="display-t">
-						<div class="display-tc">
-							<h1>Регистрация</h1>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header> 
-
-
-
-	<div style="background-color: #ededed" id="registration-section" class="fh5co-section">
-		<div class="container">
-			<div class="row">
+			<form id="register" class="row" action="" method="">
                 <div class="col-md-8 col-sm-10 col-xs-11 col-centered">
-					<h3 id="step-order">Шаг <span></span> из 3</h3>
-					<!-- Router page 1 -->
-                    <div id="router-page1" class="inputs box-shadow-effect">
+                    <h3 id="step-order">Шаг <span></span> из 3</h3>
+                    <!-- Router page 1 -->
+                    <div id="router-page1" class="form-boxes box-shadow-effect">
                         <h4>Загрузите 5 Ваших фотографий: <br/>
                             <small>(нажмите на иконку фотоаппарата и загрузите фото)</small>
                         </h4>
@@ -130,792 +102,798 @@
                             <!--Image 1-->
                             <div class="image-upload">
                                 <label for="image-file-01">
-                                    <img class="img-responsive" src="images/camera2.png"/>
+                                    <img class="img-responsive" id="image-preview-01" src="images/camera.jpg"/>
                                 </label>
                             
-                                <input id="image-file-01" type="file"/>
+                                <input type="file" id="image-file-01" class="user-profile-img" required/>
                             </div>
                             <!--Image 2-->
                             <div class="image-upload">
                                 <label for="image-file-02">
-                                    <img class="img-responsive" src="images/camera2.png"/>
+                                    <img class="img-responsive" id="image-preview-02" src="images/camera.jpg"/>
                                 </label>
                             
-                                <input id="image-file-02" type="file"/>
+                                <input type="file" id="image-file-02" class="user-profile-img" required/>
                             </div>
                             <!--Image 3-->
                             <div class="image-upload">
                                 <label for="image-file-03">
-                                    <img class="img-responsive" src="images/camera2.png"/>
+                                    <img class="img-responsive" id="image-preview-03" src="images/camera.jpg"/>
                                 </label>
                             
-                                <input id="image-file-03" type="file"/>
+                                <input type="file" id="image-file-03" class="user-profile-img" required/>
                             </div>
                             <!--Image 4-->
                             <div class="image-upload">
                                 <label for="image-file-04">
-                                    <img class="img-responsive" src="images/camera2.png"/>
+                                    <img class="img-responsive" id="image-preview-04" src="images/camera.jpg"/>
                                 </label>
                             
-                                <input id="image-file-04" type="file"/>
+                                <input type="file" id="image-file-04" class="user-profile-img" required/>
                             </div>
                             <!--Image 5-->
                             <div class="image-upload">
                                 <label for="image-file-05">
-                                    <img class="img-responsive" src="images/camera2.png"/>
+                                    <img class="img-responsive" id="image-preview-05" src="images/camera.jpg"/>
                                 </label>
                             
-                                <input id="image-file-05" type="file"/>
+                                <input type="file" id="image-file-05" class="user-profile-img" required/>
+                            </div>
+                            <span id="user-profile-errors"></span>
+                        </div>
+                        <!--end of uploading images-->
+                        
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group label-floating">
+                                    <label for="user-name" class="control-label">Фамилия</label>
+                                    <input type="text" class="form-control input-validation-step1" id="user-name" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group label-floating">
+                                    <label for="user-surname" class="control-label">Имя</label>
+                                    <input type="text" class="form-control input-validation-step1" id="user-surname" required>
+                                </div>
                             </div>
                         </div>
-						<!--end of uploading images-->
-						
-						<div class="row">
-							<div class="col-sm-6">
-								<div class="form-group label-floating">
-									<label for="user-name" class="control-label">Фамилия</label>
-									<input type="text" class="form-control" id="user-name">
-								</div>
-							</div>
-							<div class="col-sm-6">
-								<div class="form-group label-floating">
-									<label for="user-surname" class="control-label">Имя</label>
-									<input type="text" class="form-control" id="user-surname">
-								</div>
-							</div>
-						</div>
 
                         <div class="row">
-							<div class="col-sm-6">
-								<div class="form-group label-floating">
-									<label for="user-patronymic" class="control-label">Отчество</label>
-									<input type="text" class="form-control" id="user-patronymic">
-								</div>
-							</div>
-							<div class="col-sm-6">
-								<div class="form-group label-floating">
-									<label for="user-nickname" class="control-label">Ник имя</label>
-									<input type="text" class="form-control" id="user-nickname">
-								</div>
-							</div>
-						</div>
+                            <div class="col-sm-6">
+                                <div class="form-group label-floating">
+                                    <label for="user-patronymic" class="control-label">Отчество</label>
+                                    <input type="text" class="form-control input-validation-step1" id="user-patronymic" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group label-floating">
+                                    <label for="user-nickname" class="control-label">Ник имя</label>
+                                    <input type="text" class="form-control input-validation-step1" id="user-nickname" required>
+                                </div>
+                            </div>
+                        </div>
 
                         <div class="form-group label-floating">
-                            <input type="text" class="form-control" id="user-birthday" placeholder="Дата рождения">
+                            <input type="text" class="form-control input-validation-step1" id="user-birthday" placeholder="Дата рождения" required>
                             <span class="help-block">Please enter a valid birthday</span>
                         </div>
                         <div class="form-group label-floating">
                             <label for="user-placeOfBirth" class="control-label">Место рождение</label>
-                            <input type="text" class="form-control" id="user-placeOfBirth">
+                            <input type="text" class="form-control input-validation-step1" id="user-placeOfBirth" required>
                             <span class="help-block">Please enter a valid name</span>
                         </div>
                         <div class="form-group label-floating">
                             <label for="user-zodiak" class="control-label">Знак зодиака</label>
-                            <input type="text" class="form-control" id="user-zodiak">
+                            <input type="text" class="form-control input-validation-step1" id="user-zodiak" required>
                             <span class="help-block">Please enter a valid name</span>
-						</div>
-						
-						<div class="form-group">
-							<label class="col-sm-1 control-label" style="font-size: 16px; padding-left: 0">Пол</label>
-						
-							<div class="col-sm-11">
-								<div class="radio radio-primary">
-								<label>
-									<input type="radio" name="user-sex" id="user-man" value="1" checked="">
-									Мужской
-								</label>
-								</div>
-								<div class="radio radio-primary">
-								<label>
-									<input type="radio" name="user-sex" id="user-woman" value="0" checked="">
-									Женский
-								</label>
-								</div>
-							</div>
-						</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label" style="font-size: 16px; padding-left: 0">Пол</label>
+                        
+                            <div class="col-sm-11">
+                                <div class="radio radio-primary">
+                                <label>
+                                    <input type="radio" name="user-sex" id="user-man" value="man" checked="">
+                                    Мужской
+                                </label>
+                                </div>
+                                <div class="radio radio-primary">
+                                <label>
+                                    <input type="radio" name="user-sex" id="user-woman" value="woman">
+                                    Женский
+                                </label>
+                                </div>
+                            </div>
+                        </div>
 
-						<div class="row">
-							<div class="col-sm-6">
-								<div class="form-group label-floating">
-									<label for="user-height" class="control-label">Рост</label>
-									<input type="text" class="form-control" id="user-height">
-									<span class="help-block">Please enter a valid name</span>
-								</div>
-							</div>
-							<div class="col-sm-6">
-								<div class="form-group label-floating">
-									<label for="user-weight" class="control-label">Вес</label>
-									<input type="text" class="form-control" id="user-weight">
-									<span class="help-block">Please enter a valid name</span>
-								</div>
-							</div>
-						</div>
-
-
-						<div class="row">
-							<div class="form-group">
-								<label class="col-sm-2 control-label" style="font-size: 16px;">Цвет глаз</label>
-							
-								<div class="col-sm-10">
-									<div class="radio radio-primary">
-										<label>
-											<input type="radio" name="eye-color" id="eye-color-01" value="1" checked="">
-											Чёрный
-										</label>
-									</div>
-									<div class="radio radio-primary">
-										<label>
-											<input type="radio" name="eye-color" id="eye-color-02" value="0" checked="">
-											Коричневый
-										</label>
-									</div>
-									<div class="radio radio-primary">
-										<label>
-											<input type="radio" name="eye-color" id="eye-color-03" value="0" checked="">
-											Серый
-										</label>
-									</div>
-									<div class="radio radio-primary">
-										<label>
-											<input type="radio" name="eye-color" id="eye-color-04" value="0" checked="">
-											Голубой
-										</label>
-									</div>
-									<div class="radio radio-primary">
-										<label>
-											<input type="radio" name="eye-color" id="eye-color-05" value="0" checked="">
-											Зелёный
-										</label>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<h4 style="margin-bottom: 0; margin-top: 28px">Сведение о место проживание:</h4>
-						<div class="row">
-							<div class="col-sm-4">
-								<div class="form-group label-floating">
-									<label for="user-city" class="control-label">Город</label>
-									<input type="text" class="form-control" id="user-city">
-								</div>
-							</div>
-							<div class="col-sm-4">
-								<div class="form-group label-floating">
-									<label for="user-house" class="control-label">Дом</label>
-									<input type="text" class="form-control" id="user-house">
-								</div>
-							</div>
-							<div class="col-sm-4">
-								<div class="form-group label-floating">
-									<label for="user-home" class="control-label">Квартира </label>
-									<input type="text" class="form-control" id="user-home">
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-4">
-								<div class="form-group label-floating">
-									<label for="user-tel" class="control-label">Телефон</label>
-									<input type="text" class="form-control" id="user-tel">
-								</div>
-							</div>
-							<div class="col-sm-4">
-								<div class="form-group label-floating">
-									<label for="user-mobile" class="control-label">Мобильный</label>
-									<input type="text" class="form-control" id="user-mobile">
-								</div>
-							</div>
-							<div class="col-sm-4">
-								<div class="form-group label-floating">
-									<label for="user-tel-relative" class="control-label">Контакты близких</label>
-									<input type="text" class="form-control" id="user-tel-relative">
-									<span class="help-block">Контакты брат, сестра, родители</span>
-								</div>
-							</div>
-						</div>
-
-						<h4 style="margin: 28px 0 0 0">Паспортные данные:</h4>
-						<div class="row">
-							<div class="col-sm-3">
-								<div class="form-group label-floating">
-									<label for="user-passport-seria" class="control-label">Серия</label>
-									<input type="text" class="form-control" id="user-passport-seria">
-									<span class="help-block"><b>Пример:</b> AB</span>
-								</div>
-							</div>
-							<div class="col-sm-9">
-								<div class="form-group label-floating">
-									<label for="user-passport-number" class="control-label">Число</label>
-									<input type="number" class="form-control" id="user-passport-number">
-									<span class="help-block"><b>Пример:</b> 4326587</span>
-								</div>
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="col-sm-4">
-								<div class="form-group label-floating">
-									<label for="user-education" class="control-label">Образование</label>
-									<input type="text" class="form-control" id="user-education">
-									<span class="help-block">Please enter a valid name</span>
-								</div>
-							</div>
-							<div class="col-sm-4">
-								<div class="form-group label-floating">
-									<label for="user-employment" class="control-label">Занятость</label>
-									<input type="text" class="form-control" id="user-employment">
-									<span class="help-block">Please enter a valid name</span>
-								</div>
-							</div>
-							<div class="col-sm-4">
-								<div class="form-group label-floating">
-									<label for="user-profession" class="control-label">Профессия</label>
-									<input type="text" class="form-control" id="user-profession">
-									<span class="help-block">Please enter a valid name</span>
-								</div>
-							</div>
-						</div>
-
-						<!--Smoking && Alcohol-->
-						<div class="row">
-							<div class="col-sm-6">
-								<div class="form-group">
-									<label class="control-label" style="font-size: 16px; padding-left: 0">Отношение к алкоголю</label>
-								
-									<div style="margin-left: 2em">
-										<div class="radio radio-primary">
-										<label>
-											<input type="radio" name="user-alcohol" id="user-alcohol1" value="1" checked="">
-											Не употребляю
-										</label>
-										</div>
-										<div class="radio radio-primary">
-										<label>
-											<input type="radio" name="user-alcohol" id="user-alcohol2" value="0" checked="">
-											Употребляю
-										</label>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6">
-								<div class="form-group">
-									<label class="control-label" style="font-size: 16px; padding-left: 0">Отношение к курению</label>
-								
-									<div style="margin-left: 2em">
-										<div class="radio radio-primary">
-										<label>
-											<input type="radio" name="user-smoking" id="user-smoking1" value="1" checked="">
-											Курю
-										</label>
-										</div>
-										<div class="radio radio-primary">
-										<label>
-											<input type="radio" name="user-smoking" id="user-smoking2" value="0" checked="">
-											Не курю
-										</label>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group label-floating">
+                                    <label for="user-height" class="control-label">Рост</label>
+                                    <input type="text" class="form-control input-validation-step1" id="user-height" required>
+                                    <span class="help-block">Please enter a valid name</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group label-floating">
+                                    <label for="user-weight" class="control-label">Вес</label>
+                                    <input type="text" class="form-control input-validation-step1" id="user-weight" required>
+                                    <span class="help-block">Please enter a valid name</span>
+                                </div>
+                            </div>
+                        </div>
 
 
-						<div class="row">
-							<div class="form-group">
-								<label class="col-sm-4 control-label" style="font-size: 16px;">Семейное положение</label>
-							
-								<div class="col-sm-8">
-									<div class="radio radio-primary">
-									<label>
-										<input type="radio" name="user-married" id="user-married1" value="1" checked="">
-										Холост (Не замужем)
-									</label>
-									</div>
-									<div class="radio radio-primary">
-									<label>
-										<input type="radio" name="user-married" id="user-married2" value="0" checked="">
-										Женат (Замужем)
-									</label>
-									</div>
-								</div>
-							</div>
-						</div>
-	
-						<div class="form-group">
-							<a href="#/step2" style="float: right" class="btn btn-raised btn-primary scroll-to-top">Next</a>
-							<div style="clear:both"></div>
-						</div>
-					</div><!--end of router page 1-->
-					
-					<!-- Router page 2 -->
-					<div id="router-page2" class="inputs box-shadow-effect">
-						<div class="form-group label-floating">
-							<label for="user-kids" class="control-label">Сведение о наличие детей</label>
-							<textarea type="text" class="form-control" rows="3" id="user-kids"></textarea>
-							<span class="help-block">Please enter a valid name</span>
-						</div>
-						<div class="form-group">
-							<label class="control-label" style="font-size: 16px;">Отношение к детям будущего партнера</label>
-						
-							<div class="radio radio-primary">
-								<label>
-									<input type="radio" name="user-attitude-to-childs" id="user-attitude1" value="1" checked="">
-									Желательно с ребенком 
-								</label>
-							</div>
-							<div class="radio radio-primary">
-								<label>
-									<input type="radio" name="user-attitude-to-childs" id="user-attitude2" value="2">
-									Желательно без ребенка 
-								</label>
-							</div>
-							<div class="radio radio-primary">
-								<label>
-									<input type="radio" name="user-attitude-to-childs" id="user-attitude3" value="3">
-									Без разницы 
-								</label>
-							</div>
-						</div>
+                        <div class="row">
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label" style="font-size: 16px;">Цвет глаз</label>
+                            
+                                <div class="col-sm-10">
+                                    <div class="radio radio-primary">
+                                        <label>
+                                            <input type="radio" name="user-eye-color" id="eye-color-01" value="black" checked="">
+                                            Чёрный
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-primary">
+                                        <label>
+                                            <input type="radio" name="user-eye-color" id="eye-color-02" value="brown">
+                                            Коричневый
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-primary">
+                                        <label>
+                                            <input type="radio" name="user-eye-color" id="eye-color-03" value="grey">
+                                            Серый
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-primary">
+                                        <label>
+                                            <input type="radio" name="user-eye-color" id="eye-color-04" value="blue">
+                                            Голубой
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-primary">
+                                        <label>
+                                            <input type="radio" name="user-eye-color" id="eye-color-05" value="green">
+                                            Зелёный
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-						
-						<div class="form-group label-floating">
-							<label for="user-nationality" class="control-label">Национальность</label>
-							<input type="text" class="form-control" id="user-nationality">
-							<span class="help-block">Please enter a valid name</span>
-						</div>
+                        <h4 style="margin-bottom: 0; margin-top: 28px">Сведение о место проживание:</h4>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group label-floating">
+                                    <label for="user-city" class="control-label">Город</label>
+                                    <input type="text" class="form-control input-validation-step1" id="user-city" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group label-floating">
+                                    <label for="user-house" class="control-label">Дом</label>
+                                    <input type="text" class="form-control input-validation-step1" id="user-house" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group label-floating">
+                                    <label for="user-home" class="control-label">Квартира </label>
+                                    <input type="text" class="form-control input-validation-step1" id="user-home" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group label-floating">
+                                    <label for="user-tel" class="control-label">Телефон</label>
+                                    <input type="text" class="form-control input-validation-step1" id="user-tel" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group label-floating">
+                                    <label for="user-mobile" class="control-label">Мобильный</label>
+                                    <input type="text" class="form-control input-validation-step1" id="user-mobile" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group label-floating">
+                                    <label for="user-tel-relative" class="control-label">Контакты близких</label>
+                                    <input type="text" class="form-control input-validation-step1" id="user-tel-relative" required>
+                                    <span class="help-block">Контакты брат, сестра, родители</span>
+                                </div>
+                            </div>
+                        </div>
 
-						<!-- Religion -->
-						<div class="row">
-							<div class="form-group">
-								<label class="col-sm-2 control-label" style="font-size: 16px;">Религия </label>
-							
-								<div class="col-sm-10">
-									<div class="radio radio-primary">
-										<label>
-											<input type="radio" name="user-religion" id="user-religion1" value="1" checked="">
-											Ислам
-										</label>
-									</div>
-									<div class="radio radio-primary">
-										<label>
-											<input type="radio" name="user-religion" id="user-religion2" value="2">
-											Христиан
-										</label>
-									</div>
-									<div class="radio radio-primary">
-										<label>
-											<input type="radio" name="user-religion" id="user-religion3" value="3">
-											Буддизм	
-										</label>
-									</div>
-									<div class="radio radio-primary">
-										<label>
-											<input type="radio" name="user-religion" id="user-religion-other" value="other">
-											Другое
-										</label>
-									</div>
-									
-								</div>
-							</div>
-						</div>
-						
-						<div class="form-group label-floating">
-							<label for="user-religion-attitude" class="control-label">Отношение к Религии</label>
-							<input type="text" class="form-control" id="user-religion-attitude">
-							<span class="help-block">Please enter a valid name</span>
-						</div>
+                        <div class="passport_upload">
+                            <h4>Паспортные данные:</h4>
+                            <label for="user_passport">Выберите файл</label>
+                            <input type="file" id="user_passport" name="user_passport" accept="image/*,application/pdf" required>
+                            <span>jpg, jpeg, png, pdf</span>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="form-group label-floating">
+                                    <label for="user-passport-seria" class="control-label">Серия</label>
+                                    <input type="text" class="form-control input-validation-step1" id="user-passport-seria" required>
+                                    <span class="help-block"><b>Пример:</b> AB</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-9">
+                                <div class="form-group label-floating">
+                                    <label for="user-passport-number" class="control-label">Число</label>
+                                    <input type="number" class="form-control input-validation-step1" id="user-passport-number" required>
+                                    <span class="help-block"><b>Пример:</b> 4326587</span>
+                                </div>
+                            </div>
+                        </div>
 
-						<h4 style="margin-bottom: 0; margin-top: 28px">Сведение о родителях</h4>
-						<div class="row">
-							<div class="col-sm-6">
-								<div class="form-group label-floating">
-									<label for="user-dad-name" class="control-label">Имя (отца)</label>
-									<input type="text" class="form-control" id="user-dad-name">
-									<span class="help-block">Please enter a valid name</span>
-								</div>
-								<div class="form-group label-floating">
-									<label for="user-dad-birthday" class="control-label">Год рождения (отца)</label>
-									<input type="text" class="form-control" id="user-dad-birthday">
-									<span class="help-block">Please enter a valid name</span>
-								</div>
-								<div class="form-group label-floating">
-									<label for="user-dad-national" class="control-label">Национальность (отца)</label>
-									<input type="text" class="form-control" id="user-dad-national">
-									<span class="help-block">Please enter a valid name</span>
-								</div>
-								<div class="form-group label-floating">
-									<label for="user-dad-spec" class="control-label">Специальность (отца)</label>
-									<input type="text" class="form-control" id="user-dad-spec">
-									<span class="help-block">Please enter a valid name</span>
-								</div>
-								<div class="form-group label-floating">
-									<label for="user-dad-position" class="control-label">Должность (отца)</label>
-									<input type="text" class="form-control" id="user-dad-position">
-									<span class="help-block">Please enter a valid name</span>
-								</div>
-							</div>
-							<div class="col-sm-6">
-								<div class="form-group label-floating">
-									<label for="user-mum-name" class="control-label">Имя (матери)</label>
-									<input type="text" class="form-control" id="user-mum-name">
-									<span class="help-block">Please enter a valid name</span>
-								</div>
-								<div class="form-group label-floating">
-									<label for="user-mum-birthday" class="control-label">Год рождения (матери)</label>
-									<input type="text" class="form-control" id="user-mum-birthday">
-									<span class="help-block">Please enter a valid name</span>
-								</div>
-								<div class="form-group label-floating">
-									<label for="user-mum-national" class="control-label">Национальность (матери)</label>
-									<input type="text" class="form-control" id="user-mum-national">
-									<span class="help-block">Please enter a valid name</span>
-								</div>
-								<div class="form-group label-floating">
-									<label for="user-mum-spec" class="control-label">Специальность (матери)</label>
-									<input type="text" class="form-control" id="user-mum-spec">
-									<span class="help-block">Please enter a valid name</span>
-								</div>
-								<div class="form-group label-floating">
-									<label for="user-mum-position" class="control-label">Должность (матери)</label>
-									<input type="text" class="form-control" id="user-mum-position">
-									<span class="help-block">Please enter a valid name</span>
-								</div>
-							</div>
-						</div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group label-floating">
+                                    <label for="user-education" class="control-label">Образование</label>
+                                    <input type="text" class="form-control input-validation-step1" id="user-education" required>
+                                    <span class="help-block">Please enter a valid name</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group label-floating">
+                                    <label for="user-employment" class="control-label">Занятость</label>
+                                    <input type="text" class="form-control input-validation-step1" id="user-employment" required>
+                                    <span class="help-block">Please enter a valid name</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group label-floating">
+                                    <label for="user-profession" class="control-label">Профессия</label>
+                                    <input type="text" class="form-control input-validation-step1" id="user-profession" required>
+                                    <span class="help-block">Please enter a valid name</span>
+                                </div>
+                            </div>
+                        </div>
 
-						<div class="form-group label-floating">
-							<label for="user-parents-marriage" class="control-label">Совместный срок в браке</label>
-							<input type="text" class="form-control" id="user-parents-marriage">
-							<span class="help-block">Please enter a valid name</span>
-						</div>
+                        <!--Smoking && Alcohol-->
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label" style="font-size: 16px; padding-left: 0">Отношение к алкоголю</label>
+                                
+                                    <div style="margin-left: 2em">
+                                        <div class="radio radio-primary">
+                                        <label>
+                                            <input type="radio" name="user-attitude-to-alcohol" id="user-alcohol1" value="not-use" checked="">
+                                            Не употребляю
+                                        </label>
+                                        </div>
+                                        <div class="radio radio-primary">
+                                        <label>
+                                            <input type="radio" name="user-attitude-to-alcohol" id="user-alcohol2" value="use">
+                                            Употребляю
+                                        </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label" style="font-size: 16px; padding-left: 0">Отношение к курению</label>
+                                
+                                    <div style="margin-left: 2em">
+                                        <div class="radio radio-primary">
+                                        <label>
+                                            <input type="radio" name="user-attitude-to-smoking" id="user-smoking1" value="smoke">
+                                            Курю
+                                        </label>
+                                        </div>
+                                        <div class="radio radio-primary">
+                                        <label>
+                                            <input type="radio" name="user-attitude-to-smoking" id="user-smoking2" value="not-smoke" checked="">
+                                            Не курю
+                                        </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-						<div class="row">
-							<div class="form-group">
-								<label class="col-sm-4 control-label" style="font-size: 16px">Наличие жилплощади</label>
-							
-								<div class="col-sm-8">
-									<div class="radio radio-primary">
-									<label>
-										<input type="radio" name="living-space" id="living-space1" value="1" checked="">
-										Есть 
-									</label>
-									</div>
-									<div class="radio radio-primary">
-									<label>
-										<input type="radio" name="living-space" id="living-space2" value="2">
-										Нет 
-									</label>
-									</div>
-								</div>
-							</div>
-						</div>
 
-						<div class="form-group">
-							<label class="control-label" style="font-size: 16px">Готовы ли Вы к совместной жизни на вашей территории?</label>
+                        <div class="row">
+                            <div class="form-group">
+                                <label class="col-sm-4 control-label" style="font-size: 16px;">Семейное положение</label>
+                            
+                                <div class="col-sm-8">
+                                    <div class="radio radio-primary">
+                                    <label>
+                                        <input type="radio" name="user-family-status" id="user-married1" value="single" checked="">
+                                        Холост (Не замужем)
+                                    </label>
+                                    </div>
+                                    <div class="radio radio-primary">
+                                    <label>
+                                        <input type="radio" name="user-family-status" id="user-married2" value="married">
+                                        Женат (Замужем)
+                                    </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="form-group">
+                            <p id="warning-step1" style="float: left" class="text-danger"></p>
+                            <a href="javascript:void(0)" id="btn-next-step1" style="float: right" class="btn btn-raised btn-primary">Next</a>
+                            <div style="clear:both"></div>
+                        </div>
+                    </div><!--end of router page 1-->
+                   
 
-							<div class="">
-								<div class="radio radio-primary">
-								<label>
-									<input type="radio" name="are-you-ready" id="are-you-ready1" value="option1" checked="">
-									Да
-								</label>
-								</div>
-								<div class="radio radio-primary">
-								<label>
-									<input type="radio" name="are-you-ready" id="are-you-ready2" value="option2">
-									Нет
-								</label>
-								</div>
-							</div>
-						</div>
+    <!-- -------------------( Router page 2 )-------------------------- -->
+                    <div id="router-page2" class="form-boxes box-shadow-effect">
+                        <div class="form-group label-floating">
+                            <label for="user-kids" class="control-label">Сведение о наличие детей</label>
+                            <textarea type="text" class="form-control input-validation-step2" rows="3" id="user-kids" required></textarea>
+                            <span class="help-block">Please enter a valid name</span>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" style="font-size: 16px;">Отношение к детям будущего партнера</label>
+                        
+                            <div class="radio radio-primary">
+                                <label>
+                                    <input type="radio" name="user-attitude-to-childs" id="user-attitude1" value="agree">
+                                    Желательно с ребенком 
+                                </label>
+                            </div>
+                            <div class="radio radio-primary">
+                                <label>
+                                    <input type="radio" name="user-attitude-to-childs" id="user-attitude2" value="disagree">
+                                    Желательно без ребенка 
+                                </label>
+                            </div>
+                            <div class="radio radio-primary">
+                                <label>
+                                    <input type="radio" name="user-attitude-to-childs" id="user-attitude3" value="no-matter" checked="">
+                                    Без разницы 
+                                </label>
+                            </div>
+                        </div>
 
-						<div class="form-group">
-							<label class="control-label" style="font-size: 16px">Есть ли у вас автомобиль?</label>
-						
-							<div class="">
-								<div class="radio radio-primary">
-								<label>
-									<input type="radio" name="user-has-car" id="user-has-car1" value="1" checked="">
-									Есть 
-								</label>
-								</div>
-								<div class="radio radio-primary">
-								<label>
-									<input type="radio" name="user-has-car" id="user-has-car2" value="2">
-									Нет 
-								</label>
-								</div>
-							</div>
-						</div>
+                        
+                        <div class="form-group label-floating">
+                            <label for="user-nationality" class="control-label">Национальность</label>
+                            <input type="text" class="form-control input-validation-step2" id="user-nationality" required>
+                            <span class="help-block">Please enter a valid name</span>
+                        </div>
 
-						<div class="form-group">
-							<label class="control-label" style="font-size: 16px">Социальный статус</label>
-						
-							<div class="">
-								<div class="radio radio-primary">
-								<label>
-									<input type="radio" name="user-social-status" id="user-social-status1" value="1" checked="">
-									Важен 
-								</label>
-								</div>
-								<div class="radio radio-primary">
-								<label>
-									<input type="radio" name="user-social-status" id="user-social-status2" value="2">
-									Не важен
-								</label>
-								</div>
-							</div>
-						</div>
+                        <!-- Religion -->
+                        <div class="row">
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label" style="font-size: 16px;">Религия </label>
+                            
+                                <div class="col-sm-10">
+                                    <div class="radio radio-primary">
+                                        <label>
+                                            <input type="radio" name="user-religion" id="user-religion1" value="islam" checked="">
+                                            Ислам
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-primary">
+                                        <label>
+                                            <input type="radio" name="user-religion" id="user-religion2" value="christian">
+                                            Христиан
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-primary">
+                                        <label>
+                                            <input type="radio" name="user-religion" id="user-religion3" value="buddhism">
+                                            Буддизм 
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-primary">
+                                        <label>
+                                            <input type="radio" name="user-religion" id="user-religion-other" value="other">
+                                            Другое
+                                        </label>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group label-floating">
+                            <label for="user-religion-attitude" class="control-label">Отношение к Религии</label>
+                            <input type="text" class="form-control input-validation-step2" id="user-religion-attitude" required>
+                            <span class="help-block">Please enter a valid name</span>
+                        </div>
 
-						<div class="form-group label-floating">
-							<label for="user-health" class="control-label">Полное сведение о здоровье</label>
-							<textarea type="text" class="form-control" rows="3" id="user-health"></textarea>
-							<span class="help-block">Please provide correct information</span>
-						</div>
+                        <h4 style="margin-bottom: 0; margin-top: 28px">Сведение о родителях:</h4>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h6 style="margin-top: 20px; margin-bottom: 0"><b>ОТЕЦ</b></h6>
+                                <div class="form-group label-floating">
+                                    <label for="user-dad-name" class="control-label">Имя</label>
+                                    <input type="text" class="form-control input-validation-step2" id="user-dad-name" required>
+                                    <span class="help-block">Please enter a valid name</span>
+                                </div>
+                                <div class="form-group label-floating">
+                                    <label for="user-dad-birthday" class="control-label">Год рождения</label>
+                                    <input type="text" class="form-control input-validation-step2" id="user-dad-birthday" required>
+                                    <span class="help-block">Please enter a valid name</span>
+                                </div>
+                                <div class="form-group label-floating">
+                                    <label for="user-dad-national" class="control-label">Национальность</label>
+                                    <input type="text" class="form-control input-validation-step2" id="user-dad-national" required>
+                                    <span class="help-block">Please enter a valid name</span>
+                                </div>
+                                <div class="form-group label-floating">
+                                    <label for="user-dad-spec" class="control-label">Специальность</label>
+                                    <input type="text" class="form-control input-validation-step2" id="user-dad-spec" required>
+                                    <span class="help-block">Please enter a valid name</span>
+                                </div>
+                                <div class="form-group label-floating">
+                                    <label for="user-dad-position" class="control-label">Должность</label>
+                                    <input type="text" class="form-control input-validation-step2" id="user-dad-position" required>
+                                    <span class="help-block">Please enter a valid name</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <h6 style="margin-top: 20px; margin-bottom: 0"><b>МАТЬ</b></h6>
+                                <div class="form-group label-floating">
+                                    <label for="user-mum-name" class="control-label">Имя</label>
+                                    <input type="text" class="form-control input-validation-step2" id="user-mum-name" required>
+                                    <span class="help-block">Please enter a valid name</span>
+                                </div>
+                                <div class="form-group label-floating">
+                                    <label for="user-mum-birthday" class="control-label">Год рождения</label>
+                                    <input type="text" class="form-control input-validation-step2" id="user-mum-birthday" required>
+                                    <span class="help-block">Please enter a valid name</span>
+                                </div>
+                                <div class="form-group label-floating">
+                                    <label for="user-mum-national" class="control-label">Национальность</label>
+                                    <input type="text" class="form-control input-validation-step2" id="user-mum-national" required>
+                                    <span class="help-block">Please enter a valid name</span>
+                                </div>
+                                <div class="form-group label-floating">
+                                    <label for="user-mum-spec" class="control-label">Специальность</label>
+                                    <input type="text" class="form-control input-validation-step2" id="user-mum-spec" required>
+                                    <span class="help-block">Please enter a valid name</span>
+                                </div>
+                                <div class="form-group label-floating">
+                                    <label for="user-mum-position" class="control-label">Должность</label>
+                                    <input type="text" class="form-control input-validation-step2" id="user-mum-position" required>
+                                    <span class="help-block">Please enter a valid name</span>
+                                </div>
+                            </div>
+                        </div>
 
-						<div class="form-group label-floating">
-							<label for="user-hobby" class="control-label">Ваше хобби</label>
-							<input type="text" class="form-control" id="user-hobby">
-							<span class="help-block">Please enter a valid name</span>
-						</div>
+                        <div class="form-group label-floating">
+                            <label for="user-parents-marriage" class="control-label">Совместный срок в браке</label>
+                            <input type="text" class="form-control input-validation-step2" id="user-parents-marriage" required>
+                            <span class="help-block">Please enter a valid name</span>
+                        </div>
 
-						<div class="form-group label-floating">
-							<label for="user-about" class="control-label">О себе</label>
-							<textarea type="text" class="form-control" rows="3" id="user-about"></textarea>
-							<span class="help-block">Please enter a valid name</span>
-						</div>
+                        <div class="row">
+                            <div class="form-group">
+                                <label class="col-sm-4 control-label" style="font-size: 16px">Наличие жилплощади</label>
+                            
+                                <div class="col-sm-8">
+                                    <div class="radio radio-primary">
+                                    <label>
+                                        <input type="radio" name="user-living-space" id="living-space1" value="yes" checked="">
+                                        Есть 
+                                    </label>
+                                    </div>
+                                    <div class="radio radio-primary">
+                                    <label>
+                                        <input type="radio" name="user-living-space" id="living-space2" value="no">
+                                        Нет 
+                                    </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-						<div class="form-group">
-							<label class="control-label" style="font-size: 16px">Желаете ли Вы что бы вашу анкету видели? <strong>Расшифровать:</strong></label>
-							
-							<div class="radio radio-primary">
-								<label>
-									<input type="radio" name="user-profile-seen" id="user-profile-seen1" value="1">
-									Универсальная
-								</label>
-							</div>
-							<div class="radio radio-primary">
-								<label>
-									<input type="radio" name="user-profile-seen" id="user-profile-seen2" value="1">
-									Международная
-								</label>
-							</div>
-							<div class="radio radio-primary">
-								<label>
-									<input type="radio" name="user-profile-seen" id="user-profile-seen3" value="1">
-									Местная
-								</label>
-							</div>
-							
-						</div>
+                        <div class="form-group">
+                            <label class="control-label" style="font-size: 16px">Готовы ли Вы к совместной жизни на вашей территории?</label>
 
-						<div class="form-group label-floating">
-							<label for="where-get-us" class="control-label">Из какого источника узнали о нас?</label>
-							<input type="text" class="form-control" id="where-get-us">
-							<span class="help-block">Из Интернета, рекламы, друзей и т.д.</span>
-						</div>
+                            <div class="">
+                                <div class="radio radio-primary">
+                                <label>
+                                    <input type="radio" name="is-ready-to-live-together" id="user-is-ready1" value="yes" checked="">
+                                    Да
+                                </label>
+                                </div>
+                                <div class="radio radio-primary">
+                                <label>
+                                    <input type="radio" name="is-ready-to-live-together" id="user-is-ready2" value="no">
+                                    Нет
+                                </label>
+                                </div>
+                            </div>
+                        </div>
 
-						
-						<div class="form-group">
-							<a href="#/" style="float:left" class="btn btn-raised btn-primary scroll-to-top">Previous</a>
-							<a href="#/step3" style="float:right" class="btn btn-raised btn-primary scroll-to-top">Next</a>
-							<div style="clear: both"></div>
-						</div>
-					</div><!--/end of router page 2-->
+                        <div class="form-group">
+                            <label class="control-label" style="font-size: 16px">Есть ли у вас автомобиль?</label>
+                        
+                            <div class="">
+                                <div class="radio radio-primary">
+                                <label>
+                                    <input type="radio" name="user-has-car" id="user-has-car1" value="yes" checked="">
+                                    Есть 
+                                </label>
+                                </div>
+                                <div class="radio radio-primary">
+                                <label>
+                                    <input type="radio" name="user-has-car" id="user-has-car2" value="no">
+                                    Нет 
+                                </label>
+                                </div>
+                            </div>
+                        </div>
 
-					<!-- Router page 3 -->
-					<div id="router-page3" class="inputs box-shadow-effect">
-						
-						<h4 style="margin-bottom: 0; margin-top: 28px">Предпочтение невесты (жениха)</h4>
-						<div class="row">
-							<div class="col-sm-6">
-								<div class="form-group label-floating">
-									<label for="user-nickname" class="control-label">Возраст от</label>
-									<input type="number" class="form-control" id="user-nickname">
-								</div>
-							</div>
-							<div class="col-sm-6">
-								<div class="form-group label-floating">
-									<label for="user-nickname" class="control-label">До</label>
-									<input type="number" class="form-control" id="user-nickname">
-								</div>
-							</div>
-						</div>
-						<h4 style="margin-bottom: 0; margin-top: 28px">Важно ли для Вас:</h4>
-						<div class="form-group">
-							<div class="checkbox">
-								<label>
-								<input type="checkbox"> Национальность
-								</label>
-							</div>
-							<div class="checkbox">
-								<label>
-								<input type="checkbox"> Семейное положение
-								</label>
-							</div>
-							<div class="checkbox">
-								<label>
-								<input type="checkbox"> Жилплощадь
-								</label>
-							</div>
-							<div class="checkbox">
-								<label>
-								<input type="checkbox"> Автомобиль 
-								</label>
-							</div>
-							<div class="checkbox">
-								<label>
-								<input type="checkbox"> Отношение к курению 
-								</label>
-							</div>
-							<div class="checkbox">
-								<label>
-								<input type="checkbox"> Отношение к алкоголю 
-								</label>
-							</div>
-						</div>
+                        <div class="form-group">
+                            <label class="control-label" style="font-size: 16px">Социальный статус</label>
+                        
+                            <div class="">
+                                <div class="radio radio-primary">
+                                <label>
+                                    <input type="radio" name="user-social-status" id="user-social-status1" value="important" checked="">
+                                    Важен 
+                                </label>
+                                </div>
+                                <div class="radio radio-primary">
+                                <label>
+                                    <input type="radio" name="user-social-status" id="user-social-status2" value="not-important">
+                                    Не важен
+                                </label>
+                                </div>
+                            </div>
+                        </div>
 
-						<div class="form-group">
-							<label class="control-label" style="font-size: 16px">Социальный статус:</label>
-							
-							<div class="radio radio-primary">
-								<label>
-									<input type="radio" name="partner-social-status" id="partner-social-status1" value="1">
-									Состоятельный 
-								</label>
-							</div>
-							<div class="radio radio-primary">
-								<label>
-									<input type="radio" name="partner-social-status" id="partner-social-status2" value="1">
-									со средним достатком
-								</label>
-							</div>
-							<div class="radio radio-primary">
-								<label>
-									<input type="radio" name="partner-social-status" id="partner-social-status3" value="1">
-									Не имеет значение 
-								</label>
-							</div>
-						</div>
+                        <div class="form-group label-floating">
+                            <label for="user-health" class="control-label">Полное сведение о здоровье</label>
+                            <textarea type="text" class="form-control input-validation-step2" rows="3" id="user-health" required></textarea>
+                            <span class="help-block">Please provide correct information</span>
+                        </div>
 
-						<div class="form-group label-floating">
-							<label for="partner-profession" class="control-label">Желаемая профессия</label>
-							<input type="text" class="form-control" id="partner-profession">
-							<span class="help-block">Please enter a valid name</span>
-						</div>
+                        <div class="form-group label-floating">
+                            <label for="user-hobby" class="control-label">Ваше хобби</label>
+                            <input type="text" class="form-control input-validation-step2" id="user-hobby" required>
+                            <span class="help-block">Please enter a valid name</span>
+                        </div>
 
-						<div class="row">
-							<div class="col-sm-6">
-								<div class="form-group label-floating">
-									<label for="user-height" class="control-label">Рост</label>
-									<input type="number" class="form-control" id="user-height">
-									<span class="help-block">Please enter a valid name</span>
-								</div>
-							</div>
-							<div class="col-sm-6">
-								<div class="form-group label-floating">
-									<label for="user-weight" class="control-label">Вес</label>
-									<input type="number" class="form-control" id="user-weight">
-									<span class="help-block">Please enter a valid name</span>
-								</div>
-							</div>
-						</div>
+                        <div class="form-group label-floating">
+                            <label for="user-about" class="control-label">О себе</label>
+                            <textarea type="text" class="form-control input-validation-step2" rows="3" id="user-about" required></textarea>
+                            <span class="help-block">Please enter a valid name</span>
+                        </div>
 
-						<div class="row">
-							<div class="form-group">
-								<label for="wished-city" class="col-sm-4 col-md-3 control-label" style="font-size: 16px">Желаемая страна проживания</label>
-							
-								<div class="col-sm-8 col-md-9">
-									<select id="wished-city" class="form-control">
-									<option>Без разницы</option>
-									<option>Узбекистан</option>
-									<option>Турция</option>
-									<option>4</option>
-									<option>5</option>
-									</select>
-								</div>
-							</div>
-						</div>
+                        <div class="form-group">
+                            <label class="control-label" style="font-size: 16px">Желаете ли Вы что бы вашу анкету видели? <strong>Расшифровать:</strong></label>
+                            
+                            <div class="radio radio-primary">
+                                <label>
+                                    <input type="radio" name="user-profile-mode" id="user-profile-seen1" value="universal" checked="">
+                                    Универсальная
+                                </label>
+                            </div>
+                            <div class="radio radio-primary">
+                                <label>
+                                    <input type="radio" name="user-profile-mode" id="user-profile-seen2" value="international">
+                                    Международная
+                                </label>
+                            </div>
+                            <div class="radio radio-primary">
+                                <label>
+                                    <input type="radio" name="user-profile-mode" id="user-profile-seen3" value="local">
+                                    Местная
+                                </label>
+                            </div>
+                            
+                        </div>
 
-						<div style="margin: 5em 0"></div>
+                        <div class="form-group label-floating">
+                            <label for="where-get-us" class="control-label">Из какого источника узнали о нас?</label>
+                            <input type="text" class="form-control input-validation-step2" id="where-get-us" required>
+                            <span class="help-block">Из Интернета, рекламы, друзей и т.д.</span>
+                        </div>
 
-						<div class="form-group">
-							<div class="checkbox">
-								<label>
-								<input type="checkbox"> Соглашайтесь с нашими <a style="color: #009688" href="javascript:void(0)">условиями</a>
-								</label>
-							</div>
-						</div>
+                        
+                        <div class="form-group">
+                            <a href="#/" style="float:left" class="btn btn-raised btn-primary scroll-to-top">Previous</a>
+                            <a href="javascript:void(0)" id="btn-next-step2" style="float:right" class="btn btn-raised btn-primary">Next</a>
+                            <div style="clear:both"></div>
+                        </div>
 
-						<div class="form-group">
-							<a href="#/step2" style="float:left" class="btn btn-raised btn-primary scroll-to-top">Previous</a>
-							<a href="javascript:void(0)" style="float:right" class="btn btn-raised btn-primary disabled">Finish</a>
-							<div style="clear: both"></div>
-						</div>
-					</div><!--end of router page 3-->
+                        <div class="form-group">
+                            <p id="warning-step2" class="text-danger"></p>
+                        </div>
+                    </div><!--/end of router page 2-->
 
-					<!-- 404 Not Found -->
-					<div id="router-404" style="margin-bottom: 12em" class="inputs">
-						<h1>404 Not Found</h1>
-					</div>
+
+                    <!-- ----------------( Router page 3 )------------------- -->
+                    <div id="router-page3" class="form-boxes box-shadow-effect">
+                        
+                        <h4 style="margin-bottom: 0; margin-top: 28px">Предпочтение невесты (жениха)</h4>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group label-floating">
+                                    <label for="user-nickname-from" class="control-label">Возраст от</label>
+                                    <input type="number" class="form-control input-validation-step3" id="user-nickname-from" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group label-floating">
+                                    <label for="user-nickname-to" class="control-label">До</label>
+                                    <input type="number" class="form-control input-validation-step3" id="user-nickname-to" required>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 style="margin-bottom: 0; margin-top: 28px">Важно ли для Вас:</h4>
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label>
+                                <input type="checkbox"><span class="checkbox-pl-2">Национальность</span>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                <input type="checkbox"><span class="checkbox-pl-2">Семейное положение</span>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                <input type="checkbox"><span class="checkbox-pl-2">Жилплощадь</span>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                <input type="checkbox"><span class="checkbox-pl-2">Автомобиль</span> 
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                <input type="checkbox"><span class="checkbox-pl-2">Отношение к курению</span> 
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                <input type="checkbox"><span class="checkbox-pl-2">Отношение к алкоголю</span> 
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label" style="font-size: 16px">Социальный статус:</label>
+                            
+                            <div class="radio radio-primary">
+                                <label>
+                                    <input type="radio" name="partner-social-status" id="partner-social-status1" value="wealthy">
+                                    Состоятельный 
+                                </label>
+                            </div>
+                            <div class="radio radio-primary">
+                                <label>
+                                    <input type="radio" name="partner-social-status" id="partner-social-status2" value="average">
+                                    со средним достатком
+                                </label>
+                            </div>
+                            <div class="radio radio-primary">
+                                <label>
+                                    <input type="radio" name="partner-social-status" id="partner-social-status3" value="not-matter" checked="">
+                                    Не имеет значение 
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group label-floating">
+                            <label for="partner-profession" class="control-label">Желаемая профессия</label>
+                            <input type="text" class="form-control input-validation-step3" id="partner-profession" required>
+                            <span class="help-block">Please enter a valid name</span>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group label-floating">
+                                    <label for="user-height" class="control-label">Рост</label>
+                                    <input type="number" class="form-control input-validation-step3" id="user-height">
+                                    <span class="help-block">Please enter a valid name</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group label-floating">
+                                    <label for="user-weight" class="control-label">Вес</label>
+                                    <input type="number" class="form-control input-validation-step3" id="user-weight">
+                                    <span class="help-block">Please enter a valid name</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group">
+                                <label for="wished-city" class="col-sm-4 col-md-3 control-label" style="font-size: 16px">Желаемая страна проживания</label>
+                            
+                                <div class="col-sm-8 col-md-9">
+                                    <select id="wished-city" class="form-control">
+                                        <option>Без разницы</option>
+                                        <option>Узбекистан</option>
+                                        <option>Турция</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h4 style="margin-bottom: 0; margin-top: 35px">С кем бы вы хотели поделиться нашими услугами?</h4>   
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group label-floating">
+                                    <label for="user-share-relative" class="control-label">Имя родственника</label>
+                                    <input type="text" class="form-control input-validation-step3" id="user-share-relative" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group label-floating">
+                                    <label for="user-share-email" class="control-label">Эл. адрес</label>
+                                    <input type="email" class="form-control input-validation-step3" id="user-share-relative" required>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div style="margin: 5em 0"></div>
+
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label>
+                                <input type="checkbox" id="terms-n-conditions"> Соглашайтесь с нашими <a style="color: #009688" href="javascript:void(0)">условиями и положениями</a>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <a href="#/step2" style="float:left" class="btn btn-raised btn-primary scroll-to-top">Previous</a>
+                            <button type="button" style="float:right" id="btn-submit" class="btn btn-raised btn-primary">Finish</button>
+                            <div style="clear: both"></div>
+                        </div>
+                        <div class="form-group">
+                            <p id="warning-step3" class="text-danger"></p>
+                        </div>
+
+                    </div><!--end of router page 3-->
+
+                    <!-- 404 Not Found -->
+                    <div id="router-404" style="margin-bottom: 12em" class="form-boxes">
+                        <h1>404 Not Found</h1>
+                    </div>
                 </div>
                 
-            </div>
+            </form>
+			
 		</div>
 	</div>
 
-	<!-- ===================== Example ====================== 
-	<div class="row">
-		<div class="col-sm-4"></div>
-		<div class="col-sm-4"></div>
-		<div class="col-sm-4"></div>
-	</div>
-	<div class="row">
-		<div class="col-sm-6"></div>
-		<div class="col-sm-6"></div>
-	</div>
-
-	<h4 style="margin-bottom: 0; margin-top: 28px"> ... </h4>
-	
-	<div class="form-group label-floating">
-		<label for="user-nickname" class="control-label">Ник имя</label>
-		<input type="text" class="form-control" id="user-nickname">
-		<span class="help-block">Please enter a valid name</span>
-	</div>
-
-	<div class="form-group has-error label-floating">
-		<label for="user-surname" class="control-label">Email has-error</label>
-		<input type="email" class="form-control" id="user-surname">
-		<span class="help-block">Введите действующий адрес эл. почты</span>
-	</div> 
-	===================== End Of Example ====================== -->
-
-
-    <footer id="fh5co-footer" role="contentinfo">
+	<footer id="fh5co-footer" role="contentinfo">
 		<div class="container">
 
 			<div class="row copyright">
 				<div class="col-md-12 text-center">
 					<p>
 						<small class="block">&copy; 2018 [Название организации]. Все права защищены.</small> 
-						<!--<small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>-->
 					</p>
-					<p>
-						<ul class="fh5co-social-icons">
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-							<li><a href="#"><i class="fa fa-telegram"></i></a></li>
-						</ul>
-					</p>
+					<ul class="fh5co-social-icons">
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-telegram"></i></a></li>
+                    </ul>
 				</div>
 			</div>
 
 		</div>
 	</footer>
-	
-	</div> <!--end of id="page"-->
+	</div>
 
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="fa fa-angle-up"></i></a>
@@ -925,61 +903,31 @@
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
 	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Jquery hash route -->
-	<script src="js/jquery.hashroute.js"></script>
-	<script>
-		$.hashroute('middleware', function(e) {
-			e.first = true;
-			this.next(); // Advance in the middleware stack
-		});
-		$.hashroute('middleware', function(e) {
-			$('.inputs').hide();
-			this.next(); // Advance in the middleware stack
-		});
-		
-		// Set routes
-		$(document).hashroute('/', function(e) {
-			$('#router-page1').show();
-			$('span', '#step-order').html('1');
-		});
-		$(document).hashroute('/step2', function(e) {
-			$('#router-page2').show();
-			$('span', '#step-order').html('2');
-		});
-		$(document).hashroute('/step3', function(e) {
-			$('#router-page3').show();
-			$('span', '#step-order').html('3');
-		});
-		$.hashroute('404', function(e) {
-			$('#router-404').show();
+    <!-- jQuery Custom Validation -->
+    <script type="text/javascript" src="js/custom-validation.js"></script>
 
-		});
+    <!-- <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/"></script>
+    <script>
+        $("form").validate();
+    </script>  -->
 
-		$(".scroll-to-top").click(function() {
-			$('html, body').animate({
-				scrollTop: $('#registration-section').offset().top
-			}, 500, 'easeInOutExpo'); // 'easeInOutExpo'
-		});
-	</script>
+    <!-- Jquery hash route -->
+    <script src="js/jquery.hashroute.js"></script>
 	<!-- Bootstrap -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- Bootstrap Material Design-->
-	<script src="md/js/material.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+    <!--Material Design-->
+    <script src="md/js/material.min.js"></script>
     <script src="md/js/ripples.min.js"></script>
     <script>
         $.material.init();
-	</script>
-	<!--Bootstrap date-picker-->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
-	<script src="js/datepicker.js"></script>
+    </script>
 	<!-- Waypoints -->
 	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Carousel -->
-	<script src="js/owl.carousel.min.js"></script>
-	<!-- Stellar -->
-	<script src="js/jquery.stellar.min.js"></script>
+
 	<!-- Main -->
-	<script src="js/main.js"></script>
+	<!--<script src="js/main.js"></script>-->
+	<script src="js/navbar.template.js"></script>
 
 	</body>
 </html>

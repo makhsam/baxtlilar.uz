@@ -188,3 +188,35 @@
 	
 	
 })(window, document, jQuery);
+
+
+/* --------------------------( Hash route: Custom JS )--------------------------- */
+
+	$.hashroute('middleware', function(e) {
+	    e.first = true;
+	    this.next(); // Advance in the middleware stack
+	});
+	$.hashroute('middleware', function(e) {
+	    $('.form-boxes').hide();
+	    this.next(); // Advance in the middleware stack
+	});
+
+	// Set routes
+	$(document).hashroute('/', function(e) {
+	    $('#router-page1').show();
+	    $('span', '#step-order').html('1');
+	});
+	$(document).hashroute('/step2', function(e) {
+	    $('#router-page2').show();
+	    $('span', '#step-order').html('2');
+	});
+	$(document).hashroute('/step3', function(e) {
+	    $('#router-page3').show();
+	    $('span', '#step-order').html('3');
+	});
+	$.hashroute('404', function(e) {
+	    $('#router-404').show();
+
+	});
+
+
