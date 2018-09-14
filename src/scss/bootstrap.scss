@@ -4,6 +4,11 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
+//** Point at which the navbar becomes uncollapsed.
+$grid-float-breakpoint: 1200px;
+//** Point at which the navbar begins collapsing.
+$grid-float-breakpoint-max: ($grid-float-breakpoint - 1);
+
 // Core variables and mixins
 @import "bootstrap/variables";
 @import "bootstrap/mixins";

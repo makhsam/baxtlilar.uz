@@ -1,0 +1,128 @@
+$card-padding: 8px;
+$card-like: #E37777;
+
+@mixin transition($transition) {
+    -moz-transition:    all $transition ease-out;
+    -o-transition:      all $transition ease-out;
+    -webkit-transition: all $transition ease-out;
+    -ms-transition: 	all $transition ease-out;
+    transition:         all $transition ease-out;
+}
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	   -moz-border-radius: $radius;
+		-ms-border-radius: $radius;
+			border-radius: $radius;
+}
+
+@import 'bootstrap/variables';
+@import 'template-style';
+
+//Search box:
+form.input-group {
+    margin-top: 1em;
+    margin-bottom: 2em;
+    padding: 0 $card-padding;
+    h4 {
+        font-size: 1em;
+        float: left;
+        margin-top: 11px;
+        margin-bottom: 11px;
+        margin-right: 10px;
+    }
+    .bootstrap-select {
+        button {
+            border-radius: 0;
+            width: 300px;
+        }
+    }
+    .form-control {
+        box-shadow: none;
+        transition: none;
+        border-radius: 0;
+        width: 40%;
+        min-width: 300px;
+        float: right;
+        &:focus {
+            border: 1px solid #ccc;
+        }
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+
+    }
+
+    .input-group-btn .btn {
+        border-radius: 0;
+        padding: 8px;
+        i {
+            vertical-align: middle;
+        }
+    }
+}
+
+
+// Grid layout
+.card-grid {
+    width:100%;
+
+    .card-wrap {
+        float:left;
+        width:100%;
+        padding: $card-padding;
+        @media (min-width: 576px) {
+            width:50%;
+        }
+        @media (min-width: 768px) {
+            width: 33.33333%;
+        }
+        @media (min-width: 992px) {
+            width: 25%;
+        }
+        .card {
+            background-color:white;
+            border-radius:5px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            @include transition(0.3s);
+            &:hover {
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            }
+            div.card-image {
+                width: 100%;
+                height: 300px;
+                // background-image: SET BY JAVASCRIPT THROUGH [data-image] ATTR;
+                background-size: cover;
+                background-position: center center;
+                background-repeat: no-repeat;
+                @media (min-width: 576px) {
+                    height: 300px;
+                }
+                @media (min-width: 768px) {
+                    height: 300px;
+                }
+                @media (min-width: 992px) {
+                    height: 300px;
+                }
+            }
+            div.content {
+                padding:.5em 1em 1em 1em;
+                h4 {
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+    
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+
+
+

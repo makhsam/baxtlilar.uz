@@ -1,0 +1,348 @@
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+body {
+  width: 1140px;
+  height: 92vh;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  background-color: #f2f2f2; }
+
+.people-wrapper,
+.chat-wrapper,
+.user-wrapper {
+  position: relative;
+  overflow: hidden;
+  float: left;
+  height: 100%;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out; }
+
+/* ---------------------------------------( People wrapper )--------------------------------------- */
+.people-wrapper {
+  width: 300px;
+  color: #aaa;
+  background-color: #373E48;
+  font-family: "Open Sans"; }
+  .people-wrapper .search {
+    display: inline-block;
+    width: 100%;
+    height: 74px;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    z-index: 99; }
+    .people-wrapper .search button {
+      width: 34px;
+      height: 34px;
+      margin-right: 12px;
+      padding: 2.5px;
+      background-color: #373E48;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      -webkit-border-radius: 17px;
+      -moz-border-radius: 17px;
+      -ms-border-radius: 17px;
+      border-radius: 17px; }
+      .people-wrapper .search button i {
+        color: #aaa;
+        vertical-align: middle; }
+    .people-wrapper .search #contact-back-icon {
+      display: none; }
+    .people-wrapper .search input {
+      width: 100%;
+      color: #fff;
+      padding: 5px 15px 5px 40px;
+      font-weight: 300;
+      letter-spacing: .5px;
+      border: 1px solid #2e343c;
+      background-color: #2e343c;
+      background-image: url("..//images/icon-search.png");
+      background-position: 10px 5px;
+      background-repeat: no-repeat;
+      outline: none;
+      -webkit-border-radius: 17px;
+      -moz-border-radius: 17px;
+      -ms-border-radius: 17px;
+      border-radius: 17px; }
+      .people-wrapper .search input::placeholder {
+        color: #cccccc;
+        opacity: 1; }
+      .people-wrapper .search input:-ms-input-placeholder {
+        color: #cccccc; }
+      .people-wrapper .search input::-ms-input-placeholder {
+        color: #cccccc; }
+      .people-wrapper .search input:focus {
+        border: 1px solid #2a2f37;
+        background-color: #2a2f37; }
+  .people-wrapper .people-list {
+    margin-top: 74px;
+    height: calc(100% - 74px);
+    overflow-x: hidden;
+    overflow-y: auto; }
+    .people-wrapper .people-list ul li {
+      cursor: pointer;
+      background-color: inherit;
+      border: none; }
+      .people-wrapper .people-list ul li .avatar {
+        float: left;
+        padding-right: 15px; }
+        .people-wrapper .people-list ul li .avatar img {
+          width: 45px;
+          height: 45px;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          border-radius: 50%; }
+      .people-wrapper .people-list ul li .list-content {
+        display: block; }
+        .people-wrapper .people-list ul li .list-content span {
+          float: right;
+          color: #aaa;
+          font-size: .9em; }
+        .people-wrapper .people-list ul li .list-content .title {
+          color: #fff; }
+        .people-wrapper .people-list ul li .list-content span.badge {
+          color: #fff; }
+        .people-wrapper .people-list ul li .list-content .description {
+          color: #aaa;
+          white-space: nowrap;
+          width: calc(100% - 100px);
+          overflow: hidden;
+          text-overflow: ellipsis; }
+        .people-wrapper .people-list ul li .list-content .contact-description {
+          color: #aaa;
+          white-space: nowrap;
+          width: calc(100% - 60px);
+          overflow: hidden;
+          text-overflow: ellipsis; }
+      .people-wrapper .people-list ul li:hover, .people-wrapper .people-list ul li.active {
+        background-color: #404854; }
+  .people-wrapper #contact-list {
+    display: none; }
+  .people-wrapper #contact-list-icon {
+    position: absolute;
+    bottom: 25px;
+    right: 25px; }
+    .people-wrapper #contact-list-icon i {
+      padding: 16px 14px;
+      font-size: 1.2em;
+      background-color: #31c46f;
+      color: #fff;
+      cursor: pointer;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      border-radius: 50%; }
+      .people-wrapper #contact-list-icon i:hover, .people-wrapper #contact-list-icon i:focus {
+        background-color: #279b58; }
+
+/* --------------------------------( Chat wrapper )-------------------------------- */
+.chat-wrapper {
+  width: calc(100% - 300px - 250px);
+  color: #aaa;
+  font-family: "Open Sans"; }
+  .chat-wrapper .header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    padding: 15px 20px;
+    background-color: #F2F8F8;
+    -webkit-box-shadow: 0px 0px 5px -1px #aaaaaa;
+    -moz-box-shadow: 0px 0px 5px -1px #aaaaaa;
+    box-shadow: 0px 0px 5px -1px #aaaaaa;
+    z-index: 99; }
+    .chat-wrapper .header span, .chat-wrapper .header a {
+      float: right;
+      color: #777777;
+      margin-top: 8px;
+      cursor: pointer; }
+      .chat-wrapper .header span i, .chat-wrapper .header a i {
+        vertical-align: middle;
+        margin-left: 10px; }
+    .chat-wrapper .header .user {
+      font-size: 1.1em;
+      color: #505559; }
+    .chat-wrapper .header .status {
+      font-size: .9em;
+      color: #54D48A;
+      font-weight: 600; }
+  .chat-wrapper .message {
+    margin-top: 70px;
+    margin-bottom: 64px;
+    height: calc(100% - 70px - 64px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: #f2f8f8; }
+    .chat-wrapper .message hr {
+      font-size: .8em; }
+    .chat-wrapper .message ul {
+      list-style-type: none;
+      padding-left: 0;
+      padding-right: 0; }
+      .chat-wrapper .message ul li {
+        display: block;
+        clear: both;
+        width: 100%; }
+        .chat-wrapper .message ul li img {
+          width: 50px;
+          height: 50px;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          border-radius: 50%; }
+        .chat-wrapper .message ul li p {
+          display: inline-block;
+          font-size: 1em;
+          width: 70%;
+          padding: 10px 15px;
+          line-height: 125%; }
+          .chat-wrapper .message ul li p span {
+            display: block;
+            float: right;
+            padding-top: 7px;
+            font-size: .8em; }
+      .chat-wrapper .message ul li.sent {
+        /* Color: green */ }
+        .chat-wrapper .message ul li.sent img {
+          float: right; }
+        .chat-wrapper .message ul li.sent p {
+          float: right;
+          color: #fff;
+          background: #54D48A;
+          margin-right: 10px;
+          -webkit-border-radius: 10px 0 10px 10px;
+          -moz-border-radius: 10px 0 10px 10px;
+          -ms-border-radius: 10px 0 10px 10px;
+          border-radius: 10px 0 10px 10px; }
+          .chat-wrapper .message ul li.sent p span {
+            color: #eee; }
+      .chat-wrapper .message ul li.received {
+        /* Color: white */ }
+        .chat-wrapper .message ul li.received img {
+          float: left; }
+        .chat-wrapper .message ul li.received p {
+          color: #5e5e5e;
+          background: #FFF;
+          margin-left: 10px;
+          -webkit-border-radius: 0 10px 10px;
+          -moz-border-radius: 0 10px 10px;
+          -ms-border-radius: 0 10px 10px;
+          border-radius: 0 10px 10px; }
+          .chat-wrapper .message ul li.received p span {
+            color: #919191; }
+  .chat-wrapper .input-box {
+    position: absolute;
+    bottom: 0;
+    display: inline-block;
+    width: 100%;
+    height: 64px;
+    padding: 15px 20px;
+    background-color: #fff;
+    z-index: 98; }
+    .chat-wrapper .input-box button {
+      width: 35px;
+      height: 30px;
+      border: none;
+      outline: none;
+      background-color: #fff;
+      cursor: pointer; }
+      .chat-wrapper .input-box button i {
+        font-size: 1.6em;
+        vertical-align: middle; }
+      .chat-wrapper .input-box button.attachment {
+        color: #aaa; }
+        .chat-wrapper .input-box button.attachment:hover, .chat-wrapper .input-box button.attachment:focus {
+          color: #919191; }
+      .chat-wrapper .input-box button.send {
+        color: #54D48A; }
+        .chat-wrapper .input-box button.send:hover, .chat-wrapper .input-box button.send:focus {
+          color: #31c46f; }
+    .chat-wrapper .input-box input {
+      height: 34px;
+      width: calc(100% - 99px);
+      margin-left: 10px;
+      margin-right: 10px;
+      border: none;
+      outline: none; }
+      .chat-wrapper .input-box input::placeholder {
+        color: #c4c4c4;
+        opacity: 1; }
+      .chat-wrapper .input-box input:-ms-input-placeholder {
+        color: #c4c4c4; }
+      .chat-wrapper .input-box input::-ms-input-placeholder {
+        color: #c4c4c4; }
+
+/* Centered text between hr tag */
+.hr-text {
+  line-height: 1em;
+  position: relative;
+  outline: 0;
+  border: 0;
+  text-align: center;
+  height: 1.5em;
+  opacity: .7; }
+  .hr-text:before {
+    content: '';
+    /* background color of <hr> */
+    background-color: #d0d0d0;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px; }
+  .hr-text:after {
+    content: attr(data-content);
+    position: relative;
+    display: inline-block;
+    padding: 0 .5em;
+    line-height: 1.5em;
+    /* color and background color of text (at the center) */
+    color: #aaa;
+    background-color: #F2F8F8; }
+
+/* -------------------------------------( User-info wrapper )------------------------------------- */
+.user-wrapper {
+  width: 250px;
+  padding: 30px 20px;
+  color: #aaa;
+  font-family: "Open Sans";
+  background-color: #fff;
+  border-left: 1px solid #e8e8e8; }
+  .user-wrapper .image {
+    margin: 0 auto;
+    margin-bottom: 25px;
+    width: 150px;
+    height: 150px; }
+    .user-wrapper .image img {
+      width: 150px;
+      height: 150px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      border-radius: 50%; }
+  .user-wrapper .name {
+    text-align: center; }
+    .user-wrapper .name h4 {
+      color: #505559;
+      font-weight: 600; }
+  .user-wrapper ul {
+    margin-top: 25px;
+    list-style-type: none;
+    padding-left: 20px;
+    padding-right: 20px; }
+    .user-wrapper ul li {
+      display: block;
+      clear: both;
+      width: 100%; }
+      .user-wrapper ul li span {
+        float: left;
+        margin-right: 15px; }

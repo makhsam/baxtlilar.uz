@@ -21,7 +21,9 @@
 
 /* Login -- Register (images) */
 .image-wrapper {
-	
+	.form-group {
+		margin-top: 0;
+	}
 	.image-upload {
 		float: left;
 		width: 20%;
@@ -50,10 +52,6 @@
 	}
 }
 
-
-.img-responsive {
-	//background-color: #999999;
-}
 
 /* Login -- Register (box shadow) */
 .box-shadow-effect {
@@ -89,18 +87,42 @@
 		opacity: 0;
 	   	z-index: -1;
 	}
-	span {
+	span.passport-ext {
+		// position: absolute;
+		// bottom: 1em;
+		margin-top: 1em;
 		font-size: .9em;
 	}
 }
 
+.checkbox-pl-1 {
+	padding-left: 1em;
+}
 .checkbox-pl-2 {
 	padding-left: 1.5em;
 }
+
 
 #warning-step1, 
 #warning-step2, 
 #warning-step3 {
 	margin-top: 20px;
 	margin-bottom: 0;
+}
+
+#other-religion-wrapper {
+	display: none;
+	margin-top: 0;
+}
+
+// #dad_fieldset,
+// #mum_fieldset {
+// 	display: none;
+// }
+.hide-fieldset {
+	display: none;
+}
+
+#register_step2, #register_step3 {
+	display: none;
 }

@@ -218,85 +218,29 @@
   color: #ca2a2a;
   background-color: #fff; }
 
-/* Login -- Register (images) */
-.image-wrapper .form-group {
-  margin-top: 0; }
+html, body {
+  overflow-y: hidden;
+  height: 100%; }
 
-.image-wrapper .image-upload {
-  float: left;
-  width: 20%;
-  padding-right: 6px; }
-  .image-wrapper .image-upload input {
-    width: 0.1px;
-    height: 0.1px;
-    opacity: 0;
-    overflow: hidden;
-    position: absolute;
-    z-index: -1; }
-  .image-wrapper .image-upload img {
-    cursor: pointer; }
-
-.image-wrapper::after {
-  content: "";
-  clear: both;
-  display: table; }
-
-.image-wrapper > span {
-  display: block;
-  color: #C9312D;
-  clear: left; }
-
-/* Login -- Register (box shadow) */
-.box-shadow-effect {
-  background-color: #fff;
-  padding: 3em;
-  -webkit-box-shadow: 6px 6px 30px 0px rgba(85, 85, 85, 0.65);
-  -moz-box-shadow: 6px 6px 30px 0px rgba(85, 85, 85, 0.65);
-  box-shadow: 6px 6px 30px 0px rgba(85, 85, 85, 0.65); }
-
-.col-centered {
-  float: none;
-  margin: 0 auto; }
-
-.passport_upload {
-  position: relative;
-  margin-top: 2em;
-  margin-bottom: -15px; }
-  .passport_upload h4, .passport_upload label, .passport_upload span {
-    display: inline-block;
-    margin-right: 1em; }
-  .passport_upload label {
-    color: #555;
-    border: 1px solid #ccc;
-    padding: 6px 12px;
-    cursor: pointer; }
-  .passport_upload input {
-    position: absolute;
-    top: 0;
-    opacity: 0;
-    z-index: -1; }
-  .passport_upload span.passport-ext {
-    margin-top: 1em;
-    font-size: .9em; }
-
-.checkbox-pl-1 {
-  padding-left: 1em; }
-
-.checkbox-pl-2 {
-  padding-left: 1.5em; }
-
-#warning-step1,
-#warning-step2,
-#warning-step3 {
-  margin-top: 20px;
-  margin-bottom: 0; }
-
-#other-religion-wrapper {
-  display: none;
-  margin-top: 0; }
-
-.hide-fieldset {
-  display: none; }
-
-#register_step2, #register_step3 {
-  display: none; }
+.chat-widget {
+  height: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: rgba(0, 0, 0, 0.04); }
+  .chat-widget .container {
+    position: relative; }
+    .chat-widget .container .sidebar-wrapper,
+    .chat-widget .container .message-wrapper,
+    .chat-widget .container .sidebar-right-wrapper {
+      height: 100%;
+      overflow: hidden;
+      float: left; }
+    .chat-widget .container .sidebar-wrapper {
+      width: 100%;
+      background-color: #aaff80; }
+    .chat-widget .container .message-wrapper {
+      display: none;
+      background-color: #80d4ff; }
+    .chat-widget .container .sidebar-right-wrapper {
+      display: none;
+      background-color: #ff99cc; }

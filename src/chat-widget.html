@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Baxtlilar.uz</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!--Bootstrap 4-->
+  <link rel="stylesheet" href="css/bootstrap4.min.css">
+  <!--Google Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Rubik:300,400" rel="stylesheet">
+  <!--Google Material Icons-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Font Awesome-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/chat-widget.css">
+</head>
+<body>
+  <!--People wrapper-->
+  <div class="people-wrapper"> 
+    <!--Search-->
+    <div class="search">
+      <button id="contact-back-icon"><i class="material-icons">arrow_back</i></button>
+      <input id="search-input" type="text" placeholder="search">
+      <!-- <button><i class="fa fa-user-plus"></i></button> -->
+    </div>
+    <!--People's list (users with whome chatting is going on)-->
+    <div id="people-list" class="people-list">
+      <ul class="list-group">
+        <li class="list-group-item">
+          <div class="avatar">
+            <img src="images/user-profile1.jpg" alt="user-avatar">
+          </div>
+          <div class="list-content">
+            <span>28/02/2018</span>
+            <div class="title">Andrei Richard</div>
+            <span class="badge badge-pill badge-success">34</span>
+            <div class="description">Ut enim ad minim veniam sit amet, consectetur adipiscing elit </div>
+          </div>
+        </li>
+        <li class="list-group-item active">
+          <div class="avatar">
+            <img src="images/user-profile3.png" alt="user-avatar">
+          </div>
+          <div class="list-content">
+            <span>28/02/2018</span>
+            <div class="title">Chris Marina</div>
+            <span class="badge badge-pill badge-success">5</span>
+            <div class="description">Ut enim ad minim veniam sit amet, consectetur adipiscing elit </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!--Contact List (users who liked each other)-->
+    <div id="contact-list" class="people-list">
+      <ul class="list-group">
+        <li class="list-group-item">
+          <div class="avatar">
+            <img src="images/user-profile1.jpg" alt="user-avatar">
+          </div>
+          <div class="list-content">
+            <div class="title">Andrei Richard</div>
+            <div class="contact-description">some description</div>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="avatar">
+            <img src="images/user-profile3.png" alt="user-avatar">
+          </div>
+          <div class="list-content">
+            <div class="title">Chris Marina</div>
+            <div class="contact-description">some description</div>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="avatar">
+            <img src="images/user-profile2.jpg" alt="user-avatar">
+          </div>
+          <div class="list-content">
+            <div class="title">John Pullman</div>
+            <div class="contact-description">some description</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!--contact list icon-->
+    <div id="contact-list-icon">
+      <i class="fa fa-user-plus"></i>
+    </div>
+  </div>
+
+
+  <!--Chat wrapper-->
+  <div class="chat-wrapper">
+    <div class="header">
+      <span>
+        <i class="material-icons">more_vert</i>
+      </span>
+      <a href="#home">
+        <i class="material-icons">home</i>
+      </a>
+      <div class="user">John Pullman</div>
+      <div class="status">online</div>
+    </div>
+    <div class="message">
+      <ul class="clearfix">
+        <!--Recieved message-->
+        <li class="received">
+          <img src="images/user-profile3.png" alt="user-avatar" />
+          <p>How the hell am I supposed to get a jury to believe you when I am not even sure that I do?!
+            <span>10:26 AM</span>
+          </p>
+        </li>
+        <!--Sent message-->
+        <li class="sent">
+          <img src="images/user-profile2.jpg" alt="user-avatar" />
+          <p>When you're backed against the wall, break the god damn thing down.
+            <span>10:27 AM</span>
+          </p>
+        </li>
+      </ul>
+      <!--Line seperator: Time-->
+      <hr class="hr-text" data-content="September 12">
+      <ul class="clearfix">
+        <!--Recieved message-->
+        <li class="received">
+          <img src="images/user-profile3.png" alt="user-avatar" />
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper mollis lacinia. Vestibulum convallis ante eu varius vehicula. Phasellus pulvinar purus nec nulla pharetra placerat. Donec turpis velit, facilisis sit amet lacinia a, faucibus et mauris. Nulla consequat arcu tempor, facilisis nisl rutrum, semper enim. 
+            <span>10:30 AM</span>
+          </p>
+        </li>
+      </ul>
+    </div>
+    <div class="input-box">
+      <button type="button" class="attachment"><i class="fa fa-paperclip"></i></button>
+      <input type="text" name="message" placeholder="Write a message ...">
+      <button type="button" class="send"><i class="material-icons">send</i></button>
+    </div>
+  </div>
+
+
+  <!-- User-info wrapper -->
+  <div class="user-wrapper">
+    <div class="image">
+      <img src="images/user-profile3.png" alt="user-profile">
+    </div>
+    <div class="name">
+      <h4>Chris Marina</h4>
+      <i>UX/UI Designer</i>
+    </div>
+    <ul>
+      <li>
+        <span><i class="material-icons">location_on</i></span>
+        <div>Shanghai, China</div>
+      </li>
+      <li>
+        <span><i class="material-icons">email</i></span>
+        <div>starbox@mail.ru</div>
+      </li>
+      <li>
+        <span><i class="material-icons">cake</i></span>
+        <div>April 25, 1990</div>
+      </li>
+      <li>
+        <span><i class="material-icons">phone_iphone</i></span>
+        <div>12012345678</div>
+      </li>
+    </ul>
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/chat-widget.js"></script>
+</body>
+</html>

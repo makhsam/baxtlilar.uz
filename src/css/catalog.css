@@ -218,85 +218,84 @@
   color: #ca2a2a;
   background-color: #fff; }
 
-/* Login -- Register (images) */
-.image-wrapper .form-group {
-  margin-top: 0; }
+form.input-group {
+  margin-top: 1em;
+  margin-bottom: 2em;
+  padding: 0 8px; }
+  form.input-group h4 {
+    font-size: 1em;
+    float: left;
+    margin-top: 11px;
+    margin-bottom: 11px;
+    margin-right: 10px; }
+  form.input-group .bootstrap-select button {
+    border-radius: 0;
+    width: 300px; }
+  form.input-group .form-control {
+    box-shadow: none;
+    transition: none;
+    border-radius: 0;
+    width: 40%;
+    min-width: 300px;
+    float: right; }
+    form.input-group .form-control:focus {
+      border: 1px solid #ccc; }
+    @media (max-width: 768px) {
+      form.input-group .form-control {
+        width: 100%; } }
+  form.input-group .input-group-btn .btn {
+    border-radius: 0;
+    padding: 8px; }
+    form.input-group .input-group-btn .btn i {
+      vertical-align: middle; }
 
-.image-wrapper .image-upload {
-  float: left;
-  width: 20%;
-  padding-right: 6px; }
-  .image-wrapper .image-upload input {
-    width: 0.1px;
-    height: 0.1px;
-    opacity: 0;
-    overflow: hidden;
-    position: absolute;
-    z-index: -1; }
-  .image-wrapper .image-upload img {
-    cursor: pointer; }
-
-.image-wrapper::after {
-  content: "";
-  clear: both;
-  display: table; }
-
-.image-wrapper > span {
-  display: block;
-  color: #C9312D;
-  clear: left; }
-
-/* Login -- Register (box shadow) */
-.box-shadow-effect {
-  background-color: #fff;
-  padding: 3em;
-  -webkit-box-shadow: 6px 6px 30px 0px rgba(85, 85, 85, 0.65);
-  -moz-box-shadow: 6px 6px 30px 0px rgba(85, 85, 85, 0.65);
-  box-shadow: 6px 6px 30px 0px rgba(85, 85, 85, 0.65); }
-
-.col-centered {
-  float: none;
-  margin: 0 auto; }
-
-.passport_upload {
-  position: relative;
-  margin-top: 2em;
-  margin-bottom: -15px; }
-  .passport_upload h4, .passport_upload label, .passport_upload span {
-    display: inline-block;
-    margin-right: 1em; }
-  .passport_upload label {
-    color: #555;
-    border: 1px solid #ccc;
-    padding: 6px 12px;
-    cursor: pointer; }
-  .passport_upload input {
-    position: absolute;
-    top: 0;
-    opacity: 0;
-    z-index: -1; }
-  .passport_upload span.passport-ext {
-    margin-top: 1em;
-    font-size: .9em; }
-
-.checkbox-pl-1 {
-  padding-left: 1em; }
-
-.checkbox-pl-2 {
-  padding-left: 1.5em; }
-
-#warning-step1,
-#warning-step2,
-#warning-step3 {
-  margin-top: 20px;
-  margin-bottom: 0; }
-
-#other-religion-wrapper {
-  display: none;
-  margin-top: 0; }
-
-.hide-fieldset {
-  display: none; }
-
-#register_step2, #register_step3 {
-  display: none; }
+.card-grid {
+  width: 100%; }
+  .card-grid .card-wrap {
+    float: left;
+    width: 100%;
+    padding: 8px; }
+    @media (min-width: 576px) {
+      .card-grid .card-wrap {
+        width: 50%; } }
+    @media (min-width: 768px) {
+      .card-grid .card-wrap {
+        width: 33.33333%; } }
+    @media (min-width: 992px) {
+      .card-grid .card-wrap {
+        width: 25%; } }
+    .card-grid .card-wrap .card {
+      background-color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      -moz-transition: all 0.3s ease-out;
+      -o-transition: all 0.3s ease-out;
+      -webkit-transition: all 0.3s ease-out;
+      -ms-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out; }
+      .card-grid .card-wrap .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
+      .card-grid .card-wrap .card div.card-image {
+        width: 100%;
+        height: 300px;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat; }
+        @media (min-width: 576px) {
+          .card-grid .card-wrap .card div.card-image {
+            height: 300px; } }
+        @media (min-width: 768px) {
+          .card-grid .card-wrap .card div.card-image {
+            height: 300px; } }
+        @media (min-width: 992px) {
+          .card-grid .card-wrap .card div.card-image {
+            height: 300px; } }
+      .card-grid .card-wrap .card div.content {
+        padding: .5em 1em 1em 1em; }
+        .card-grid .card-wrap .card div.content h4 {
+          font-size: 1em; }
+  .card-grid:after {
+    content: "";
+    display: table;
+    clear: both; }

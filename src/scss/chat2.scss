@@ -1,0 +1,57 @@
+
+@mixin transition($transition) {
+    -moz-transition:    all $transition ease-out;
+    -o-transition:      all $transition ease-out;
+    -webkit-transition: all $transition ease-out;
+    -ms-transition: 	all $transition ease-out;
+    transition:         all $transition ease-out;
+}
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	   -moz-border-radius: $radius;
+		-ms-border-radius: $radius;
+			border-radius: $radius;
+}
+
+@import 'bootstrap/variables';
+@import 'template-style';
+
+html, body {
+    overflow-y:hidden;
+    height:100%;
+}
+
+.chat-widget {
+    height: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: rgba($brand-black,.04);
+    
+    .container {
+        position: relative;
+        .sidebar-wrapper,
+        .message-wrapper,
+        .sidebar-right-wrapper {
+            height: 100%;
+            overflow: hidden;
+            float: left;
+            //@include transition(.3s);
+        }
+        .sidebar-wrapper {
+            //display: none;
+            width: 100%;
+            background-color: #aaff80;
+        }
+        .message-wrapper {
+            display: none;
+            //width: 100%;
+            background-color: #80d4ff;
+        }
+        .sidebar-right-wrapper {
+            display: none;
+            // width: 25%;
+            background-color: #ff99cc;
+        }
+    }
+}

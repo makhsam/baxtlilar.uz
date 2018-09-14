@@ -1356,21 +1356,25 @@ label.radio-inline {
   cursor: pointer;
   padding-left: 45px;
   position: relative;
-  color: rgba(0,0,0, 0.26);
+  /* color: rgba(0,0,0, 0.26); */
+  color: rgba(0,0,0, 0.46); 
 }
 .form-group.is-focused .radio label,
 .form-group.is-focused label.radio-inline {
-  color: rgba(0,0,0, 0.26);
+  /* color: rgba(0,0,0, 0.26); */
+  color: rgba(0,0,0, 0.46);
 }
 .form-group.is-focused .radio label:hover,
 .form-group.is-focused label.radio-inline:hover,
 .form-group.is-focused .radio label:focus,
 .form-group.is-focused label.radio-inline:focus {
-  color: rgba(0,0,0, .54);
+  /*color: rgba(0,0,0, 0.54);*/
+  color: rgba(0,0,0, 0.74); 
 }
 fieldset[disabled] .form-group.is-focused .radio label,
 fieldset[disabled] .form-group.is-focused label.radio-inline {
-  color: rgba(0,0,0, 0.26);
+  /* color: rgba(0,0,0, 0.26); */
+  color: rgba(0,0,0, 0.46);
 }
 .radio span,
 label.radio-inline span {
@@ -1703,17 +1707,20 @@ output {
 }
 .form-control::-moz-placeholder,
 .form-group .form-control::-moz-placeholder {
-  color: #BDBDBD;
+  /* color: #BDBDBD; */
+  color: #999;
   font-weight: 400;
 }
 .form-control:-ms-input-placeholder,
 .form-group .form-control:-ms-input-placeholder {
-  color: #BDBDBD;
+  /* color: #BDBDBD; */
+  color: #999;
   font-weight: 400;
 }
 .form-control::-webkit-input-placeholder,
 .form-group .form-control::-webkit-input-placeholder {
-  color: #BDBDBD;
+  /* color: #BDBDBD; */
+  color: #999;
   font-weight: 400;
 }
 .form-control[readonly],
@@ -1776,7 +1783,8 @@ fieldset[disabled] .form-group .form-control {
 }
 .form-group.is-focused.label-placeholder label,
 .form-group.is-focused.label-placeholder label.control-label {
-  color: #BDBDBD;
+  /* color: #BDBDBD; */
+  color: #999;
 }
 .form-group.is-focused .help-block {
   display: block;
@@ -1857,19 +1865,22 @@ fieldset[disabled] .form-group .form-control {
 .form-control::-moz-placeholder {
   font-size: 16px;
   line-height: 1.42857143;
-  color: #BDBDBD;
+  /* color: #BDBDBD; */
+  color: #999;
   font-weight: 400;
 }
 .form-control:-ms-input-placeholder {
   font-size: 16px;
   line-height: 1.42857143;
-  color: #BDBDBD;
+  /* color: #BDBDBD; */
+  color: #999;
   font-weight: 400;
 }
 .form-control::-webkit-input-placeholder {
   font-size: 16px;
   line-height: 1.42857143;
-  color: #BDBDBD;
+  /* color: #BDBDBD; */
+  color: #999;
   font-weight: 400;
 }
 .checkbox label,
@@ -1877,7 +1888,8 @@ fieldset[disabled] .form-group .form-control {
 label {
   font-size: 16px;
   line-height: 1.42857143;
-  color: #BDBDBD;
+  /* color: #BDBDBD; */
+  color: #999;
   font-weight: 400;
 }
 label.control-label {
@@ -1900,19 +1912,22 @@ label.control-label {
 .form-group .form-control::-moz-placeholder {
   font-size: 16px;
   line-height: 1.42857143;
-  color: #BDBDBD;
+  /* color: #BDBDBD; */
+  color: #999;
   font-weight: 400;
 }
 .form-group .form-control:-ms-input-placeholder {
   font-size: 16px;
   line-height: 1.42857143;
-  color: #BDBDBD;
+  /* color: #BDBDBD; */
+  color: #999;
   font-weight: 400;
 }
 .form-group .form-control::-webkit-input-placeholder {
   font-size: 16px;
   line-height: 1.42857143;
-  color: #BDBDBD;
+  /* color: #BDBDBD; */
+  color: #999;
   font-weight: 400;
 }
 .form-group .checkbox label,
@@ -1920,7 +1935,8 @@ label.control-label {
 .form-group label {
   font-size: 16px;
   line-height: 1.42857143;
-  color: #BDBDBD;
+  /*color: #BDBDBD;*/
+  color: #999;
   font-weight: 400;
 }
 .form-group label.control-label {
@@ -1963,19 +1979,22 @@ label.control-label {
 .form-group.form-group-sm .form-control::-moz-placeholder {
   font-size: 11px;
   line-height: 1.5;
-  color: #BDBDBD;
+  /* color: #BDBDBD; */
+  color: #999;
   font-weight: 400;
 }
 .form-group.form-group-sm .form-control:-ms-input-placeholder {
   font-size: 11px;
   line-height: 1.5;
-  color: #BDBDBD;
+  /* color: #BDBDBD; */
+  color: #999;
   font-weight: 400;
 }
 .form-group.form-group-sm .form-control::-webkit-input-placeholder {
   font-size: 11px;
   line-height: 1.5;
-  color: #BDBDBD;
+  /* color: #BDBDBD; */
+  color: #999;
   font-weight: 400;
 }
 .form-group.form-group-sm .checkbox label,
@@ -1983,7 +2002,8 @@ label.control-label {
 .form-group.form-group-sm label {
   font-size: 11px;
   line-height: 1.5;
-  color: #BDBDBD;
+  /* color: #BDBDBD; */
+  color: #999;
   font-weight: 400;
 }
 .form-group.form-group-sm label.control-label {
@@ -2026,19 +2046,22 @@ label.control-label {
 .form-group.form-group-lg .form-control::-moz-placeholder {
   font-size: 18px;
   line-height: 1.3333333;
-  color: #BDBDBD;
+  /* color: #BDBDBD; */
+  color: #999;
   font-weight: 400;
 }
 .form-group.form-group-lg .form-control:-ms-input-placeholder {
   font-size: 18px;
   line-height: 1.3333333;
-  color: #BDBDBD;
+  /* color: #BDBDBD; */
+  color: #999;
   font-weight: 400;
 }
 .form-group.form-group-lg .form-control::-webkit-input-placeholder {
   font-size: 18px;
   line-height: 1.3333333;
-  color: #BDBDBD;
+  /* color: #BDBDBD; */
+  color: #999;
   font-weight: 400;
 }
 .form-group.form-group-lg .checkbox label,
@@ -2046,7 +2069,8 @@ label.control-label {
 .form-group.form-group-lg label {
   font-size: 18px;
   line-height: 1.3333333;
-  color: #BDBDBD;
+  /* color: #BDBDBD; */
+  color: #999;
   font-weight: 400;
 }
 .form-group.form-group-lg label.control-label {
