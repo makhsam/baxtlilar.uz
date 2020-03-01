@@ -84,21 +84,72 @@ $(document).ready(function(){
                 $(element).closest('.form-group').removeClass("has-error");
             },
             rules: {
-                name: "required",
-                surname: "required",
-                patronymic: "required",
-                nickname: "required",
+                // Step #1
+                fullname: {
+                    required: true
+                },
                 birthday: {
                     required: true,
                     datePicker: true,
                     birthDate: true,
                 }, 
-                birth_place: {
+                country: {
+                    required: true,
+                    valueNotEquals: "default"
+                },
+                city: {
+                    required: true
+                },
+                address: {
                     required: true,
                     minlength: 5,
                 },
+                tel_number: {
+                    required: true,
+                },
+                mobile_number: {
+                    required: true,
+                }, 
+                email: {
+                    required: true,
+                    email: true
+                },
+                passport_serial: {
+                    required: true,
+                    passportFormat: true,
+                },
+                passport_issued_by: {
+                    required: true,
+                },
+                passport_when_issued: {
+                    required: true,
+                },
+                passport_img: {
+                    required: true,
+                    accept: "image/*,application/pdf"
+                }, 
+
+                // Step #2
+                nickname: {
+                    required: true
+                },
+                user_sex: {
+                    required: true,
+                    valueNotEquals: "default"
+                },
+                age: {
+                    required: true,
+                    range: [5,150]
+                },
+                birth_place: {
+                    required: true,
+                },
+                nationality: {
+                    required: true,
+                },
                 zodiak: {
                     required: true,
+                    valueNotEquals: "default"
                 },
                 height: {
                     required: true,
@@ -106,39 +157,24 @@ $(document).ready(function(){
                 },
                 weight: {
                     required: true,
-                    range: [20,350]
+                    range: [10,350]
                 },
-                country: {
+                eye_color: {
                     required: true,
+                    valueNotEquals: "default"
                 },
-                city: {
-                    required: true,
-                },
-                house: {
-                    required: true,
-                }, 
-                home: {
+                citizenship: {
                     required: true,
                 },
-                tel: {
+                religion: {
                     required: true,
+                    valueNotEquals: "default"
                 },
-                mobile: {
-                    required: true,
-                }, 
-                tel_relative: {
-                    required: true,
-                },
-                passport: {
-                    required: true,
-                    accept: "image/*,application/pdf"
-                }, 
-                passport_serial: {
-                    required: true,
-                    passportFormat: true,
+                attitude_to_religion: {
+                    required: true
                 },
                 education: {
-                    required: true,
+                    required: true
                 },
                 employment: {
                     required: true,
@@ -146,11 +182,10 @@ $(document).ready(function(){
                 profession: {
                     required: true,
                 },
-                attitude_to_alcohol: {
+                hobby: {
                     required: true,
-                    valueNotEquals: "default"
                 },
-                attitude_to_smoking: {
+                family_status: {
                     required: true,
                     valueNotEquals: "default"
                 },
@@ -158,81 +193,124 @@ $(document).ready(function(){
                     required: true,
                     minlength: 10
                 },
-                nationality: {
+
+                // Step #3
+                dad_info: {
                     required: true,
+                    minlength: 3
                 },
-                other_religion: {
+                mum_info: {
                     required: true,
+                    minlength: 3
                 },
-                attitude_to_religion: {
+                brother_info: {
                     required: true,
+                    minlength: 3
                 },
-                dad_name: {
-                    required: "#dad_checkbox:checked",
-                },
-                dad_birthday: {
-                    required: "#dad_checkbox:checked",
-                },
-                dad_national: {
-                    required: "#dad_checkbox:checked",
-                },
-                dad_spec: {
-                    required: "#dad_checkbox:checked",
-                },
-                dad_position: {
-                    required: "#dad_checkbox:checked",
-                },
-                mum_name: {
-                    required: "#mum_checkbox:checked",
-                },
-                mum_birthday: {
-                    required: "#mum_checkbox:checked",
-                },
-                mum_national: {
-                    required: "#mum_checkbox:checked",
-                },
-                mum_spec: {
-                    required: "#mum_checkbox:checked",
-                },
-                mum_position: {
-                    required: "#mum_checkbox:checked",
+                sister_info: {
+                    required: true,
+                    minlength: 3
                 },
                 parents_marriage: {
                     required: true,
-                    datePicker: true,
+                },
+                attitude_to_smoking: {
+                    required: true,
+                    valueNotEquals: "default"
+                },
+                attitude_to_alcohol: {
+                    required: true,
+                    valueNotEquals: "default"
+                },
+                attitude_to_narcotic: {
+                    required: true,
+                    valueNotEquals: "default"
                 },
                 health: {
-                    required: true,
-                    minlength: 10,
+                    required: true
                 },
-                hobby: {
+                financial_situation: {
                     required: true,
+                    valueNotEquals: "default"
+                },
+                living_space: {
+                    required: true,
+                    valueNotEquals: "default"
+                },
+                is_ready_to_live_together: {
+                    required: true,
+                    valueNotEquals: "default"
                 },
                 about: {
                     required: true,
                     minlength: 10,
                 },
-                where_get_us: {
-                    required: true,
-                },
+
+                // Step #4
                 partner_age_from: {
                     required: true,
                 },
                 partner_age_to: {
                     required: true,
                 },
-                partner_profession: {
+                partner_country: {
                     required: true,
                 },
-                partner_height: {
+                partner_nationality: {
                     required: true,
                 },
-                partner_weight: {
-                    required: true,
-                },
-                wished_city: {
+                partner_religion: {
                     required: true,
                     valueNotEquals: "default"
+                },
+                partner_family_status: {
+                    required: true,
+                    valueNotEquals: "default"
+                },
+                partner_living_space: {
+                    required: true,
+                    valueNotEquals: "default"
+                },
+                partner_attitude_to_smoking: {
+                    required: true,
+                    valueNotEquals: "default"
+                },
+                partner_attitude_to_alcohol: {
+                    required: true,
+                    valueNotEquals: "default"
+                },
+                partner_attitude_to_narcotic: {
+                    valueNotEquals: "default"
+                },
+                partner_finance: {
+                    required: true,
+                    valueNotEquals: "default"
+                },
+                partner_profession: {
+                    required: true
+                },
+                partner_height_from: {
+                    required: true,
+                },
+                partner_height_to: {
+                    required: true,
+                },
+                partner_weight_from: {
+                    required: true
+                },
+                partner_weight_to: {
+                    required: true
+                },
+                partner_attitude_to_childs: {
+                    required: true,
+                    valueNotEquals: "default"
+                },
+                profile_mode: {
+                    required: true,
+                    valueNotEquals: "default"
+                },
+                where_get_us: {
+                    required: true
                 },
                 relative_name_1: {
                     required: true,
@@ -241,20 +319,7 @@ $(document).ready(function(){
                     required: true,
                     email: true
                 },
-                relative_name_2: {
-                    required: true,
-                },
-                relative_email_2: {
-                    required: true,
-                    email: true
-                },
-                relative_name_3: {
-                    required: true,
-                },
-                relative_email_3: {
-                    required: true,
-                    email: true
-                }, 
+                
                 terms_n_conditions: {
                     required: true,
                 }
@@ -266,146 +331,210 @@ $(document).ready(function(){
              */
             
             messages: {
-                name: {
-                    required: "Это поле обязательно к заполнению",
-                },
-                surname: {
-                    required: "Это поле обязательно к заполнению",
-                }, 
-                patronymic: {
-                    required: "Это поле обязательно к заполнению",
-                }, 
-                nickname: {
+
+                // Step #1
+                fullname: {
                     required: "Это поле обязательно к заполнению",
                 },
                 birthday: {
                     required: "Это поле обязательно к заполнению",
                 }, 
-                birth_place: {
-                    required: "Это поле обязательно к заполнению",
-                    minlength: "Введите не менее 5 символов"
-                },
-                zodiak: {
-                    required: "Это поле обязательно к заполнению",
-                },
-                height: {
-                    required: "Это поле обязательно к заполнению",
-                    range: "Введите действительное значение",
-                },
-                weight: {
-                    required: "Это поле обязательно к заполненбию",
-                    range: "Введите действительное значение",
-                },
                 country: {
                     required: "Это поле обязательно к заполнению",
                 },
                 city: {
                     required: "Это поле обязательно к заполнению",
                 },
-                house: {
+                address: {
                     required: "Это поле обязательно к заполнению",
-                }, 
-                home: {
+                    minlength: "Введите не менее 5 символов",
+                },
+                tel_number: {
                     required: "Это поле обязательно к заполнению",
                 },
-                tel: {
-                    required: "Это поле обязательно к заполнению",
-                },
-                mobile: {
+                mobile_number: {
                     required: "Это поле обязательно к заполнению",
                 }, 
-                tel_relative: {
+                email: {
                     required: "Это поле обязательно к заполнению",
+                    email: "Введите действующий адрес электронной почты"
                 },
-                passport: {
-                    required: "Выберите паспорт",
-                    accept: "Недействительный тип файла"
-                }, 
                 passport_serial: {
                     required: "Это поле обязательно к заполнению",
                 },
-                passport_number: {
+                passport_issued_by: {
                     required: "Это поле обязательно к заполнению",
+                },
+                passport_when_issued: {
+                    required: "Это поле обязательно к заполнению",
+                },
+                passport_img: {
+                    required: "Это поле обязательно к заполнению",
+                    accept: "Недействительный тип файла"
+                }, 
+
+                // Step #2
+                nickname: {
+                    required: "Заполните поле",
+                },
+                user_sex: {
+                    required: "Это поле обязательно к заполнению",
+                },
+                age: {
+                    required: "Заполните поле",
+                    range: "Не действительный возраст"
+                },
+                birth_place: {
+                    required: "Заполните поле",
+                },
+                nationality: {
+                    required: "Заполните поле",
+                },
+                zodiak: {
+                    required: "Это поле обязательно к заполнению",
+                },
+                height: {
+                    required: "Заполните поле",
+                    range: "Не действительный рост"
+                },
+                weight: {
+                    required: "Заполните поле",
+                    range: "Не действительный вес"
+                },
+                eye_color: {
+                    required: "Это поле обязательно к заполнению",
+                },
+                citizenship: {
+                    required: "Заполните поле",
+                },
+                religion: {
+                    required: "Это поле обязательно к заполнению",
+                },
+                attitude_to_religion: {
+                    required: "Заполните поле",
                 },
                 education: {
-                    required: "Это поле обязательно к заполнению",
+                    required: "Заполните поле",
                 },
                 employment: {
-                    required: "Это поле обязательно к заполнению",
+                    required: "Заполните поле",
                 },
                 profession: {
+                    required: "Заполните поле",
+                },
+                hobby: {
+                    required: "Это поле обязательно к заполнению",
+                },
+                family_status: {
                     required: "Это поле обязательно к заполнению",
                 },
                 kids: {
                     required: "Это поле обязательно к заполнению",
+                    minlength: "Введите не менее 5 символов"
                 },
-                nationality: {
+
+                // Step #3
+                dad_info: {
                     required: "Это поле обязательно к заполнению",
+                    minlength: "Введите не менее 5 символов"                
                 },
-                attitude_to_religion: {
+                mum_info: {
                     required: "Это поле обязательно к заполнению",
+                    minlength: "Введите не менее 5 символов"                
                 },
-                dad_name: {
+                brother_info: {
                     required: "Это поле обязательно к заполнению",
+                    minlength: "Введите не менее 5 символов"                
                 },
-                dad_birthday: {
+                sister_info: {
                     required: "Это поле обязательно к заполнению",
-                },
-                dad_national: {
-                    required: "Это поле обязательно к заполнению",
-                },
-                dad_spec: {
-                    required: "Это поле обязательно к заполнению",
-                },
-                dad_position: {
-                    required: "Это поле обязательно к заполнению",
-                },
-                mum_name: {
-                    required: "Это поле обязательно к заполнению",
-                },
-                mum_birthday: {
-                    required: "Это поле обязательно к заполнению",
-                },
-                mum_national: {
-                    required: "Это поле обязательно к заполнению",
-                },
-                mum_spec: {
-                    required: "Это поле обязательно к заполнению",
-                },
-                mum_position: {
-                    required: "Это поле обязательно к заполнению",
+                    minlength: "Введите не менее 5 символов"                
                 },
                 parents_marriage: {
+                    required: "Это поле обязательно к заполнению"
+                },
+                attitude_to_smoking: {
+                    required: "Это поле обязательно к заполнению",
+                },
+                attitude_to_alcohol: {
+                    required: "Это поле обязательно к заполнению",
+                },
+                attitude_to_narcotic: {
                     required: "Это поле обязательно к заполнению",
                 },
                 health: {
                     required: "Это поле обязательно к заполнению",
                 },
-                hobby: {
+                financial_situation: {
+                    required: "Это поле обязательно к заполнению",
+                },
+                living_space: {
+                    required: "Это поле обязательно к заполнению",
+                },
+                is_ready_to_live_together: {
                     required: "Это поле обязательно к заполнению",
                 },
                 about: {
                     required: "Это поле обязательно к заполнению",
+                    minlength: "Введите не менее 5 символов",
                 },
-                where_get_us: {
-                    required: "Это поле обязательно к заполнению",
-                },
+
+                // Step #4
                 partner_age_from: {
-                    required: "Это поле обязательно к заполнению",
+                    required: "Заполните поле",
                 },
                 partner_age_to: {
+                    required: "Заполните поле",
+                },
+                partner_country: {
+                    required: "Заполните поле",
+                },
+                partner_nationality: {
+                    required: "Заполните поле",
+                },
+                partner_religion: {
+                    required: "Это поле обязательно к заполнению",
+                },
+                partner_family_status: {
+                    required: "Это поле обязательно к заполнению",
+                },
+                partner_living_space: {
+                    required: "Это поле обязательно к заполнению",
+                },
+                partner_attitude_to_smoking: {
+                    required: "Это поле обязательно к заполнению",
+                },
+                partner_attitude_to_alcohol: {
+                    required: "Это поле обязательно к заполнению",
+                },
+                partner_attitude_to_narcotic: {
+                    required: "Это поле обязательно к заполнению",
+                },
+                partner_finance: {
                     required: "Это поле обязательно к заполнению",
                 },
                 partner_profession: {
                     required: "Это поле обязательно к заполнению",
                 },
-                partner_height: {
+                partner_height_from: {
+                    required: "Заполните поле",
+                },
+                partner_height_to: {
+                    required: "Заполните поле",
+                },
+                partner_weight_from: {
+                    required: "Заполните поле",
+                },
+                partner_weight_to: {
+                    required: "Заполните поле",
+                },
+                partner_attitude_to_childs: {
                     required: "Это поле обязательно к заполнению",
                 },
-                partner_weight: {
+                profile_mode: {
                     required: "Это поле обязательно к заполнению",
                 },
-                wished_city: {
+                where_get_us: {
                     required: "Это поле обязательно к заполнению",
                 },
                 relative_name_1: {
@@ -414,24 +543,11 @@ $(document).ready(function(){
                 relative_email_1: {
                     required: "Это поле обязательно к заполнению",
                     email: "Введите действующий адрес электронной почты"
-                },
-                relative_name_2: {
-                    required: "Это поле обязательно к заполнению",
-                },
-                relative_email_2: {
-                    required: "Это поле обязательно к заполнению",
-                    email: "Введите действующий адрес электронной почты"
-                },
-                relative_name_3: {
-                    required: "Это поле обязательно к заполнению",
-                },
-                relative_email_3: {
-                    required: "Это поле обязательно к заполнению",
-                    email: "Введите действующий адрес электронной почты"
                 }, 
                 terms_n_conditions: {
                     required: "Это поле обязательно к заполнению",
                 }
+
             }
         });
 
@@ -440,12 +556,20 @@ $(document).ready(function(){
         
         // When .btn-next is pressed
         if (form.valid() === true){
-            if ($('#register_step1').is(":visible")){
+            if ($('#register_step1').is(":visible"))
+            {
                 current_fieldset = $('#register_step1');
                 next_fieldset = $('#register_step2');
-            }else if($('#register_step2').is(":visible")){
+            } 
+            else if($('#register_step2').is(":visible"))
+            {
                 current_fieldset = $('#register_step2');
                 next_fieldset = $('#register_step3');
+            } 
+            else if($('#register_step3').is(":visible")) 
+            {
+                current_fieldset = $('#register_step3');
+                next_fieldset = $('#register_step4');
             }
             
             
@@ -462,13 +586,22 @@ $(document).ready(function(){
 
     // When prev button is clicked
     $('.btn-prev').click(function(){
-        if($('#register_step2').is(":visible")){
+        if($('#register_step2').is(":visible"))
+        {
             current_fieldset = $('#register_step2');
             next_fieldset = $('#register_step1');
-        }else if ($('#register_step3').is(":visible")){
+        }
+        else if ($('#register_step3').is(":visible"))
+        {
             current_fieldset = $('#register_step3');
             next_fieldset = $('#register_step2');
         }
+        else if ($('#register_step4').is(":visible"))
+        {
+            current_fieldset = $('#register_step4');
+            next_fieldset = $('#register_step3');
+        }
+
         next_fieldset.show(); 
         current_fieldset.hide();
         html_body.animate({
@@ -489,7 +622,9 @@ $(document).ready(function(){
     });
     // Mask tel fields
     $('.tel-mask').mask('(00) 000 00 00');
-
+    // Date Fields
+    $('#birthday').mask('00/00/0000');
+    $('#parents_marriage').mask('00/00/0000');
 
     // Hide and show input field to type other religion
     var other_religion_field = $('#other-religion-wrapper');
@@ -502,17 +637,23 @@ $(document).ready(function(){
     });
 
     // Hide, show dad & mum info fieldset
-    var mum_field = $('#mum_fieldset').addClass('hide-fieldset');
-    var dad_field = $('#dad_fieldset').addClass('hide-fieldset');
-    var dad_checkbox = $('#dad_checkbox');
-    var mum_checkbox = $('#mum_checkbox');
+    var conviction_field = $('#conviction_field').addClass('hide-fieldset');
+    var conviction_checkbox = $('#conviction_checkbox');
 
-    dad_checkbox.click(function() {
-        dad_field[this.checked ? "removeClass" : "addClass"]('hide-fieldset');
+    conviction_checkbox.click(function() {
+        conviction_field[this.checked ? "removeClass" : "addClass"]('hide-fieldset');
     });
 
-    mum_checkbox.click(function() {
-        mum_field[this.checked ? "removeClass" : "addClass"]('hide-fieldset');
+
+    // Disable & Enable Submit button when terms-n-conditions is checked
+    var terms_checkbox = $("#terms_n_conditions");
+    var btn_submit = $("#btn-submit").addClass("disabled").attr("type", "button");
+    terms_checkbox.click(function() {
+        if (this.checked) {
+            btn_submit.removeClass("disabled").attr("type", "submit");
+        } else {
+            btn_submit.addClass("disabled").attr("type", "button");
+        }
     });
 
 

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>Baxtlilar.uz</title>
+ 
+        <!--Favicon icon-->
+        <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="images/favicon/favicon.ico" type="image/x-icon">
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Marmelad&amp;subset=cyrillic" rel="stylesheet">
+        <!--Google Material Icons-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Font Awesome-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <!--Bootstrap Select-->
+        <link rel="stylesheet" href="css/bootstrap-select.css">
+        <!-- Theme style  -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/user.css">
+        <!--Jasny bootstrap-->
+        <link rel="stylesheet" href="css/jasny-bootstrap.min.css">
+        <!--Image gallery plugin-->
+        <link rel="stylesheet" href="css/ekko-lightbox.css">
+        <!-- Modernizr JS -->
+        <script src="js/modernizr-2.6.2.min.js"></script>
+        <!-- FOR IE9 below -->
+        <!--[if lt IE 9]>
+        <script src="js/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    
+	<body>	
+	<!-- Fixed navbar -->
+    <nav id="navbar-template" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar top-bar"></span>
+                    <span class="icon-bar middle-bar"></span>
+                    <span class="icon-bar bottom-bar"></span>
+                </button>
+                <a class="navbar-logo" href="index.html">
+                    <img src="images/logo_light.png" style="width: 120px; height: auto"/>
+                </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right nav-animation">
+                    <li><a href="#home">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#about" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Information</a></li>
+                            <li><a href="#">Questions</a></li>
+                            <li><a href="#">Feedback</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#catalog">Catalog</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li class="active"><a href="#cabinet">Cabinet</a></li>
+                    <li><a href="#register">Register</a></li>
+                    <li class="dropdown">
+                        <a href="#about" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-user" style="margin-right:4px"></i><span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#profile">My Profile</a></li>
+                            <li><a href="#logout">Logout</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <select class="selectpicker" data-width="fit" onchange="redirect(this)">
+                            <option data-content='<img src="images/flags/rus.png"> RU'>RU</option>
+                            <option data-content='<img src="images/flags/uzb.png"> UZ'>UZ</option>
+                            <option data-content='<img src="images/flags/eng.png"> EN'>EN</option>
+                        </select>
+                    </li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+
+	<div class="main-wrapper" style="min-height: 500px;">
+		<div class="container">
+            <div class="row profile">
+                <div class="col-md-3">
+                    <div class="profile-sidebar">
+                        <!-- SIDEBAR USERPIC -->
+                        <div class="profile-userpic">
+                            <!-- <img src="images/user-profile1.jpg" class="img-responsive" alt=""> -->
+                            <a href="https://unsplash.it/1200/768.jpg?image=1027" data-toggle="lightbox" data-gallery="hidden-images">
+                                <img src="https://unsplash.it/200.jpg?image=1027" class="img-responsive" alt="user-profile">
+                            </a>      
+                            <div data-toggle="lightbox" data-gallery="hidden-images" data-remote="https://unsplash.it/1200/768.jpg?image=265"></div>
+                            <div data-toggle="lightbox" data-gallery="hidden-images" data-remote="https://unsplash.it/1200/768.jpg?image=266"></div>
+                        </div> 
+                        <!-- END SIDEBAR USERPIC -->
+                        <!-- SIDEBAR USER TITLE -->
+                        <div class="profile-usertitle">
+                            <div class="profile-usertitle-name">
+                                Chris Marina
+                            </div>
+                            <div class="profile-usertitle-job">
+                                Designer
+                            </div>
+                        </div>
+                        <!-- END SIDEBAR USER TITLE -->
+                        
+                        <!-- SIDEBAR MENU -->
+                        <div class="profile-usermenu">
+                            <ul class="nav">
+                                <li>
+                                    <a href="#">
+                                    <i class="glyphicon glyphicon-home"></i>
+                                    User info </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                    <i class="glyphicon glyphicon-user"></i>
+                                    Services </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank">
+                                    <i class="glyphicon glyphicon-ok"></i>
+                                    Payment page </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                    <i class="glyphicon glyphicon-flag"></i>
+                                    Chat </a>
+                                </li>
+                                <li class="active">
+                                    <a href="#">
+                                    <i class="glyphicon glyphicon-flag"></i>
+                                    Friend requests </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                    <i class="glyphicon glyphicon-flag"></i>
+                                    My likes </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- END MENU -->
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div id="likes">
+                        <!--main content-->
+                        <div class="table-responsive">
+                        <table id="table-like" class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th class="col-1">Images</th>
+                                    <th class="col-2">Users Info</th>
+                                    <th class="col-3">Requests</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-url="profile.html?user=1">
+                                     <!--Normal Status-->
+                                    <td class="col-1">
+                                        <img src="images/user-profile2.jpg" alt="user-profile">
+                                    </td>
+                                    <td class="col-2">Doe <b>&middot;</b> john@example.com</td>
+                                    <td class="col-3">
+                                        <button class="btn btn-sm btn-primary"><span>Accept</span></button>
+                                        <button class="btn btn-sm btn-default"><span>Reject</span></button>
+                                    </td>
+                                </tr>
+                                <tr data-url="profile.html?user=2">
+                                    <!--Rejected User-->
+                                    <td class="col-1">
+                                        <img src="images/profile/user3.png" alt="user-profile">
+                                    </td>
+                                    <td class="col-2">
+                                        Ник имя: Alice <b>&middot;</b> 
+                                        Место рождение: Chicago, USA <b>&middot;</b> 
+                                        Знак зодиака: Стрелец
+                                    </td>
+                                    <td class="col-3">
+                                        <button class="btn btn-sm btn-primary disabled">
+                                            <span>Rejected</span> <i class="material-icons">close</i>
+                                        </button>
+                                        <button class="btn btn-sm btn-default">Undo</button>
+                                    </td>
+                                </tr>
+                                <tr data-url="profile.html?user=3">
+                                    <!--Accepted User-->
+                                    <td class="col-1">
+                                        <img src="images/user-profile1.jpg" alt="user-profile">
+                                    </td>
+                                    <td class="col-2">Dooley <b>&middot;</b> july@example.com</td>
+                                    <td class="col-3">
+                                        <button class="btn btn-sm btn-primary disabled">
+                                            <span>Accepted</span> <i class="material-icons">done</i>
+                                        </button>
+                                        <button class="btn btn-sm btn-default">Undo</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </div>
+                        <!--end main content-->
+                    </div>
+                </div>
+            </div>
+		</div>
+	</div>
+
+	<footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+
+			<div class="row copyright">
+				<div class="col-md-12 text-center">
+					<p>
+						<small class="block">&copy; 2018 Baxtlilar.uz. Все права защищены.</small> 
+					</p>
+					<ul class="fh5co-social-icons">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-telegram"></i></a></li>
+                    </ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+
+	<!--Scroll to top-->
+	<a id="back-to-top" href="#scrollTop" class="scroll-to-top" role="button">
+        <i style="font-size:28px" class="fa fa-angle-up"></i>
+    </a>
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+    <script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    
+    <!--Select Picker-->
+    <script src="js/bootstrap-select.js"></script>
+    <!--Jasny Bootstrap-->
+    <script src="js/jasny-bootstrap.min.js"></script>
+    <!--Image gallery-->
+    <script src="js/ekko-lightbox.min.js"></script>
+    <script>
+        $(function(){
+            $('.selectpicker').selectpicker();
+            $.fn.selectpicker.Constructor.BootstrapVersion = '3';
+            $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                event.preventDefault();
+                $(this).ekkoLightbox();
+            });
+        });
+    </script>
+    <!-- Custom JS -->
+    <script src="js/custom.user-profile.js"></script>
+	<script src="js/custom.template.js"></script>
+
+	</body>
+</html>
+

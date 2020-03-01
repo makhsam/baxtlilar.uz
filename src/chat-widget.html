@@ -6,8 +6,10 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <!--Bootstrap 4-->
-  <link rel="stylesheet" href="css/bootstrap4.min.css">
+  <!--Bootstrap 3-->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/chat-widget.css">
+  <link rel="stylesheet" href="css/ekko-lightbox.css">
   <!--Google Fonts-->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Rubik:300,400" rel="stylesheet">
@@ -15,39 +17,53 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Font Awesome-->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/chat-widget.css">
 </head>
 <body>
+  <!--Sidebar wrapper-->
+  <div class="sidebar-wrapper">
+    <ul>
+      <li class="active" id="chat-icon">
+        <i class="material-icons">chat</i>
+      </li>
+      <li id="contact-list-icon">
+        <i class="material-icons">person_add</i>
+      </li>
+    </ul>
+    <ul class="logout">
+      <li><a href="#home"><i class="material-icons">home</i></a></li>
+    </ul>
+  </div>
+
+
   <!--People wrapper-->
-  <div class="people-wrapper"> 
+  <div id="app" class="people-wrapper"> 
     <!--Search-->
     <div class="search">
-      <button id="contact-back-icon"><i class="material-icons">arrow_back</i></button>
       <input id="search-input" type="text" placeholder="search">
       <!-- <button><i class="fa fa-user-plus"></i></button> -->
     </div>
     <!--People's list (users with whome chatting is going on)-->
     <div id="people-list" class="people-list">
-      <ul class="list-group">
-        <li class="list-group-item">
+      <ul>
+        <li class="people-list-item" data-toggle="modal" data-target="#terms-n-conditions">
           <div class="avatar">
             <img src="images/user-profile1.jpg" alt="user-avatar">
           </div>
           <div class="list-content">
             <span>28/02/2018</span>
             <div class="title">Andrei Richard</div>
-            <span class="badge badge-pill badge-success">34</span>
+            <span class="badge">34</span>
             <div class="description">Ut enim ad minim veniam sit amet, consectetur adipiscing elit </div>
           </div>
         </li>
-        <li class="list-group-item active">
+        <li class="people-list-item" data-toggle="modal" data-target="#terms-n-conditions">
           <div class="avatar">
-            <img src="images/user-profile3.png" alt="user-avatar">
+            <img src="https://unsplash.it/200.jpg?image=1027" alt="user-avatar">
           </div>
           <div class="list-content">
             <span>28/02/2018</span>
             <div class="title">Chris Marina</div>
-            <span class="badge badge-pill badge-success">5</span>
+            <span class="badge">5</span>
             <div class="description">Ut enim ad minim veniam sit amet, consectetur adipiscing elit </div>
           </div>
         </li>
@@ -55,8 +71,8 @@
     </div>
     <!--Contact List (users who liked each other)-->
     <div id="contact-list" class="people-list">
-      <ul class="list-group">
-        <li class="list-group-item">
+      <ul>
+        <li class="people-list-item" data-toggle="modal" data-target="#terms-n-conditions">
           <div class="avatar">
             <img src="images/user-profile1.jpg" alt="user-avatar">
           </div>
@@ -65,16 +81,16 @@
             <div class="contact-description">some description</div>
           </div>
         </li>
-        <li class="list-group-item">
+        <li class="people-list-item" data-toggle="modal" data-target="#terms-n-conditions">
           <div class="avatar">
-            <img src="images/user-profile3.png" alt="user-avatar">
+            <img src="https://unsplash.it/200.jpg?image=1027" alt="user-avatar">
           </div>
           <div class="list-content">
             <div class="title">Chris Marina</div>
             <div class="contact-description">some description</div>
           </div>
         </li>
-        <li class="list-group-item">
+        <li class="people-list-item" data-toggle="modal" data-target="#terms-n-conditions">
           <div class="avatar">
             <img src="images/user-profile2.jpg" alt="user-avatar">
           </div>
@@ -85,10 +101,6 @@
         </li>
       </ul>
     </div>
-    <!--contact list icon-->
-    <div id="contact-list-icon">
-      <i class="fa fa-user-plus"></i>
-    </div>
   </div>
 
 
@@ -98,9 +110,6 @@
       <span>
         <i class="material-icons">more_vert</i>
       </span>
-      <a href="#home">
-        <i class="material-icons">home</i>
-      </a>
       <div class="user">John Pullman</div>
       <div class="status">online</div>
     </div>
@@ -108,7 +117,7 @@
       <ul class="clearfix">
         <!--Recieved message-->
         <li class="received">
-          <img src="images/user-profile3.png" alt="user-avatar" />
+          <img src="https://unsplash.it/200.jpg?image=1027" alt="user-avatar" />
           <p>How the hell am I supposed to get a jury to believe you when I am not even sure that I do?!
             <span>10:26 AM</span>
           </p>
@@ -126,7 +135,7 @@
       <ul class="clearfix">
         <!--Recieved message-->
         <li class="received">
-          <img src="images/user-profile3.png" alt="user-avatar" />
+          <img src="https://unsplash.it/200.jpg?image=1027" alt="user-avatar" />
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper mollis lacinia. Vestibulum convallis ante eu varius vehicula. Phasellus pulvinar purus nec nulla pharetra placerat. Donec turpis velit, facilisis sit amet lacinia a, faucibus et mauris. Nulla consequat arcu tempor, facilisis nisl rutrum, semper enim. 
             <span>10:30 AM</span>
           </p>
@@ -134,17 +143,21 @@
       </ul>
     </div>
     <div class="input-box">
-      <button type="button" class="attachment"><i class="fa fa-paperclip"></i></button>
+      <!-- <button type="button" class="attachment"><i class="fa fa-paperclip"></i></button> -->
       <input type="text" name="message" placeholder="Write a message ...">
       <button type="button" class="send"><i class="material-icons">send</i></button>
     </div>
   </div>
 
-
   <!-- User-info wrapper -->
   <div class="user-wrapper">
     <div class="image">
-      <img src="images/user-profile3.png" alt="user-profile">
+      <a href="https://unsplash.it/1200/768.jpg?image=1027" data-toggle="lightbox" data-gallery="hidden-images">
+        <img src="https://unsplash.it/200.jpg?image=1027" class="img-fluid" alt="user-profile">
+      </a>      
+      <!-- <img src="https://unsplash.it/200.jpg?image=1027" alt="user-profile"> -->
+      <div data-toggle="lightbox" data-gallery="hidden-images" data-remote="https://unsplash.it/1200/768.jpg?image=265"></div>
+      <div data-toggle="lightbox" data-gallery="hidden-images" data-remote="https://unsplash.it/1200/768.jpg?image=266"></div>
     </div>
     <div class="name">
       <h4>Chris Marina</h4>
@@ -170,7 +183,56 @@
     </ul>
   </div>
 
+
+  <!-- Modal: Terms-n-conditions -->
+  <div class="modal fade" id="terms-n-conditions" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Terms and conditions</h4>
+        </div>
+        <div class="modal-body">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Vestibulum lorem sed risus ultricies tristique nulla aliquet enim. 
+            Vehicula ipsum a arcu cursus vitae congue mauris. Est ullamcorper 
+            eget nulla facilisi etiam dignissim diam quis enim. In ornare quam 
+            viverra orci sagittis eu. Interdum posuere lorem ipsum dolor sit amet 
+            consectetur adipiscing. Volutpat diam ut venenatis tellus. 
+          </p>
+          <p>
+            Ligula ullamcorper malesuada proin libero nunc consequat interdum varius. 
+            Netus et malesuada fames ac turpis egestas sed. In nibh mauris cursus 
+            mattis. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus. 
+            Eget velit aliquet sagittis id consectetur purus ut faucibus. Massa placerat 
+            duis ultricies lacus sed turpis tincidunt id aliquet. Urna duis convallis 
+            convallis tellus id.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">I Agree</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
   <script src="js/jquery.min.js"></script>
-  <script src="js/chat-widget.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/ekko-lightbox.min.js"></script>
+  <script src="js/custom.chat-widget.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
+      });
+    });
+  </script>
 </body>
 </html>

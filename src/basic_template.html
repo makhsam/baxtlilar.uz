@@ -26,11 +26,13 @@
         <!--Bootstrap Select-->
         <link rel="stylesheet" href="css/bootstrap-select.css">
         <!-- Owl Carousel  -->
-        <link rel="stylesheet" href="css/owl.carousel.min.css">
-        <link rel="stylesheet" href="css/owl.theme.default.min.css">
+        <!-- <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/owl.theme.default.min.css"> -->
         <!-- Theme style  -->
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/basic_style.css">
+
+        <link rel="stylesheet" href="css/ekko-lightbox.css">
 
         <!-- Modernizr JS -->
         <script src="js/modernizr-2.6.2.min.js"></script>
@@ -96,7 +98,21 @@
 	<div class="main-wrapper" style="min-height: 1200px;">
 		<div class="container">
 			
-			<h1>Hello World!</h1>
+			<a href="https://unsplash.it/1200/768.jpg?image=263" data-toggle="lightbox" data-gallery="hidden-images" class="col-4">
+                <img src="https://unsplash.it/600.jpg?image=263" class="img-fluid">
+            </a>
+            <a href="https://unsplash.it/1200/768.jpg?image=264" data-toggle="lightbox" data-gallery="hidden-images" class="col-4">
+                <img src="https://unsplash.it/600.jpg?image=264" class="img-fluid">
+            </a>
+            <a href="https://unsplash.it/1200/768.jpg?image=265" data-toggle="lightbox" data-gallery="hidden-images" class="col-4">
+                <img src="https://unsplash.it/600.jpg?image=265" class="img-fluid">
+            </a>
+            <!-- elements not showing, use data-remote -->
+            <div data-toggle="lightbox" data-gallery="hidden-images" data-remote="https://unsplash.it/1200/768.jpg?image=264" data-title="Hidden item 1"></div>
+            <div data-toggle="lightbox" data-gallery="hidden-images" data-remote="https://www.youtube.com/embed/b0jqPvpn3sY" data-title="Hidden item 2"></div>
+            <div data-toggle="lightbox" data-gallery="hidden-images" data-remote="https://unsplash.it/1200/768.jpg?image=265" data-title="Hidden item 3"></div>
+            <div data-toggle="lightbox" data-gallery="hidden-images" data-remote="https://unsplash.it/1200/768.jpg?image=266" data-title="Hidden item 4"></div>
+            <div data-toggle="lightbox" data-gallery="hidden-images" data-remote="https://unsplash.it/1200/768.jpg?image=267" data-title="Hidden item 5"></div>
 			
 		</div>
 	</div>
@@ -119,10 +135,10 @@
 		</div>
 	</footer>
 	
-
-	<div class="gototop js-top">
-		<a href="#" class="js-gotop"><i class="fa fa-angle-up"></i></a>
-	</div>
+    <!--Scroll to top-->
+	<a id="back-to-top" href="#scrollTop" class="scroll-to-top" role="button">
+        <i style="font-size:28px" class="fa fa-angle-up"></i>
+    </a>
 	
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
@@ -132,18 +148,25 @@
     <script src="js/bootstrap.min.js"></script>
     <!--Select Picker-->
     <script src="js/bootstrap-select.js"></script>
+    <!--Image gallery-->
+    <script src="js/ekko-lightbox.min.js"></script>
     <script>
         $(function(){
             $('.selectpicker').selectpicker();
             $.fn.selectpicker.Constructor.BootstrapVersion = '3';
+            $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                event.preventDefault();
+                $(this).ekkoLightbox();
+            });
         });
     </script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Waypoints --> 
+	<!-- <script src="js/jquery.waypoints.min.js"></script> -->
 	<!-- Carousel -->
-	<script src="js/owl.carousel.min.js"></script>
+	<!-- <script src="js/owl.carousel.min.js"></script> -->
 	<!-- Custom JS -->
-	<script src="js/navbar.template.js"></script>
+    <script src="js/custom.template.js"></script>
+    
 
 	</body>
 </html>

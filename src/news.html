@@ -20,18 +20,10 @@
         <!--Font Awesome-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        
-        <!-- Animate.css -->
-        <link rel="stylesheet" href="css/animate.css">
-        <!-- Icomoon Icon Fonts-->
-        <link rel="stylesheet" href="css/icomoon.css">
         <!-- Bootstrap  -->
         <link rel="stylesheet" href="css/bootstrap.css">
-        <!-- Magnific Popup -->
-        <link rel="stylesheet" href="css/magnific-popup.css">
-        <!-- Owl Carousel  -->
-        <link rel="stylesheet" href="css/owl.carousel.min.css">
-        <link rel="stylesheet" href="css/owl.theme.default.min.css">
+        <!--Bootstrap Select-->
+        <link rel="stylesheet" href="css/bootstrap-select.css">
         <!-- Theme style  -->
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/news.css">
@@ -44,8 +36,6 @@
     </head>
     
 	<body>
-		
-	<div class="fh5co-loader"></div>
 	
 	<div id="template-page">
 	<!-- Fixed navbar -->
@@ -54,29 +44,46 @@
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                    <span class="icon-bar top-bar"></span>
+                    <span class="icon-bar middle-bar"></span>
+                    <span class="icon-bar bottom-bar"></span>
                 </button>
                 <a class="navbar-logo" href="index.html">
                     <img src="images/logo_light.png" style="width: 120px; height: auto"/>
                 </a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                <ul class="nav navbar-nav navbar-right nav-animation">
+                    <li><a href="#home">Home</a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <a href="#about" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li class="dropdown-header">Nav header</li>
-                            <li><a href="#">Separated link</a></li>
-                            <li><a href="#">One more separated link</a></li>
+                            <li><a href="#">Information</a></li>
+                            <li><a href="#">Questions</a></li>
+                            <li><a href="#">Feedback</a></li>
                         </ul>
+                    </li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#catalog">Catalog</a></li>
+                    <li class="active"><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#cabinet">Cabinet</a></li>
+                    <li><a href="#register">Register</a></li>
+                    <li class="dropdown">
+                        <a href="#about" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-user" style="margin-right:4px"></i><span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#profile">My Profile</a></li>
+                            <li><a href="#logout">Logout</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <select class="selectpicker" data-width="fit" onchange="redirect(this)">
+                            <option data-content='<img src="images/flags/rus.png"> RU'>RU</option>
+                            <option data-content='<img src="images/flags/uzb.png"> UZ'>UZ</option>
+                            <option data-content='<img src="images/flags/eng.png"> EN'>EN</option>
+                        </select>
                     </li>
                 </ul>
             </div><!--/.nav-collapse -->
@@ -85,102 +92,93 @@
 
     
 
-	<div class="main-wrapper" style="min-height: 1200px;">
+	<div class="main-wrapper" style="min-height: 600px;">
         <div class="container">
+            <h3>Latest News</h3>
             <div class="input-group">
-                <h3>Latest News</h3>
                 <input type="text" class="form-control" placeholder="Search" name="search">
                 <div class="input-group-btn">
                     <button class="btn btn-default" type="submit"><i class="material-icons">search</i></button>
                 </div>
             </div>
             <!--Card container-->
-            <div class="card-deck">
-                <div class="card">
-                    <img class="card-img-top" src="images/news2.jpeg" alt="Card image">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-primary btn-sm">Learn more</a>
-                        <!-- <small class="text-muted">Last updated 3 mins ago</small> -->
-                    </div>
-                </div>
-                <div class="card">
-                    <img class="card-img-top" src="images/news1.png" alt="Card image">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-primary btn-sm">Learn more</a>
+            <div class="card-grid">
+                <div class="card-wrap">
+                    <div class="card">
+                        <!--SET IMAGE URLs HERE: [data-image]-->
+                        <div class="card-image" data-image="images/news2.jpeg"></div>
+                        <div class="content">
+                            <h3 class="post-title"><a href="#">Pagedraw UI Builder Turns Your Website Design Mockup Into Code Automatically</a></h3>
+                            <div class="date">March 28, 2017</div>
+                            <!-- <a href="#" class="btn btn-primary btn-sm">Learn more</a> -->
+                        </div>
                     </div>
                 </div>
-                <div class="card">
-                    <img class="card-img-top" src="images/process_step1.jpg" alt="Card image">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-primary btn-sm">Learn more</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <img class="card-img-top" src="images/nature.jpg" alt="Card image">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-primary btn-sm">Learn more</a>
+                <div class="card-wrap">
+                    <div class="card">
+                        <div class="card-image" data-image="images/news1.png"></div>
+                        <div class="content">
+                            <h3 class="post-title"><a href="#">Pagedraw UI Builder Turns Your Website Design Mockup Into Code Automatically</a></h3>
+                            <div class="date">March 28, 2017</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="card-deck">
-                <div class="card">
-                    <img class="card-img-top" src="images/nature2.jpg" alt="Card image">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="card-wrap">
+                    <div class="card">
+                    <div class="card-image" data-image="images/process_step1.jpg"></div>
+                    <div class="content">
+                        <h3 class="post-title"><a href="#">Pagedraw UI Builder Turns Your Website Design</a></h3>
+                        <div class="date">March 28, 2017</div>
                     </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-primary btn-sm">Learn more</a>
                     </div>
                 </div>
-                <div class="card">
-                    <img class="card-img-top" src="images/nature3.jpeg" alt="Card image">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                <div class="card-wrap">
+                    <div class="card">
+                    <div class="card-image" data-image="images/nature.jpg"></div>
+                    <div class="content">
+                        <h3 class="post-title"><a href="#">Pagedraw UI Builder Turns Your Website Design Mockup Into Code Automatically</a></h3>
+                        <div class="date">March 28, 2017</div>
                     </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-primary btn-sm">Learn more</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <img class="card-img-top" src="images/nature4.jpg" alt="Card image">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-primary btn-sm">Learn more</a>
                     </div>
                 </div>
-                <div class="card">
-                    <img class="card-img-top" src="images/news3.jpg" alt="Card image">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                <div class="card-wrap">
+                    <div class="card">
+                    <div class="card-image" data-image="images/nature2.jpg"></div>
+                    <div class="content">
+                        <h3 class="post-title"><a href="#">Pagedraw UI Builder Turns Your Website Design Mockup Into Code Automatically</a></h3>
+                        <div class="date">March 28, 2017</div>
                     </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-primary btn-sm">Learn more</a>
+                    </div>
+                </div>
+                <div class="card-wrap">
+                    <div class="card">
+                    <div class="card-image" data-image="images/nature3.jpeg"></div>
+                    <div class="content">
+                        <h3 class="post-title"><a href="#">Pagedraw UI Builder Turns Your Website Design Mockup Into Code Automatically</a></h3>
+                        <div class="date">March 28, 2017</div>
+                    </div>
+                    </div>
+                </div>
+                <div class="card-wrap">
+                    <div class="card">
+                    <div class="card-image" data-image="images/nature4.jpg"></div>
+                    <div class="content">
+                        <h3 class="post-title"><a href="#">Pagedraw UI Builder Turns Your Website Design Mockup Into Code Automatically</a></h3>
+                        <div class="date">March 28, 2017</div>
+                    </div>
+                    </div>
+                </div>
+                <div class="card-wrap">
+                    <div class="card">
+                    <div class="card-image" data-image="images/news3.jpg"></div>
+                    <div class="content">
+                        <h3 class="post-title"><a href="#">Pagedraw UI Builder Turns Your Website Design Mockup Into Code Automatically</a></h3>
+                        <div class="date">March 28, 2017</div>
+                    </div>
                     </div>
                 </div>
             </div>
+            
 
             <div class="pagination-wrap">
                 <ul class="pagination">
@@ -216,30 +214,29 @@
 		</div>
 	</footer>
 	</div>
-
-	<div class="gototop js-top">
-		<a href="#" class="js-gotop"><i class="fa fa-angle-up"></i></a>
-	</div>
+ 
+	<!--Scroll to top-->
+	<a id="back-to-top" href="#scrollTop" class="scroll-to-top" role="button">
+        <i style="font-size:28px" class="fa fa-angle-up"></i>
+    </a>
 	
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
 	<script src="js/jquery.easing.1.3.js"></script>
 	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Carousel -->
-	<script src="js/owl.carousel.min.js"></script>
-	<!-- Stellar -->
-	<script src="js/jquery.stellar.min.js"></script>
-	<!-- Magnific Popup -->
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/magnific-popup-options.js"></script>
-
-	<!-- Main -->
-	<script src="js/main.js"></script>
-	<script src="js/navbar.template.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!--Select Picker-->
+    <script src="js/bootstrap-select.js"></script>
+    <script>
+        $(function(){
+            $('.selectpicker').selectpicker();
+            $.fn.selectpicker.Constructor.BootstrapVersion = '3';
+        });
+    </script>
+	
+	<!-- Template scripts -->
+	<script src="js/custom.template.js"></script>
 
 	</body>
 </html>

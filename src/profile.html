@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <title>Baxtlilar.uz</title>
- 
+
         <!--Favicon icon-->
         <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
         <link rel="icon" href="images/favicon/favicon.ico" type="image/x-icon">
@@ -25,15 +25,15 @@
         <link rel="stylesheet" href="css/bootstrap.css">
         <!--Bootstrap Select-->
         <link rel="stylesheet" href="css/bootstrap-select.css">
+        <!-- Owl Carousel  -->
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/owl.theme.default.min.css">
         <!-- Theme style  -->
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/user.css">
-        <!--Bootstrap datepicker-->
-        <link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
-        <!--Jasny bootstrap-->
-        <link rel="stylesheet" href="css/jasny-bootstrap.min.css">
-        <!--Image gallery plugin-->
+
         <link rel="stylesheet" href="css/ekko-lightbox.css">
+
         <!-- Modernizr JS -->
         <script src="js/modernizr-2.6.2.min.js"></script>
         <!-- FOR IE9 below -->
@@ -59,7 +59,7 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right nav-animation">
-                    <li><a href="#home">Home</a></li>
+                    <li class=""><a href="#home">Home</a></li>
                     <li class="dropdown">
                         <a href="#about" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
                         <ul class="dropdown-menu">
@@ -72,7 +72,7 @@
                     <li><a href="#catalog">Catalog</a></li>
                     <li><a href="#news">News</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li class="active"><a href="#cabinet">Cabinet</a></li>
+                    <li><a href="#cabinet">Cabinet</a></li>
                     <li><a href="#register">Register</a></li>
                     <li class="dropdown">
                         <a href="#about" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -95,59 +95,43 @@
         </div>
     </nav>
 
-	<div class="main-wrapper" style="min-height: 1200px;">
-		<div class="container">
+	<div class="main-wrapper" style="min-height: 600px;">
+        <div class="container">
             <div class="row profile">
                 <div class="col-md-3">
                     <div class="profile-sidebar">
                         <!-- SIDEBAR USERPIC -->
                         <div class="profile-userpic">
                             <!-- <img src="images/user-profile1.jpg" class="img-responsive" alt=""> -->
-                            <a href="https://unsplash.it/1200/768.jpg?image=1027" data-toggle="lightbox" data-gallery="hidden-images">
-                                <img src="https://unsplash.it/200.jpg?image=1027" class="img-responsive" alt="user-profile">
+                            <a href="images/user-profile1.jpg" data-toggle="lightbox" data-gallery="hidden-images">
+                                <img src="images/user-profile1.jpg" class="img-responsive" alt="user-profile">
                             </a>      
                             <div data-toggle="lightbox" data-gallery="hidden-images" data-remote="https://unsplash.it/1200/768.jpg?image=265"></div>
                             <div data-toggle="lightbox" data-gallery="hidden-images" data-remote="https://unsplash.it/1200/768.jpg?image=266"></div>
-                        </div> 
+                        </div>                
                         <!-- END SIDEBAR USERPIC -->
                         <!-- SIDEBAR USER TITLE -->
                         <div class="profile-usertitle">
                             <div class="profile-usertitle-name">
-                                Chris Marina
+                                Marcus Doe
                             </div>
                             <div class="profile-usertitle-job">
-                                Designer
+                                Businessman
                             </div>
                         </div>
                         <!-- END SIDEBAR USER TITLE -->
-                        
+                        <!-- SIDEBAR BUTTONS -->
+                        <div class="profile-userbuttons">
+                            <button type="button" id="user-liked-sb" class="btn btn-danger btn-sm">Нравиться</button>
+                        </div>
+                        <!-- END SIDEBAR BUTTONS -->
                         <!-- SIDEBAR MENU -->
                         <div class="profile-usermenu">
                             <ul class="nav">
                                 <li class="active">
                                     <a href="#">
                                     <i class="glyphicon glyphicon-home"></i>
-                                    User info </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                    <i class="glyphicon glyphicon-user"></i>
-                                    Services </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                    <i class="glyphicon glyphicon-ok"></i>
-                                    Payment page </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                    <i class="glyphicon glyphicon-flag"></i>
-                                    Chat </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                    <i class="glyphicon glyphicon-flag"></i>
-                                    Likes </a>
+                                    Overview </a>
                                 </li>
                             </ul>
                         </div>
@@ -190,6 +174,7 @@
                             </a>
                         </div>
 
+
                         <style>
                             .data-header > h4,
                             .data-header > ul > h5 {
@@ -203,90 +188,21 @@
                             }
                         </style>
 
+                        
                         <div class="row">
-                            <!--User Data: Step 1-->
                             <div class="col-md-6 data-header">
-                                <h4>1. Скрытые личные данные:</h4>
-                                <ul class="list-group">
-                                    <li class="list-group-item">
-                                        <h4>Ф.И.О.</h4>
-                                        <p>John Doe</p>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <h4>Дата рождения:</h4>
-                                        <p>1995-10-10</p>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <h4>Страна проживания:</h4>
-                                        <p>USA</p>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <h4>Город проживания:</h4>
-                                        <p>Chicago</p>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <h4>Адрес проживания:</h4>
-                                        <p></p>
-                                    </li>
-                                    <h5>Контактные данные</h5>
-                                    <li class="list-group-item">
-                                        <h4>Телефон домашний:</h4>
-                                        <p></p>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <h4>Телефон мобильный:</h4>
-                                        <p></p>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <h4>Email:</h4>
-                                        <p></p>
-                                    </li>
-                                    <h5>Контактные данные близких родственников</h5>
-                                    <li class="list-group-item">
-                                        <h4>Отец, мать:</h4>
-                                        <p></p>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <h4>Брат, сестра:</h4>
-                                        <p></p>
-                                    </li>
-                                    <h5>Паспортные данные</h5>
-                                    <li class="list-group-item">
-                                        <h4>Серия и Номер:</h4>
-                                        <p></p>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <h4>Кем выдан:</h4>
-                                        <p></p>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <h4>Когда выдан:</h4>
-                                        <p></p>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <h4>Файл:</h4>
-                                        <p>user-passport.pdf</p>
-                                    </li>
-                                </ul>
-                            </div>
-
-
-
-                            <!--User Data: Step 2-->
-                            <div class="col-md-6 data-header">
-                                <h4>2. Открытые личные данные:</h4>
                                 <ul class="list-group">
                                     <li class="list-group-item">
                                         <h4>Ник-имя:</h4>
-                                        <p></p>
+                                        <p>Alice</p>
                                     </li>
                                     <li class="list-group-item">
                                         <h4>Пол:</h4>
-                                        <p></p>
+                                        <p>Female</p>
                                     </li>
                                     <li class="list-group-item">
                                         <h4>Возраст:</h4>
-                                        <p></p>
+                                        <p>32</p>
                                     </li>
                                     <li class="list-group-item">
                                         <h4>Место рождения:</h4>
@@ -350,15 +266,8 @@
                                     </li>
                                 </ul>
                             </div>
-                        </div>
 
-
-
-
-                        <div class="row">
-                            <!--User Data: Step 3-->
                             <div class="col-md-6 data-header">
-                                <h4>3. Открытые личные данные</h4>
                                 <ul class="list-group">
                                     <h5>Сведение о близких родственниках</h5>
                                     <li class="list-group-item">
@@ -423,131 +332,12 @@
                                     </li>
                                 </ul>
                             </div>
-
-
-
-                            <!--User Data: Step 4-->
-                            <div class="col-md-6 data-header">
-                                <h4>4. Открытые личные данные <br> 
-                                    <strong>Мои предпочтения</strong>
-                                </h4>
-                                <ul class="list-group">
-                                    <li class="list-group-item">
-                                        <h4>Возраст:</h4>
-                                        <p>от 17 до 35</p>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <h4>Страна:</h4>
-                                        <p></p>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <h4>Национальность:</h4>
-                                        <p></p>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <h4>Религия:</h4>
-                                        <p></p>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <h4>Семейное положение:</h4>
-                                        <p></p>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <h4>Наличие жилплощади:</h4>
-                                        <p></p>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <h4>Отношение к курению:</h4>
-                                        <p></p>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <h4>Отношение к алкоголю:</h4>
-                                        <p></p>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <h4>Отношение к наркотикам:</h4>
-                                        <p></p>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <h4>Материальное положение:</h4>
-                                        <p></p>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <h4>Желаемая профессия будущего партнера:</h4>
-                                        <p></p>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <h4>Рост:</h4>
-                                        <p>от 50 до 100</p>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <h4>Вес:</h4>
-                                        <p>от 50 до 100</p>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <h4>Отношение к детям будущего партнера:</h4>
-                                        <p></p>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <h4>Варианты доступа к Вашей анкете:</h4>
-                                        <p></p>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <h4>Из какого источника Вы узнали о нас?</h4>
-                                        <p></p>
-                                    </li>
-                                    <h5>Поделитесь шансом стать счастливыми с Вашими близкими</h5>
-                                    <li class="list-group-item">
-                                        <h4>1. Имя близкого человека:</h4>
-                                        <p></p>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <h4>1. Эл. адрес или мобильный телефон:</h4>
-                                        <p></p>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <h4>2. Имя близкого человека:</h4>
-                                        <p></p>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <h4>2. Эл. адрес или мобильный телефон:</h4>
-                                        <p></p>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!--End User Data-->
-                        </div>
-
-                        <style>
-                            .edit-btn .btn {
-                                text-transform: uppercase;
-                                font-size: 12px;
-                                font-weight: 600;
-                                padding: 6px 15px;
-                                -webkit-border-radius: 0;
-                                -moz-border-radius: 0;
-                                -ms-border-radius: 0;
-                                border-radius: 0;
-                            }
-
-                            .edit-btn .btn-center {
-                                margin: 0 auto; 
-                                width: 100px
-                            }
-                        </style>
-
-                        <div class="row edit-btn">
-                            <div class="col-sm-12">
-                                <div class="btn-center">
-                                    <a href="#" class="btn btn-sm btn-block btn-primary">Edit</a>
-                                </div>
-                            </div>
                         </div>
                     </div>
                    <!--end of profile data-->
                 </div>
             </div>
-		</div>
+        </div>
 	</div>
 
 	<footer id="fh5co-footer" role="contentinfo">
@@ -569,29 +359,19 @@
 	</footer>
 	
 
-	<!--Scroll to top-->
-	<a id="back-to-top" href="#scrollTop" class="scroll-to-top" role="button">
+    <!--Scroll to top-->
+    <a id="back-to-top" href="#scrollTop" class="scroll-to-top" role="button">
         <i style="font-size:28px" class="fa fa-angle-up"></i>
     </a>
-    
 	
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
-    <script src="js/jquery.easing.1.3.js"></script>
-    <!-- jQuery Validation -->
-    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
-    <script type="text/javascript" src="js/additional-methods.js"></script>
-    <script type="text/javascript" src="js/custom.user-profile.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
 	<!-- Bootstrap -->
     <script src="js/bootstrap.min.js"></script>
-    
     <!--Select Picker-->
     <script src="js/bootstrap-select.js"></script>
-    <!--Bootstrap datepicker-->
-    <script src="js/bootstrap-datepicker.min.js"></script>
-    <!--Jasny Bootstrap-->
-    <script src="js/jasny-bootstrap.min.js"></script>
     <!--Image gallery-->
     <script src="js/ekko-lightbox.min.js"></script>
     <script>
@@ -602,16 +382,15 @@
                 event.preventDefault();
                 $(this).ekkoLightbox();
             });
-            $('#birthday').datepicker({
-                format: "dd/mm/yyyy"
-            });
-            $('#parents_marriage').datepicker({
-                format: "dd/mm/yyyy"
-            });
         });
     </script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
 	<!-- Custom JS -->
-	<script src="js/custom.template.js"></script>
+    <script src="js/custom.template.js"></script>
+    <script src="js/custom.user-profile.js"></script>
 
 	</body>
 </html>

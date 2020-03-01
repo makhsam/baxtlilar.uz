@@ -1,7 +1,10 @@
+//sidebar
+$sidebar-link: #A2B7CA;
 //people
-$people-bg-color: #373E48;
+$sidebar-bg-color: #4D1E42; // (prev: #373E48)
 // chat
-$chat-bg-color: #F2F8F8;
+$chat-header-bg-color: #eedaf1;
+$chat-bg-color: #eedaf1;
 $received-msg: #FFF;
 $sent-msg: #54D48A;
 $status-color: #54D48A;
@@ -9,6 +12,7 @@ $font-black: #505559;
 $font-gray: #aaa;
 $font-white: #fff;
 $font: 'Open Sans';
+
 
 
 @mixin transition($transition) {
@@ -32,7 +36,7 @@ $font: 'Open Sans';
         color: $color;
         opacity: 1; 
     }
-    &:-ms-input-placeholder { 
+    &::-ms-input-placeholder { 
        color: $color;
     }
     &::-ms-input-placeholder { 
@@ -45,16 +49,18 @@ $font: 'Open Sans';
 }
 
 body {
-    width: 1140px;
+    width: 1200px;
     height: 92vh;
+    // overflow: hidden;
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 14px;
+    line-height: 1.5;
     background-color: #f2f2f2;
 }
 
-
+.sidebar-wrapper,
 .people-wrapper,
 .chat-wrapper,
 .user-wrapper {
@@ -65,11 +71,49 @@ body {
     @include transition(.3s);
 }
 
+.sidebar-wrapper {
+    width: 60px;
+    background-color: darken($sidebar-bg-color, 4%);
+    ul {
+        padding: 20px 0;
+        list-style-type: none;
+        li {
+            padding: 10px 20px 10px 14px;
+            color: $sidebar-link;
+            border-left: 3px solid darken($sidebar-bg-color, 4%);
+            font-size: 1.4em;
+            cursor: pointer;
+            &.active {
+                color: lighten($sidebar-link, 20%);
+                border-left: 3px solid $status-color;
+                background-color: darken($sidebar-bg-color, 2%);
+            }
+            &:hover {
+                background-color: darken($sidebar-bg-color, 2%)
+            }
+        }
+    }
+    ul.logout {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 0;
+        li {
+            border: none;
+            padding-left: 18px;
+            padding-right: 18px;
+            > a {
+                color: $sidebar-link;
+            }
+        }
+        
+    }
+}
+
 /* ---------------------------------------( People wrapper )--------------------------------------- */
 .people-wrapper {
     width: 300px;
     color: $font-gray;
-    background-color: $people-bg-color;
+    background-color: $sidebar-bg-color;
     font-family: $font;
 
     .search {
@@ -85,7 +129,7 @@ body {
             height: 34px;
             margin-right: 12px;
             padding: 2.5px;
-            background-color: $people-bg-color;
+            background-color: $sidebar-bg-color;
             border: none;
             outline: none;
             cursor: pointer;
@@ -95,9 +139,7 @@ body {
                 vertical-align: middle;
             }
         }
-        #contact-back-icon {
-            display: none;
-        }
+       
         input {
             // width: calc(100% - 50px);
             width: 100%;
@@ -105,20 +147,26 @@ body {
             padding: 5px 15px 5px 40px;
             font-weight: 300;
             letter-spacing: .5px;
-            border: 1px solid darken($people-bg-color, 4%);
-            background-color: darken($people-bg-color, 4%);
+            border: 1px solid darken($sidebar-bg-color, 4%);
+            background-color: darken($sidebar-bg-color, 4%);
             background-image: url('..//images/icon-search.png');
-            background-position: 10px 5px; 
+            background-position: 10px 3px; 
             background-repeat: no-repeat;
             outline: none;
             @include border-radius(17px);
             @include placeholder-color(darken($font-white, 20%));
             &:focus {
-                border: 1px solid darken($people-bg-color, 6%);
-                background-color: darken($people-bg-color, 6%);
+                border: 1px solid darken($sidebar-bg-color, 6%);
+                background-color: darken($sidebar-bg-color, 6%);
             }
         }
     }
+
+
+    
+
+
+
     .people-list {
         margin-top: 74px;
         height: calc(100% - 74px);
@@ -126,7 +174,16 @@ body {
         overflow-y: auto;
 
         ul {
-            li {                
+            display: -ms-flexbox;       // from BS4
+            display: flex;              // from BS4
+            -ms-flex-direction: column; // from BS4
+            flex-direction: column;     // from BS4
+            padding-left: 0;            // from BS4
+            li {
+                position: relative;     // from BS4
+                display: block;         // from BS4
+                padding: 12px 20px;     // from BS4
+                margin-bottom: -1px;    // from BS4        
                 cursor: pointer;
                 background-color: inherit;
                 border: none;
@@ -137,6 +194,11 @@ body {
                         width: 45px;
                         height: 45px;
                         @include border-radius(50%);
+                    }
+                    &::after {
+                        display: block;
+                        clear: both;
+                        content: "";
                     }
                 }
                 .list-content {
@@ -151,6 +213,7 @@ body {
                     }
                     span.badge {
                         color: $font-white;
+                        background-color: darken($status-color, 10%);
                     }
                     .description {
                         color: $font-gray;
@@ -168,7 +231,7 @@ body {
                     }
                 }
                 &:hover, &.active {
-                    background-color: lighten($people-bg-color, 4%);
+                    background-color: lighten($sidebar-bg-color, 4%);
                 }
             }
             
@@ -201,7 +264,7 @@ body {
 /* --------------------------------( Chat wrapper )-------------------------------- */
 
 .chat-wrapper {
-    width: calc(100% - 300px - 250px);
+    width: calc(100% - 60px - 300px - 250px);
     color: $font-gray;
     font-family: $font;
 
@@ -211,7 +274,7 @@ body {
         width: 100%;
         height: 70px;
         padding: 15px 20px;
-        background-color: $chat-bg-color;
+        background-color: $chat-header-bg-color;
         -webkit-box-shadow: 0px 0px 5px -1px rgba(170,170,170,1);
         -moz-box-shadow: 0px 0px 5px -1px rgba(170,170,170,1);
         box-shadow: 0px 0px 5px -1px rgba(170,170,170,1);
@@ -244,7 +307,7 @@ body {
         overflow-x: hidden;
         overflow-y: auto;
         padding: 20px;
-        background-color: darken($chat-bg-color, 0%);
+        background-color: $chat-bg-color;
         hr {
             font-size: .8em;
         }
@@ -266,6 +329,8 @@ body {
                     font-size: 1em;
                     width: 70%;
                     padding: 10px 15px;
+                    margin-top: 0;
+                    margin-bottom: 16px;
                     line-height: 125%;
                     span {
                         display: block;
@@ -305,6 +370,12 @@ body {
                 }
             }
         }
+
+        ul.clearfix::after {
+            display: block;
+            clear: both;
+            content: "";
+        }
     }
 
     .input-box {
@@ -342,9 +413,10 @@ body {
         }
         input {
             height: 34px;
-            width: calc(100% - 99px); // 10+10+35+35
+            width: calc(100% - 60px); // MUST BE (100% - 99px) WHEN ATTACHMENT BUTTON ADDED
             margin-left: 10px;
             margin-right: 10px;
+            color: $font-black;
             border: none;
             outline: none;
             @include placeholder-color(lighten($font-gray, 10%));
@@ -381,7 +453,7 @@ body {
         padding: 0 .5em;
         line-height: 1.5em;
         /* color and background color of text (at the center) */
-        color: $font-gray;
+        color: darken($font-gray, 30%);
         background-color: $chat-bg-color;
     }
 }

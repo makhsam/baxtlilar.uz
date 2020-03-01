@@ -1,4 +1,18 @@
 $font-primary: 'Open Sans', Arial, sans-serif;
+$brand-primary: #E37777;
+$mum-label: #e37777;
+$dad-label: #78e378;
+$user-main-color: #5b9bd1;
+$request-accepted: darken($user-main-color, 10%);
+$request-sent: #999;
+
+@mixin transition($transition) {
+    -moz-transition:    all $transition ease-out;
+    -o-transition:      all $transition ease-out;
+    -webkit-transition: all $transition ease-out;
+    -ms-transition: 	all $transition ease-out;
+    transition:         all $transition ease-out;
+}
 
 @mixin border-radius($radius) {
 	-webkit-border-radius: $radius;
@@ -8,13 +22,25 @@ $font-primary: 'Open Sans', Arial, sans-serif;
 }
 
 @import 'bootstrap/variables';
-
 @import 'template-style';
 
 
 /* user.html: User profile */
 .profile {
 	margin: 20px 0;
+
+	> .col-md-3 {
+		margin-bottom: 1.5em;
+
+		// Sticky position
+		@media (min-width: 992px) {
+			position: sticky;
+			top: 90px;
+			left: 37.5px;
+			margin-bottom: 0;
+		}
+	}
+	
 
     /* Profile sidebar */
 	.profile-sidebar {
@@ -42,7 +68,7 @@ $font-primary: 'Open Sans', Arial, sans-serif;
 			  
 			.profile-usertitle-job {
 				text-transform: uppercase;
-				color: #5b9bd1;
+				color: $user-main-color;
 				font-size: 12px;
 				font-weight: 600;
 				margin-bottom: 15px;
@@ -64,6 +90,11 @@ $font-primary: 'Open Sans', Arial, sans-serif;
 			  
 			.btn:last-child {
 				margin-right: 0px;
+			}
+
+			.btn.active {
+				background-color: #fff;
+				color: darken($brand-primary, 20%);
 			}
 		}
 		  
@@ -88,7 +119,7 @@ $font-primary: 'Open Sans', Arial, sans-serif;
 
 					a:hover {
 						background-color: #fafcfd;
-						color: #5b9bd1;
+						color: $user-main-color;
 					}
 					
 				}
@@ -101,9 +132,9 @@ $font-primary: 'Open Sans', Arial, sans-serif;
 					border-bottom: none;
 
 					a {
-						color: #5b9bd1;
+						color: $user-main-color;
 						background-color: #f6f9fb;
-						border-left: 2px solid #5b9bd1;
+						border-left: 2px solid $user-main-color;
 						margin-left: -2px;
 					}
 				}
@@ -111,7 +142,7 @@ $font-primary: 'Open Sans', Arial, sans-serif;
 		}	  
 	}
 
-	/* Profile Content */
+	/* Profile Content: user.html */
 	.profile-content {
 		padding: 20px;
 		background: #fff;
@@ -120,24 +151,63 @@ $font-primary: 'Open Sans', Arial, sans-serif;
 		.form-horizontal {
 			margin-top: 20px;
 
-			.control-label {
-				font-size: .8em;
-			}
-	
-			.user-form-control {
-				display: block;
-				width: 100%;
-				padding: 7px 20px;
-				font-size: .9em;
-				font-family: $font-primary;
+			.fileinput .btn {
 				color: #777;
-				background-color: #fff;
-				background-image: none;
-				border: 1px solid #eee;
-				
-				&:active, &:focus {
-					border: 1px solid #5b9bd1;
+				padding-left: 10px;
+				padding-right: 10px;
+				@include border-radius(0);
+			}
+
+			.form-group {
+				.fs-title {
+					font-size: .8em;
+					text-align: right;
 				}
+				.fs-dad, .fs-mum {
+					padding-top: 7px;
+					padding-bottom: 7px;
+					font-size: .9em;
+				}
+				
+				label[for=tel_relative],
+				label[for=passport],
+				label[for=user-family-status],
+				label[for=parents_marriage] {
+					padding-top: 0;
+				}
+				label.control-label {
+					font-size: .8em;
+				}
+				.user-form-control {
+					display: block;
+					width: 100%;
+					padding: 7px 20px;
+					font-size: .9em;
+					font-family: $font-primary;
+					color: #777;
+					background-color: #fff;
+					background-image: none;
+					border: 1px solid #eee;
+					
+					&:active, &:focus {
+						border: 1px solid $user-main-color;
+					}
+				}
+				span.help-block {
+					font-size: .75em;
+				}
+			}
+
+			#dad_fieldset label, .fs-dad {
+				// font-weight: 600;
+				// color: darken($dad-label, 30%);
+				color: darken($user-main-color, 10%);
+			}
+
+			#mum_fieldset label, .fs-mum {
+				// font-weight: 600;
+				// color: darken($mum-label, 30%);
+				color: darken($user-main-color, 10%);
 			}
 
 			.submit-btn {
@@ -151,6 +221,109 @@ $font-primary: 'Open Sans', Arial, sans-serif;
 					@include border-radius(0);
 				}
 			}
+		}
+	}
+
+	/* Used in profile.html */
+	.profile-data {
+		padding: 30px;
+		background: #fff;
+		min-height: 474px;
+
+		ul {
+			li {
+				border: none;
+				cursor: context-menu;
+				h4, p {
+					font-size: 14px;
+					margin: 0;
+					padding: 0;
+				}
+				p {
+					line-height: 1.3;
+				}
+				&:hover {
+					background-color: #f8f8f8;
+				}
+			}
+		}
+	}
+}
+
+
+
+#likes {
+	padding: 20px;
+	background: #fff;
+	min-height: 474px;
+
+	table {
+		tbody > tr {
+			cursor: pointer;
+		}
+		td {
+			vertical-align: middle;
+			img {
+				width: 50px;
+				height: 50px;
+			}
+			.btn {
+				@include border-radius(0);
+				text-transform: capitalize;
+				i.material-icons {
+					font-size: 17px;
+					vertical-align: middle;
+				}
+			}
+			// i[class^="fa fa-heart"] {
+			// 	font-size: 1.2em;
+			// 	color: $brand-primary;
+
+			// 	&:hover {
+			// 		color: darken($brand-primary, 10%);
+			// 	}
+			// }
+			// i.material-icons {
+			// 		position: relative;
+			// 		top: 2px;
+			// }
+			div.request-accepted {
+				color: $request-accepted;
+				span {
+					font-size: 0.9em;
+				} 
+				i {
+					position: relative;
+					top: 3px;
+					font-size: 1.2em;
+				}
+			}
+			div.request-sent {
+				color: $request-sent;
+				span {
+					font-size: 0.9em;
+				} 
+			}
+		}
+
+		/* Table Responsive overflow behaviour */
+		th, td {
+			width: auto;
+			white-space: nowrap;
+		}
+		td.col-1 {
+			width: 10%;
+			white-space: nowrap;
+		}
+		td.col-2 {
+			text-align: left;
+			max-width: 200px;
+			overflow: hidden;
+			text-overflow: ellipsis; 
+		}
+		td.col-3 {
+			width: 20%;
+			white-space: nowrap;
 		}
 	}
 }

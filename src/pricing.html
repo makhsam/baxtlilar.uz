@@ -25,12 +25,9 @@
         <link rel="stylesheet" href="css/bootstrap.css">
         <!--Bootstrap Select-->
         <link rel="stylesheet" href="css/bootstrap-select.css">
-        <!-- Owl Carousel  -->
-        <link rel="stylesheet" href="css/owl.carousel.min.css">
-        <link rel="stylesheet" href="css/owl.theme.default.min.css">
-        <!-- Theme style  -->
+        <!--Custom styles-->
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/basic_style.css">
+        <link rel="stylesheet" href="css/pricing.css">
 
         <!-- Modernizr JS -->
         <script src="js/modernizr-2.6.2.min.js"></script>
@@ -57,7 +54,7 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right nav-animation">
-                    <li><a href="#home">Home</a></li>
+                    <li class="active"><a href="#home">Home</a></li>
                     <li class="dropdown">
                         <a href="#about" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
                         <ul class="dropdown-menu">
@@ -70,7 +67,7 @@
                     <li><a href="#catalog">Catalog</a></li>
                     <li><a href="#news">News</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li class="active"><a href="#cabinet">Cabinet</a></li>
+                    <li><a href="#cabinet">Cabinet</a></li>
                     <li><a href="#register">Register</a></li>
                     <li class="dropdown">
                         <a href="#about" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -93,13 +90,103 @@
         </div>
     </nav>
 
-	<div class="main-wrapper" style="min-height: 1200px;">
+	<section class="main-wrapper" style="min-height: 600px;">
 		<div class="container">
-			
-			<h1>Hello World!</h1>
-			
+            <div class="block-heading">
+                <h2>Премиум-планы</h2>
+                <a href="#women" class="pull-left btn btn-default disabled">Для женщин</a>
+                <a href="#men" class="pull-right btn btn-default">Для мужщин</a>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo.</p>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-sm-12 col-md-4 mb-4">
+                    <div class="item">
+                        <div class="heading">
+                            <h3>Базовый</h3>
+                            <!-- <span>Персональное</span> -->
+                        </div>
+                        <div class="price">
+                            <span class="currency"></span>
+                            <span class="value">250</span>
+                            <span>тысяч сум</span>
+                            <p>Для гражданы Узбекистана</p>
+                        </div>
+                        <div class="price">
+                            <span class="currency"></span>
+                            <span class="value">75</span>
+                            <span>долларов</span>
+                            <p>Для нерезиденты</p>
+                        </div>
+                        <div class="features">
+                            <div class="feature">1 Website</div>
+                            <div class="feature">1 Email Account</div>
+                            <div class="feature">100 GB Bandwidth</div>
+                            <div class="feature">1X Processing Power & Memory</div>
+                        </div>
+                        <button class="btn btn-block btn-default" type="submit">BUY NOW</button>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-4 mb-4">
+                    <div class="item">
+                        <div class="ribbon">Топ продаж</div>
+                        <div class="heading">
+                            <h3>Премиум</h3>
+                            <!-- <span>Бизнесмены и фрилансеры</span> -->
+                        </div>
+                        <div class="price">
+                            <span class="currency"></span>
+                            <span class="value">500</span>
+                            <span>тысяч сум</span>
+                            <p>Для гражданы Узбекистана</p>
+                        </div>
+                        <div class="price">
+                            <span class="currency"></span>
+                            <span class="value">125</span>
+                            <span>долларов</span>
+                            <p>Для нерезиденты</p>
+                        </div>
+                        <div class="features">
+                            <div class="feature">10 Number of Websites</div>
+                            <div class="feature">10 Email Accounts</div>
+                            <div class="feature">1000 GB Bandwidth</div>
+                            <div class="feature">2X Processing Power & Memory</div>
+                            <div class="feature">Weekly Backups</div>
+                        </div>
+                        <button class="btn btn-block btn-primary" type="submit">BUY NOW</button>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-4 mb-4">
+                    <div class="item">
+                        <div class="heading">
+                            <h3>VIP</h3>
+                            <!-- <span>Все и даже больше</span> -->
+                        </div>
+                        <div class="price">
+                            <span class="currency"></span>
+                            <span class="value">1</span>
+                            <span>млн. сум</span>
+                            <p>Для гражданы Узбекистана</p>
+                        </div>
+                        <div class="price">
+                            <span class="currency"></span>
+                            <span class="value">250</span>
+                            <span>долларов</span>
+                            <p>Для нерезиденты</p>
+                        </div>
+                        <div class="features">
+                            <div class="feature">All Benefits From Premium</div>
+                            <div class="feature">Daily Backups</div>
+                            <div class="feature">Free SSL Certificate</div>
+                            <div class="feature">4X Processing Power & Memory</div>
+                        </div>
+                        <button class="btn btn-block btn-default" type="submit">BUY NOW</button>
+                    </div>
+                </div>
+            </div>
 		</div>
-	</div>
+	</section>
 
 	<footer id="fh5co-footer" role="contentinfo">
 		<div class="container">
@@ -120,9 +207,10 @@
 	</footer>
 	
 
-	<div class="gototop js-top">
-		<a href="#" class="js-gotop"><i class="fa fa-angle-up"></i></a>
-	</div>
+	<!--Scroll to top-->
+	<a id="back-to-top" href="#scrollTop" class="scroll-to-top" role="button">
+        <i style="font-size:28px" class="fa fa-angle-up"></i>
+    </a>
 	
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
@@ -138,13 +226,8 @@
             $.fn.selectpicker.Constructor.BootstrapVersion = '3';
         });
     </script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Carousel -->
-	<script src="js/owl.carousel.min.js"></script>
-	<!-- Custom JS -->
-	<script src="js/navbar.template.js"></script>
-
+    <script src="js/custom.template.js"></script>
+    
 	</body>
 </html>
 

@@ -4,222 +4,165 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Bahtim.uz</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<meta name="author" content="" />
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>Baxtlilar.uz</title>
 
+        <!--Favicon icon-->
+        <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="images/favicon/favicon.ico" type="image/x-icon">
 
-  	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
-	<!--Favicon icon-->
-	<link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="images/favicon/favicon.ico" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Marmelad&amp;subset=cyrillic" rel="stylesheet">
+        <!--Google Material Icons-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Font Awesome-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Marmelad&amp;subset=cyrillic" rel="stylesheet">
-	<!--Google Material Icons (Sacramento)-->
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<!--Font Awesome-->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <!--Bootstrap Select-->
+        <link rel="stylesheet" href="css/bootstrap-select.css">
+        <!-- Animate.css -->
+	    <link rel="stylesheet" href="css/animate.css">
+        <!-- Owl Carousel  -->
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/owl.theme.default.min.css">
+        <!-- Theme style  -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/home.css">
+        
+        <!-- <link rel="stylesheet" href="css/ekko-lightbox.css"> -->
+        <!-- Icomoon Icon Fonts-->
+	    <link rel="stylesheet" href="css/icomoon.css">
 
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
+        <!-- Modernizr JS -->
+        <script src="js/modernizr-2.6.2.min.js"></script>
+        <!-- FOR IE9 below -->
+        <!--[if lt IE 9]>
+        <script src="js/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    
+	<body>	
+	<!-- Fixed navbar -->
+    <nav id="navbar-template" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar top-bar"></span>
+                    <span class="icon-bar middle-bar"></span>
+                    <span class="icon-bar bottom-bar"></span>
+                </button>
+                <a class="navbar-logo" href="index.html">
+                    <img src="images/logo_light.png" style="width: 120px; height: auto"/>
+                </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right nav-animation">
+                    <li class="active"><a href="#home">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#about" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Information</a></li>
+                            <li><a href="#">Questions</a></li>
+                            <li><a href="#">Feedback</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#catalog">Catalog</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#cabinet">Cabinet</a></li>
+                    <li><a href="#register">Register</a></li>
+                    <li>
+                        <select class="selectpicker" data-width="fit" onchange="redirect(this)">
+                            <option data-content='<img src="images/flags/rus.png"> RU'>RU</option>
+                            <option data-content='<img src="images/flags/uzb.png"> UZ'>UZ</option>
+                            <option data-content='<img src="images/flags/eng.png"> EN' selected>EN</option>
+                        </select>
+                    </li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
 
-	<!-- Magnific Popup -->
-	<link rel="stylesheet" href="css/magnific-popup.css">
+    <!--Carousel slideshow-->
+    <header style="margin-top:55px">
+        <div id="owl-main-slide" class="owl-carousel">
+            <!--Slideshow 1-->
+            <div class="owl-slide" style="background-image:url(images/mega_love_01.jpg);" role="banner">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 vertical-align-flex">
+                            <div class="text-center">
+                                <h1>Найдите свою пару</h1>
+                                <h2>83% девушек идут на свидание в течение 60 дней с момента начала сотрудничества с нами</h2>
+                                <p><a href="#" class="btn btn-default btn-sm">Бесплатная регистрация</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Slideshow 2-->
+            <div class="owl-slide" style="background-image:url(images/mega_love_02.jpg);" role="banner">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 vertical-align-flex">
+                            <div class="text-center">
+                                <h1>Индивидуальный подбор пары</h1>
+                                <h2>Регистрация на самых надежных ресурсах</h2>
+                                <p><a href="#" class="btn btn-default btn-sm">Бесплатная регистрация</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Slideshow 3-->
+            <div class="owl-slide" style="background-image:url(images/mega_love_03.jpg);" role="banner">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 vertical-align-flex">
+                            <div class="text-center">
+                                <h1>9 лет работы</h1>
+                                <h2>148 официальных браков</h2>
+                                <p><a href="#" class="btn btn-default btn-sm">Бесплатная регистрация</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header><!--end carousel slideshow-->
+    
 
-	<!-- Owl Carousel  -->
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <!--Introduction text-->
+    <div id="fh5co-couple">
+        <div class="container">
+            <div class="fh5co-heading animate-box">
+                <h2 class="text-center">Введение</h2>
+                <p class="text-justify">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pellentesque vitae ex a sagittis. Cras vestibulum nibh id lorem tristique tempus. Mauris laoreet ornare ipsum ac elementum. Maecenas consectetur mauris at lorem blandit, vitae congue ante consectetur. Etiam nec tincidunt sem, in tempus ante. Donec at elit libero. Mauris sed sem eget felis semper sodales. Ut id tincidunt dolor. Suspendisse euismod eleifend leo, sed tincidunt libero tincidunt non. Vestibulum in eros a diam eleifend hendrerit. Donec viverra accumsan metus eleifend dictum. Cras in nisl pellentesque ligula lacinia posuere. Praesent vulputate condimentum mi, non porttitor urna ultricies gravida. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras at sem quis erat porttitor tempus vel vitae libero.
+                </p>
+                <p class="text-justify">
+                    Etiam quis pulvinar massa, id volutpat libero. Donec ultricies euismod neque, eu ullamcorper turpis aliquet sed. Duis tristique accumsan iaculis. Suspendisse at viverra velit. Integer sed nibh ultrices, molestie eros mollis, lobortis odio. Vivamus facilisis semper dapibus. Ut magna sem, consectetur quis hendrerit at, lobortis quis sapien. Suspendisse ullamcorper, enim at sollicitudin feugiat, risus felis consequat magna, vitae varius nibh tellus non velit. Pellentesque convallis eros et porttitor facilisis.
+                </p>
+                <p class="text-justify">
+                    Morbi dapibus nunc ac tellus interdum, at vestibulum diam imperdiet. Aliquam erat volutpat. Phasellus tempor quam accumsan, hendrerit ante ac, tincidunt elit. Morbi vel ipsum sit amet purus molestie mattis sed at mi. Sed ac hendrerit metus. Donec nec sollicitudin lacus, at placerat eros. Cras convallis dapibus odio, ut fringilla mi imperdiet et. Morbi congue pellentesque urna non ullamcorper.
+                </p>
+                <p class="text-center"><a href="#" class="btn btn-danger" role="button">Узнать больше</a></p>
+            </div>
+        </div>
+    </div>
 
-	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/index.css">
-
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
-
-	</head>
-	<body>
-		
-	<div class="fh5co-loader"></div>
-	
-	<div id="page">
-	<!-- Navbar: slide down on.scroll -->
-	<nav class="fh5co-nav-fixed" role="navigation">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-2">
-					<div id="fh5co-logo-colorful"><a href="index.html">
-						<img src="images/logo_light.png" style="width: 120px; height: auto"/>
-					</a></div>
-				</div>
-				<div class="col-xs-10 text-right menu-1">
-					<ul>
-						<li class="active"><a href="index.html">Home</a></li>
-						<li><a href="about.html">Story</a></li>
-						<li class="has-dropdown-fixed">
-							<a href="services.html">Services</a>
-							<ul class="dropdown-fixed">
-								<li><a href="#">Web Design</a></li>
-								<li><a href="#">eCommerce</a></li>
-								<li><a href="#">Branding</a></li>
-								<li><a href="#">API</a></li>
-							</ul>
-						</li>
-						<li class="has-dropdown-fixed">
-							<a href="gallery.html">Gallery</a>
-							<ul class="dropdown-fixed">
-								<li><a href="#">HTML5</a></li>
-								<li><a href="#">CSS3</a></li>
-								<li><a href="#">Sass</a></li>
-								<li><a href="#">jQuery</a></li>
-							</ul>
-						</li>
-						<li><a href="contact.html">Contact</a></li>
-					</ul>
-				</div>
-			</div>
-			
-		</div>
-	</nav>
-	<!-- Navbar transparent on top -->
-	<nav class="fh5co-nav" role="navigation">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-2">
-					<div id="fh5co-logo"><a href="index.html">
-						<img src="images/logo-white.png" style="width: 150px; height: auto"/>
-					</a></div>
-				</div>
-				<div class="col-xs-10 text-right menu-1">
-					<ul>
-						<li class="active"><a href="index.html">Home</a></li>
-						<li><a href="about.html">Story</a></li>
-						<li class="has-dropdown">
-							<a href="services.html">Services</a>
-							<ul class="dropdown">
-								<li><a href="#">Web Design</a></li>
-								<li><a href="#">eCommerce</a></li>
-								<li><a href="#">Branding</a></li>
-								<li><a href="#">API</a></li>
-							</ul>
-						</li>
-						<li class="has-dropdown">
-							<a href="gallery.html">Gallery</a>
-							<ul class="dropdown">
-								<li><a href="#">HTML5</a></li>
-								<li><a href="#">CSS3</a></li>
-								<li><a href="#">Sass</a></li>
-								<li><a href="#">jQuery</a></li>
-							</ul>
-						</li>
-						<li><a href="contact.html">Contact</a></li>
-					</ul>
-				</div>
-			</div>
-			
-		</div>
-	</nav>
-
-	<header id="header-slideshow" class="slideshow-container fadein">
-		<!--Slider one-->
-		<div class="slideshow-cover" role="banner" style="background-image:url(images/mega_love_01.jpg);" data-stellar-background-ratio="0.5">
-			<div class="overlay"></div>
-
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center">
-						<div class="display-t">
-							<div class="display-tc">
-								<h1>Найдите свою пару</h1>
-								<h2>83% девушек идут на свидание в течение 60 дней с момента начала сотрудничества с нами</h2>
-								<p><a href="#" class="btn btn-default btn-sm">Бесплатная регистрация</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!--Slider two-->
-		<div class="slideshow-cover" role="banner" style="background-image:url(images/mega_love_02.jpg);" data-stellar-background-ratio="0.5">
-			<div class="overlay"></div>
-
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center">
-						<div class="display-t">
-							<div class="display-tc">
-								<h1>Индивидуальный подбор пары</h1>
-								<h2>Регистрация на самых надежных ресурсах</h2>
-								<p><a href="#" class="btn btn-default btn-sm">Бесплатная регистрация</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!--Slider three-->
-		<div class="slideshow-cover" role="banner" style="background-image:url(images/mega_love_03.jpg);" data-stellar-background-ratio="0.5">
-			<div class="overlay"></div>
-
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center">
-						<div class="display-t">
-							<div class="display-tc">
-								<h1>9 лет работы</h1>
-								<h2>148 официальных браков</h2>
-								<p><a href="#" class="btn btn-default btn-sm">Бесплатная регистрация</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<a id="slide-prev" class="prev" onclick="nextSlides(-1)">&#10094;</a>
-		<a id="slide-next" class="next" onclick="nextSlides(1)">&#10095;</a>
-	</header>
-
-	<div id="fh5co-couple">
-		<div class="container">
-			<div class="fh5co-heading animate-box">
-				<h2 class="text-center">Введение</h2>
-				<p class="text-justify">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pellentesque vitae ex a sagittis. Cras vestibulum nibh id lorem tristique tempus. Mauris laoreet ornare ipsum ac elementum. Maecenas consectetur mauris at lorem blandit, vitae congue ante consectetur. Etiam nec tincidunt sem, in tempus ante. Donec at elit libero. Mauris sed sem eget felis semper sodales. Ut id tincidunt dolor. Suspendisse euismod eleifend leo, sed tincidunt libero tincidunt non. Vestibulum in eros a diam eleifend hendrerit. Donec viverra accumsan metus eleifend dictum. Cras in nisl pellentesque ligula lacinia posuere. Praesent vulputate condimentum mi, non porttitor urna ultricies gravida. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras at sem quis erat porttitor tempus vel vitae libero.
-				</p>
-				<p class="text-justify">
-					Etiam quis pulvinar massa, id volutpat libero. Donec ultricies euismod neque, eu ullamcorper turpis aliquet sed. Duis tristique accumsan iaculis. Suspendisse at viverra velit. Integer sed nibh ultrices, molestie eros mollis, lobortis odio. Vivamus facilisis semper dapibus. Ut magna sem, consectetur quis hendrerit at, lobortis quis sapien. Suspendisse ullamcorper, enim at sollicitudin feugiat, risus felis consequat magna, vitae varius nibh tellus non velit. Pellentesque convallis eros et porttitor facilisis.
-				</p>
-				<p class="text-justify">
-					Morbi dapibus nunc ac tellus interdum, at vestibulum diam imperdiet. Aliquam erat volutpat. Phasellus tempor quam accumsan, hendrerit ante ac, tincidunt elit. Morbi vel ipsum sit amet purus molestie mattis sed at mi. Sed ac hendrerit metus. Donec nec sollicitudin lacus, at placerat eros. Cras convallis dapibus odio, ut fringilla mi imperdiet et. Morbi congue pellentesque urna non ullamcorper.
-				</p>
-				<p class="text-center"><a href="#" class="btn btn-danger" role="button">Узнать больше</a></p>
-			</div>
-		</div>
-	</div>
-
-	<div id="fh5co-event" class="fh5co-bg" style="background-image:url(images/background-333.jpg);">
+    <!--Services-->
+    <div id="fh5co-event" class="fh5co-bg" style="background-image:url(images/background-333.jpg);">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
@@ -229,321 +172,490 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="display-t">
-					<div class="display-tc">
-						<!--Service 1-->
-						<div class="col-md-4 col-sm-12 text-center">
-							<div class="event-wrap animate-box">
-								<h3>Service 1</h3>
-								<div class="">
-									<i style="font-size:5em;" class="material-icons">check</i>
-								</div>
-								<p style="padding-bottom: 30px;">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right ...</p>
-								<a href="services.html#service1" class="service-btn-outline">Learn more</a>
-							</div>
-						</div>
-						<!--Service 2-->
-						<div class="col-md-4 col-sm-12 text-center">
-							<div class="event-wrap animate-box">
-								<h3>Service 2</h3>
-								<div class="">
-									<i style="font-size:5em" class="material-icons">event_note</i>
-								</div>
-								<p style="padding-bottom: 30px;">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right ...</p>
-								<a href="services.html#service2" class="service-btn-outline">Learn more</a>
-							</div>
-						</div>
-						<!--Service 3-->
-						<div class="col-md-4 col-sm-12 text-center">
-							<div class="event-wrap animate-box">
-								<h3>Service 3</h3>
-								<div class="">
-									<i style="font-size:5em" class="material-icons">add_a_photo</i>
-								</div>
-								<p style="padding-bottom: 30px;">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right ...</p>
-								<a href="services.html#service3" class="service-btn-outline">Learn more</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+                <div class="col-sm-12 animate-box">
+                    <div id="owl-services" class="">
+                        <!--Service 1-->
+                        <div class="item text-center">
+                            <div class="event-wrap" data-toggle="modal" data-target="#our-services1">
+                                <h3>Service 1</h3>
+                                <div class="">
+                                    <i style="font-size:5em;" class="material-icons">check</i>
+                                </div>
+                                <p style="height: 135px"> Small text here.</p>
+                            </div>
+                        </div>
+                        <!--Service 2-->
+                        <div class="item text-center">
+                            <div class="event-wrap" data-toggle="modal" data-target="#our-services2">
+                                <h3>Service 2</h3>
+                                <div class="">
+                                    <i style="font-size:5em" class="material-icons">event_note</i>
+                                </div>
+                                <p style="height: 135px">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right ...</p>
+                            </div>
+                        </div>
+                        <!--Service 3-->
+                        <div class="item text-center">
+                            <div class="event-wrap" data-toggle="modal" data-target="#our-services3">
+                                <h3>Service 3</h3>
+                                <div class="">
+                                    <i style="font-size:5em" class="material-icons">add_a_photo</i>
+                                </div>
+                                <p style="height: 135px">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right ...</p>
+                            </div>
+                        </div>
+                        <!--Service 4-->
+                        <div class="item text-center">
+                            <div class="event-wrap" data-toggle="modal" data-target="#our-services4">
+                                <h3>Service 4</h3>
+                                <div class="">
+                                    <i style="font-size:5em" class="material-icons">add_a_photo</i>
+                                </div>
+                                <p style="height: 135px">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right ...</p>
+                            </div>
+                        </div>
+                        <!--Service 5-->
+                        <div class="item text-center">
+                            <div class="event-wrap" data-toggle="modal" data-target="#our-services5">
+                                <h3>Service 5</h3>
+                                <div class="">
+                                    <i style="font-size:5em" class="material-icons">add_a_photo</i>
+                                </div>
+                                <p style="height: 135px">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right ...</p>                                
+                            </div>
+                        </div>
+                        <!--Service 6-->
+                        <div class="item text-center">
+                            <div class="event-wrap" data-toggle="modal" data-target="#our-services6">
+                                <h3>Service 6</h3>
+                                <div class="">
+                                    <i style="font-size:5em" class="material-icons">add_a_photo</i>
+                                </div>
+                                <p style="height: 135px">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right ...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 		</div>
-	</div>
+    </div>
 
-	<div id="fh5co-couple-story">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-					<span>Как идет процесс</span>
-					<h2>Our Story</h2>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12 col-md-offset-0">
-					<ul class="timeline animate-box">
-						<li class="animate-box">
-							<div class="timeline-badge" style="background-image:url(images/process_111.jpg);"></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Шаг 1</h3>
-									<span class="date">December 25, 2015</span>
-								</div>
-								<div class="timeline-body">
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-								</div>
-							</div>
-						</li>
-						<li class="timeline-inverted animate-box">
-							<div class="timeline-badge" style="background-image:url(images/process_222.jpg);"></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Шаг 2</h3>
-									<span class="date">December 28, 2015</span>
-								</div>
-								<div class="timeline-body">
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-								</div>
-							</div>
-						</li>
-						<li class="animate-box">
-							<div class="timeline-badge" style="background-image:url(images/process_333.jpg);"></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Шаг 3</h3>
-									<span class="date">January 1, 2016</span>
-								</div>
-								<div class="timeline-body">
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-								</div>
-							</div>
-						</li>
-			    	</ul>
-				</div>
-			</div>
-		</div>
-	</div>
+    <!-- --------------------------- Service Dialogs (Pop Ups) --------------------------- -->
+    <!--Service 1-->
+    <div class="modal fade" id="our-services1" role="dialog">
+        <div class="vertical-alignment-helper">
+            <div class="modal-dialog vertical-align-center" role="document">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Service 1</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pellentesque vitae ex a sagittis. Cras vestibulum nibh id lorem tristique tempus. </p>
+                        <p>Mauris laoreet ornare ipsum ac elementum. Maecenas consectetur mauris at lorem blandit, vitae congue ante consectetur.</p>
+                        <p>Etiam nec tincidunt sem, in tempus ante. Donec at elit libero. Mauris sed sem eget felis semper sodales. Ut id tincidunt dolor. Suspendisse euismod eleifend leo, sed tincidunt libero tincidunt non.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Service 2-->
+    <div class="modal fade" id="our-services2" role="dialog">
+        <div class="vertical-alignment-helper">
+            <div class="modal-dialog vertical-align-center" role="document">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Service 2</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pellentesque vitae ex a sagittis. Cras vestibulum nibh id lorem tristique tempus. </p>
+                        <p>Mauris laoreet ornare ipsum ac elementum. Maecenas consectetur mauris at lorem blandit, vitae congue ante consectetur.</p>
+                        <p>Etiam nec tincidunt sem, in tempus ante. Donec at elit libero. Mauris sed sem eget felis semper sodales. Ut id tincidunt dolor. Suspendisse euismod eleifend leo, sed tincidunt libero tincidunt non.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Service 1-->
+    <div class="modal fade" id="our-services3" role="dialog">
+        <div class="vertical-alignment-helper">
+            <div class="modal-dialog vertical-align-center" role="document">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Service 3</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pellentesque vitae ex a sagittis. Cras vestibulum nibh id lorem tristique tempus. </p>
+                        <p>Mauris laoreet ornare ipsum ac elementum. Maecenas consectetur mauris at lorem blandit, vitae congue ante consectetur.</p>
+                        <p>Etiam nec tincidunt sem, in tempus ante. Donec at elit libero. Mauris sed sem eget felis semper sodales. Ut id tincidunt dolor. Suspendisse euismod eleifend leo, sed tincidunt libero tincidunt non.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--end service dialog-->
 
+    <!--Процесс работы-->
+    <div id="fh5co-couple-story">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+                    <h2>Процесс работы</h2>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-md-offset-0">
+                    <ul class="timeline animate-box">
+                        <li class="animate-box">
+                            <div class="timeline-badge" style="background-image:url(images/process_111.jpg);"></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h3 class="timeline-title">Шаг 1</h3>
+                                    <span class="date">December 25, 2015</span>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted animate-box">
+                            <div class="timeline-badge" style="background-image:url(images/process_222.jpg);"></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h3 class="timeline-title">Шаг 2</h3>
+                                    <span class="date">December 28, 2015</span>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="animate-box">
+                            <div class="timeline-badge" style="background-image:url(images/process_333.jpg);"></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h3 class="timeline-title">Шаг 3</h3>
+                                    <span class="date">January 1, 2016</span>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted animate-box">
+                            <div class="timeline-badge" style="background-image:url(images/process_222.jpg);"></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h3 class="timeline-title">Шаг 4</h3>
+                                    <span class="date">December 28, 2015</span>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="animate-box">
+                            <div class="timeline-badge" style="background-image:url(images/process_333.jpg);"></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h3 class="timeline-title">Шаг 5</h3>
+                                    <span class="date">January 1, 2016</span>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
-	<div id="fh5co-services" class="fh5co-section-gray">
-		<div class="container">
-			
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Что мы предлагаем</h2>
-					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
-				</div>
-			</div>
+    <!--Коротко о нас-->
+    <div id="fh5co-services" class="fh5co-section-gray">
+        <div class="container">
+            
+            <div class="row animate-box">
+                <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                    <h2>Коротко о нас</h2>
+                    <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+                </div>
+            </div>
 
-			<div class="row">
-				<div class="col-md-6">
-					<div class="feature-left animate-box" data-animate-effect="fadeInLeft">
-						<span class="icon">
-							<i class="icon-calendar"></i>
-						</span>
-						<div class="feature-copy">
-							<h3>We Organized Events</h3>
-							<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
-						</div>
-					</div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="feature-left animate-box" data-animate-effect="fadeInLeft">
+                        <span class="icon">
+                            <i class="icon-calendar"></i>
+                        </span>
+                        <div class="feature-copy">
+                            <h3>We Organized Events</h3>
+                            <p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
+                        </div>
+                    </div>
 
-					<div class="feature-left animate-box" data-animate-effect="fadeInLeft">
-						<span class="icon">
-							<i class="icon-image"></i>
-						</span>
-						<div class="feature-copy">
-							<h3>Photoshoot</h3>
-							<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
-						</div>
-					</div>
+                    <div class="feature-left animate-box" data-animate-effect="fadeInLeft">
+                        <span class="icon">
+                            <i class="icon-image"></i>
+                        </span>
+                        <div class="feature-copy">
+                            <h3>Photoshoot</h3>
+                            <p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
+                        </div>
+                    </div>
 
-					<div class="feature-left animate-box" data-animate-effect="fadeInLeft">
-						<span class="icon">
-							<i class="icon-video"></i>
-						</span>
-						<div class="feature-copy">
-							<h3>Video Editing</h3>
-							<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
-						</div>
-					</div>
+                    <div class="feature-left animate-box" data-animate-effect="fadeInLeft">
+                        <span class="icon">
+                            <i class="icon-video"></i>
+                        </span>
+                        <div class="feature-copy">
+                            <h3>Video Editing</h3>
+                            <p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
+                        </div>
+                    </div>
 
-				</div>
+                </div>
 
-				<div class="col-md-6 animate-box">
-					<div class="fh5co-video fh5co-bg" style="background-image: url(images/nature.jpg);">
-						<a href="https://www.youtube.com/watch?v=DQuhA5ZCV9M" class="popup-vimeo"><i class="icon-video2"></i></a>
-						<div class="overlay"></div>
-					</div>
-				</div>
-			</div>
+                <div class="col-md-6 animate-box">
+                    <div class="fh5co-video fh5co-bg" style="background-image: url(images/nature.jpg);">
+                        <a href="https://www.youtube.com/watch?v=DQuhA5ZCV9M" class="popup-vimeo"><i class="icon-video2"></i></a>
+                        <div class="overlay"></div>
+                    </div>
+                </div>
+            </div>
 
-			
-		</div>
-	</div>
+        </div>
+    </div>
 
-
+    
+    <!--Flags-->
 	<div id="fh5co-testimonial">
-		<div class="container">
-			<div class="row">
-				<div class="row animate-box">
-					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-						<span>Best Wishes</span>
-						<h2>Наша команда</h2>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12 animate-box">
-						<div class="wrap-testimony">
-							<div class="owl-carousel-fullwidth">
-								<div class="item">
-									<div class="testimony-slide active text-center">
-										<figure>
-											<img src="images/user.png" alt="user">
-										</figure>
-										<span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
-										<blockquote>
-											<p>"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics"</p>
-										</blockquote>
-									</div>
-								</div>
-								<div class="item">
-									<div class="testimony-slide active text-center">
-										<figure>
-											<img src="images/user.png" alt="user">
-										</figure>
-										<span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
-										<blockquote>
-											<p>"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, at the coast of the Semantics, a large language ocean."</p>
-										</blockquote>
-									</div>
-								</div>
-								<div class="item">
-									<div class="testimony-slide active text-center">
-										<figure>
-											<img src="images/user.png" alt="user">
-										</figure>
-										<span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
-										<blockquote>
-											<p>"Far far away, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean."</p>
-										</blockquote>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+                        <span>Countries</span>
+                        <h2></h2>
+                    </div>
+                    <div class="col-md-12 animate-box">
+                        <div id="owl-carousel-flags" class="owl-carousel-flags">
+                            <!--Flag 1-->
+                            <div class="item item-width-wide">
+                                <div class="flag-image">
+                                    <img class="img-responsive" src="images/flags/countries/Uzbekistan.png" alt="">
+                                </div>
+                                <div class="text-center">
+                                    <h5>Uzbekistan</h5>
+                                </div>
+                            </div>
+                            <!--Flag 2-->
+                            <div class="item item-width-narrow">
+                                <div class="flag-image">
+                                    <img class="img-responsive" src="images/flags/countries/Turkey.png" alt="">
+                                </div>
+                                <div class="text-center">
+                                    <h5>Turkey</h5>
+                                </div>
+                            </div>
+                            <!--Flag 3-->
+                            <div class="item item-width-narrow">
+                                <div class="flag-image">
+                                    <img class="img-responsive" src="images/flags/countries/Korea.png" alt="">
+                                </div>
+                                <div class="text-center">
+                                    <h5>South Korea</h5>
+                                </div>
+                            </div>
+                            <!--Flag 4-->
+                            <div class="item item-width-narrow">
+                                <div class="flag-image">
+                                    <img class="img-responsive" src="images/flags/countries/Russia.png" alt="">
+                                </div>
+                                <div class="text-center">
+                                    <h5>Russia</h5>
+                                </div>
+                            </div>
+                            <!--Flag 5-->
+                            <div class="item item-width-wide">
+                                <div class="flag-image">
+                                    <img class="img-responsive" src="images/flags/countries/Australia.png" alt="">
+                                </div>
+                                <div class="text-center">
+                                    <h5>Australia</h5>
+                                </div>
+                            </div>
+                            <!--Flag 6-->
+                            <div class="item item-width-narrow">
+                                <div class="flag-image">
+                                    <img class="img-responsive" src="images/flags/countries/France.png" alt="">
+                                </div>
+                                <div class="text-center">
+                                    <h5>France</h5>
+                                </div>
+                            </div>
+                            <!--Flag 7-->
+                            <div class="item item-width-wide">
+                                <div class="flag-image">
+                                    <img class="img-responsive" src="images/flags/countries/Kazakhstan.png" alt="">
+                                </div>
+                                <div class="text-center">
+                                    <h5>France</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!--Contacts-->
+        <div id="fh5co-started" class="fh5co-bg" style="background-image:url(images/contactUs.jpg);">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="animate-box">
+                    <div class="text-center fh5co-heading">
+                        <h2>Свяжитесь с нами</h2>
+                        <p>Please Fill-up the form to notify you that you're attending. Thanks.</p>
+                    </div>
+                </div>
+                <div class="row animate-box">
+    
+                    <div class="col-md-6">
+                        <div class="home-contact-wrap">
+                            <h3 class="text-center">Заполните Анкету, либо свяжитесь с нами любым другим удобным для Вас способом</h3>
+                            <p class="text-center">Все услуги для девушек бесплатны!​​</p>
+                        
+                            <div class="home-contact-person">
+                                Клиент-менеджер Лилия <br/>
+                                (по вопросам ​регистрации и сотрудничества)
+                            </div>
+                            <div class="home-contact-number">
+                                <a href="#">
+                                    <i class="fa fa-telegram"></i>&nbsp;&nbsp;
+                                    <i class="fa fa fa-whatsapp home-contact-1x"></i>
+                                    +998 90 999 98 98</a>
+                                <a href="#"><i class="fa fa fa-phone home-contact-2x"></i> +998 71 297 98 98</a>
+                                <a href="#"><i class="fa fa fa-phone home-contact-2x"></i> +998 71 295 98 98</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-6">
+                        <form method="GET">
+                            <div class="">
+                                <div class="form-group">
+                                    <label for="name" class="sr-only">Name</label>
+                                    <input type="name" class="form-control" id="name" placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="form-group">
+                                    <label for="email" class="sr-only">Email</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="form-group">
+                                    <label for="message" class="sr-only">Message</label>
+                                    <textarea type="text" class="form-control" id="message" rows="8" placeholder="Leave a feedback"></textarea>
+                                </div>
+                            </div>
+                            <div class="">
+                                <button type="submit" class="btn btn-default btn-block">Отправить</button>
+                            </div>
+                        </form>	
+                    </div>
+    
+                </div>
+            </div>
+        </div>
 
-
-	<div id="fh5co-started" class="fh5co-bg" style="background-image:url(images/contactUs.jpg);">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="animate-box">
-				<div class="text-center fh5co-heading">
-					<h2>Свяжитесь с нами</h2>
-					<p>Please Fill-up the form to notify you that you're attending. Thanks.</p>
-				</div>
-			</div>
-			<div class="row animate-box">
-
-				<div class="col-md-6">
-					<div class="home-contact-wrap">
-						<h3 class="text-center">Заполните Анкету, либо свяжитесь с нами любым другим удобным для Вас способом</h3>
-						<p class="text-center">Все услуги для девушек бесплатны!​​</p>
-					
-						<div class="home-contact-person">
-							Клиент-менеджер Лилия <br/>
-							(по вопросам ​регистрации и сотрудничества)
-						</div>
-						<div class="home-contact-number">
-							<a href="#">
-								<i class="fa fa-telegram"></i>&nbsp;&nbsp;
-								<i class="fa fa fa-whatsapp home-contact-1x"></i>
-								+998 90 999 98 98</a>
-							<a href="#"><i class="fa fa fa-phone home-contact-2x"></i> +998 71 297 98 98</a>
-							<a href="#"><i class="fa fa fa-phone home-contact-2x"></i> +998 71 295 98 98</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-6">
-					<form method="GET">
-						<div class="">
-							<div class="form-group">
-								<label for="name" class="sr-only">Name</label>
-								<input type="name" class="form-control" id="name" placeholder="Name">
-							</div>
-						</div>
-						<div class="">
-							<div class="form-group">
-								<label for="email" class="sr-only">Email</label>
-								<input type="email" class="form-control" id="email" placeholder="Email">
-							</div>
-						</div>
-						<div class="">
-							<div class="form-group">
-								<label for="message" class="sr-only">Message</label>
-								<textarea type="text" class="form-control" id="message" rows="8" placeholder="Message"></textarea>
-							</div>
-						</div>
-						<div class="">
-							<button type="submit" class="btn btn-default btn-block">Отправить</button>
-						</div>
-					</form>	
-				</div>
-
-			</div>
-		</div>
-	</div>
-
+    <!--Footer-->
 	<footer id="fh5co-footer" role="contentinfo">
 		<div class="container">
 
 			<div class="row copyright">
 				<div class="col-md-12 text-center">
 					<p>
-						<small class="block">&copy; 2018 [Название организации]. Все права защищены.</small> 
-						<!--<small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>-->
+						<small class="block">&copy; 2018 Baxtlilar.uz. Все права защищены.</small> 
 					</p>
 					<ul class="fh5co-social-icons">
-						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-						<li><a href="#"><i class="fa fa-telegram"></i></a></li>
-					</ul>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-telegram"></i></a></li>
+                    </ul>
 				</div>
 			</div>
-
 		</div>
 	</footer>
-	</div>
+	
 
-	<div class="gototop js-top">
-		<a href="#" class="js-gotop"><i class="fa fa-angle-up"></i></a>
-	</div>
+	<!--Scroll to top-->
+	<a id="scroll-to-top" href="#scrollTop" class="scroll-to-top" role="button">
+        <i style="font-size:28px" class="fa fa-angle-up"></i>
+    </a>
+
+    <!--Live Chat-->
+    <div id="live-chat" class="chat-widget-wrapper">
+        <div class="chat-widget-container">
+            <div class="chat-widget-text">
+                <p>Напишите нам, мы онлайн!</p>
+            </div>
+        </div>
+        <div class="chat-box-container">
+            <div class="chat-box-nav">
+                <span>Отправьте нам сообщение</span>
+                <i id="chat-box-close" class="material-icons">close</i>
+            </div>
+            <div class="chat-box-content">
+                <p>Оставьте свое сообщение в этой форме, мы получим его на e-mail и обязательно ответим!</p>
+                <form action="" class="chat-box-form">
+                    <input type="text" name="fullname" placeholder="Полное имя">
+                    <input type="email" name="email" placeholder="Эл. почта">
+                    <input type="text" name="theme" placeholder="Тема">
+                    <textarea name="content" rows="3" placeholder="Введите текст"></textarea>
+                    <button class="btn btn-danger btn-sm">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div><!--end chat-->
+
 	
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
 	<script src="js/jquery.easing.1.3.js"></script>
 	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Carousel -->
-	<script src="js/owl.carousel.min.js"></script>
-	<!-- Stellar -->
-	<script src="js/jquery.stellar.min.js"></script>
-	<!-- Magnific Popup -->
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/magnific-popup-options.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Carousel -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!--Select Picker-->
+    <script src="js/bootstrap-select.js"></script>
+    <!--Image gallery-->
+    <!-- <script src="js/ekko-lightbox.min.js"></script> -->
+    <!-- Waypoints -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    
+    
+    <script>
+        $(function(){
+            $('.selectpicker').selectpicker();
+            $.fn.selectpicker.Constructor.BootstrapVersion = '3';
+            // $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+            //     event.preventDefault();
+            //     $(this).ekkoLightbox();
+            // });
 
-	<!-- Main -->
-	<script src="js/index.js"></script>
-	<script src="js/main.js"></script>
-
+        });
+    </script>
+    <script src="js/custom.home.js"></script>
+    <script src="js/custom.template.js"></script>
+    
 	</body>
 </html>
 

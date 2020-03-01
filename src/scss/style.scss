@@ -444,11 +444,11 @@ h1, h2, h3, h4, h5, h6, figure {
 
 #fh5co-counter,
 #fh5co-event {
-	height: 850px;
+	// height: 850px;
 	float: left;
 	.display-t,
 	.display-tc {
-		height: 700px;
+		// height: 700px;
 		display: table;
 		width: 100%;
 	}
@@ -487,9 +487,13 @@ h1, h2, h3, h4, h5, h6, figure {
 		padding: 30px;
 		width: 100%;
 		float: left;
+		cursor: pointer;
 		@include border-radius(4px);
 		@media screen and (max-width: $screen-sm) {
 			margin-bottom: 10px;
+		}
+		&:hover, &:active {
+			border: 2px solid rgba($brand-white,.8);
 		}
 		h3{
 			font-size: 20px;
@@ -502,7 +506,7 @@ h1, h2, h3, h4, h5, h6, figure {
 		}
 		p,span{
 			display: block;
-			color: rgba($brand-white,.8);
+			color: $brand-white;
 		}
 		i{
 			color: rgba($brand-white,1);
@@ -866,7 +870,7 @@ h1, h2, h3, h4, h5, h6, figure {
 
 form {
 	label {
-		font-weight: normal!important;
+		font-weight: normal;
 	}
 }
 
@@ -1117,7 +1121,7 @@ form {
 
 
 .fh5co-heading {
-	margin-bottom: 5em;
+	margin-bottom: 2em;
 	&.fh5co-heading-sm {
 		margin-bottom: 2em;
 	}
@@ -1461,11 +1465,11 @@ form {
 	right: 20px;
 	z-index: 999;
 	opacity: 0;
-	visibility: hidden;
+	// visibility: hidden;
 	@include transition(.5s);
 	&.active {
 		opacity: 1;
-		visibility: visible;
+		// visibility: visible;
 	}
 	a {
 		width: 50px;

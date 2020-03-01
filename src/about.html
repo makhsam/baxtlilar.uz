@@ -6,8 +6,9 @@
 	<head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Bahtim.uz</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>Baxtlilar.uz</title>
 
         <!--Favicon icon-->
         <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
@@ -15,26 +16,24 @@
 
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Marmelad&amp;subset=cyrillic" rel="stylesheet">
-        <!--Google Material Icons (Sacramento)-->
+        <!--Google Material Icons-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Font Awesome-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        
-        <!-- Animate.css -->
-        <link rel="stylesheet" href="css/animate.css">
-        <!-- Icomoon Icon Fonts-->
-        <link rel="stylesheet" href="css/icomoon.css">
-        <!-- Bootstrap  -->
+        <!-- Bootstrap -->
         <link rel="stylesheet" href="css/bootstrap.css">
-        <!-- Magnific Popup -->
-        <link rel="stylesheet" href="css/magnific-popup.css">
+        <!--Bootstrap Select-->
+        <link rel="stylesheet" href="css/bootstrap-select.css">
         <!-- Owl Carousel  -->
-        <link rel="stylesheet" href="css/owl.carousel.min.css">
-        <link rel="stylesheet" href="css/owl.theme.default.min.css">
+        <!-- <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/owl.theme.default.min.css"> -->
         <!-- Theme style  -->
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/about.css">
+
+        <link rel="stylesheet" href="css/ekko-lightbox.css">
+
         <!-- Modernizr JS -->
         <script src="js/modernizr-2.6.2.min.js"></script>
         <!-- FOR IE9 below -->
@@ -43,77 +42,77 @@
         <![endif]-->
     </head>
     
-	<body>
-		
-	<div class="fh5co-loader"></div>
-	
-	<div id="template-page">
+	<body>	
 	<!-- Fixed navbar -->
     <nav id="navbar-template" class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                    <span class="icon-bar top-bar"></span>
+                    <span class="icon-bar middle-bar"></span>
+                    <span class="icon-bar bottom-bar"></span>
                 </button>
                 <a class="navbar-logo" href="index.html">
                     <img src="images/logo_light.png" style="width: 120px; height: auto"/>
                 </a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <ul class="nav navbar-nav navbar-right nav-animation">
+                    <li><a href="#home">Home</a></li>
+                    <li class="dropdown active">
+                        <a href="#about" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li class="dropdown-header">Nav header</li>
-                            <li><a href="#">Separated link</a></li>
-                            <li><a href="#">One more separated link</a></li>
+                            <li><a href="#">Information</a></li>
+                            <li><a href="#">Questions</a></li>
+                            <li><a href="#">Feedback</a></li>
                         </ul>
+                    </li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#catalog">Catalog</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#cabinet">Cabinet</a></li>
+                    <li><a href="#register">Register</a></li>
+                    <li class="dropdown">
+                        <a href="#about" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-user" style="margin-right:4px"></i><span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#profile">My Profile</a></li>
+                            <li><a href="#logout">Logout</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <select class="selectpicker" data-width="fit" onchange="redirect(this)">
+                            <option data-content='<img src="images/flags/rus.png"> RU'>RU</option>
+                            <option data-content='<img src="images/flags/uzb.png"> UZ'>UZ</option>
+                            <option data-content='<img src="images/flags/eng.png"> EN'>EN</option>
+                        </select>
                     </li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
-	</nav>
-	
-	<header class="jumbotron-cover" role="banner" style="background-image:url(images/contact-us.jpg);">
-		<div class="overlay"></div>
-		<div class="jumbotron-container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2">
-					<div class="display-t">
-						<div class="display-tc animate-box" data-animate-effect="fadeIn">
-							<h1>About Us</h1>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
+    </nav>
 
-	<div class="main-wrapper" style="min-height: 1200px;">
-		<div class="container">
-			
-			<h1 class="text-center">Введение</h1>
-			<p class="text-justify">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pellentesque vitae ex a sagittis. Cras vestibulum nibh id lorem tristique tempus. Mauris laoreet ornare ipsum ac elementum. Maecenas consectetur mauris at lorem blandit, vitae congue ante consectetur. Etiam nec tincidunt sem, in tempus ante. Donec at elit libero. Mauris sed sem eget felis semper sodales. Ut id tincidunt dolor. Suspendisse euismod eleifend leo, sed tincidunt libero tincidunt non. Vestibulum in eros a diam eleifend hendrerit. Donec viverra accumsan metus eleifend dictum. Cras in nisl pellentesque ligula lacinia posuere. Praesent vulputate condimentum mi, non porttitor urna ultricies gravida. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras at sem quis erat porttitor tempus vel vitae libero.
-			</p>
-			<p class="text-justify">
-				Etiam quis pulvinar massa, id volutpat libero. Donec ultricies euismod neque, eu ullamcorper turpis aliquet sed. Duis tristique accumsan iaculis. Suspendisse at viverra velit. Integer sed nibh ultrices, molestie eros mollis, lobortis odio. Vivamus facilisis semper dapibus. Ut magna sem, consectetur quis hendrerit at, lobortis quis sapien. Suspendisse ullamcorper, enim at sollicitudin feugiat, risus felis consequat magna, vitae varius nibh tellus non velit. Pellentesque convallis eros et porttitor facilisis.
-			</p>
-			<p class="text-justify">
-				Morbi dapibus nunc ac tellus interdum, at vestibulum diam imperdiet. Aliquam erat volutpat. Phasellus tempor quam accumsan, hendrerit ante ac, tincidunt elit. Morbi vel ipsum sit amet purus molestie mattis sed at mi. Sed ac hendrerit metus. Donec nec sollicitudin lacus, at placerat eros. Cras convallis dapibus odio, ut fringilla mi imperdiet et. Morbi congue pellentesque urna non ullamcorper.
-			</p>
-			<p class="text-justify">
-				Etiam quis pulvinar massa, id volutpat libero. Donec ultricies euismod neque, eu ullamcorper turpis aliquet sed. Duis tristique accumsan iaculis. Suspendisse at viverra velit. Integer sed nibh ultrices, molestie eros mollis, lobortis odio. Vivamus facilisis semper dapibus. Ut magna sem, consectetur quis hendrerit at, lobortis quis sapien. Suspendisse ullamcorper, enim at sollicitudin feugiat, risus felis consequat magna, vitae varius nibh tellus non velit. Pellentesque convallis eros et porttitor facilisis.
-			</p>
+	<div class="main-wrapper" style="min-height: 1000px;">
+		<div class="container mt-4">
+            <div class="about-wrapper">
+                <!--Main content-->
+                <h1 class="text-center">Введение</h1>
+                <p class="text-justify">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pellentesque vitae ex a sagittis. Cras vestibulum nibh id lorem tristique tempus. Mauris laoreet ornare ipsum ac elementum. Maecenas consectetur mauris at lorem blandit, vitae congue ante consectetur. Etiam nec tincidunt sem, in tempus ante. Donec at elit libero. Mauris sed sem eget felis semper sodales. Ut id tincidunt dolor. Suspendisse euismod eleifend leo, sed tincidunt libero tincidunt non. Vestibulum in eros a diam eleifend hendrerit. Donec viverra accumsan metus eleifend dictum. Cras in nisl pellentesque ligula lacinia posuere. Praesent vulputate condimentum mi, non porttitor urna ultricies gravida. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras at sem quis erat porttitor tempus vel vitae libero.
+                </p>
+                <p class="text-justify">
+                    Etiam quis pulvinar massa, id volutpat libero. Donec ultricies euismod neque, eu ullamcorper turpis aliquet sed. Duis tristique accumsan iaculis. Suspendisse at viverra velit. Integer sed nibh ultrices, molestie eros mollis, lobortis odio. Vivamus facilisis semper dapibus. Ut magna sem, consectetur quis hendrerit at, lobortis quis sapien. Suspendisse ullamcorper, enim at sollicitudin feugiat, risus felis consequat magna, vitae varius nibh tellus non velit. Pellentesque convallis eros et porttitor facilisis.
+                </p>
+                <p class="text-justify">
+                    Morbi dapibus nunc ac tellus interdum, at vestibulum diam imperdiet. Aliquam erat volutpat. Phasellus tempor quam accumsan, hendrerit ante ac, tincidunt elit. Morbi vel ipsum sit amet purus molestie mattis sed at mi. Sed ac hendrerit metus. Donec nec sollicitudin lacus, at placerat eros. Cras convallis dapibus odio, ut fringilla mi imperdiet et. Morbi congue pellentesque urna non ullamcorper.
+                </p>
+                <p class="text-justify">
+                    Etiam quis pulvinar massa, id volutpat libero. Donec ultricies euismod neque, eu ullamcorper turpis aliquet sed. Duis tristique accumsan iaculis. Suspendisse at viverra velit. Integer sed nibh ultrices, molestie eros mollis, lobortis odio. Vivamus facilisis semper dapibus. Ut magna sem, consectetur quis hendrerit at, lobortis quis sapien. Suspendisse ullamcorper, enim at sollicitudin feugiat, risus felis consequat magna, vitae varius nibh tellus non velit. Pellentesque convallis eros et porttitor facilisis.
+                </p>
+            </div>
 		</div>
 	</div>
 
@@ -123,44 +122,50 @@
 			<div class="row copyright">
 				<div class="col-md-12 text-center">
 					<p>
-						<small class="block">&copy; 2018 [Название организации]. Все права защищены.</small> 
+						<small class="block">&copy; 2018 Baxtlilar.uz. Все права защищены.</small> 
 					</p>
 					<ul class="fh5co-social-icons">
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                         <li><a href="#"><i class="fa fa-telegram"></i></a></li>
                     </ul>
 				</div>
 			</div>
-
 		</div>
 	</footer>
-	</div>
-
-	<div class="gototop js-top">
-		<a href="#" class="js-gotop"><i class="fa fa-angle-up"></i></a>
-	</div>
+	
+    <!--Scroll to top-->
+	<a id="back-to-top" href="#scrollTop" class="scroll-to-top" role="button">
+        <i style="font-size:28px" class="fa fa-angle-up"></i>
+    </a>
 	
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
 	<script src="js/jquery.easing.1.3.js"></script>
 	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!--Select Picker-->
+    <script src="js/bootstrap-select.js"></script>
+    <!--Image gallery-->
+    <script src="js/ekko-lightbox.min.js"></script>
+    <script>
+        $(function(){
+            $('.selectpicker').selectpicker();
+            $.fn.selectpicker.Constructor.BootstrapVersion = '3';
+            $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                event.preventDefault();
+                $(this).ekkoLightbox();
+            });
+        });
+    </script>
+	<!-- Waypoints --> 
+	<!-- <script src="js/jquery.waypoints.min.js"></script> -->
 	<!-- Carousel -->
-	<script src="js/owl.carousel.min.js"></script>
-	<!-- Stellar -->
-	<script src="js/jquery.stellar.min.js"></script>
-	<!-- Magnific Popup -->
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/magnific-popup-options.js"></script>
-
-	<!-- Main -->
-	<script src="js/main.js"></script>
-	<script src="js/navbar.template.js"></script>
+	<!-- <script src="js/owl.carousel.min.js"></script> -->
+	<!-- Custom JS -->
+    <script src="js/custom.template.js"></script>
+    
 
 	</body>
 </html>

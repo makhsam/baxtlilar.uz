@@ -301,13 +301,11 @@ h1, h2, h3, h4, h5, h6, figure {
 
 #fh5co-counter,
 #fh5co-event {
-  height: 850px;
   float: left; }
   #fh5co-counter .display-t,
   #fh5co-counter .display-tc,
   #fh5co-event .display-t,
   #fh5co-event .display-tc {
-    height: 700px;
     display: table;
     width: 100%; }
   #fh5co-counter .fh5co-heading h2,
@@ -345,6 +343,7 @@ h1, h2, h3, h4, h5, h6, figure {
     padding: 30px;
     width: 100%;
     float: left;
+    cursor: pointer;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
@@ -353,6 +352,10 @@ h1, h2, h3, h4, h5, h6, figure {
       #fh5co-counter .event-wrap,
       #fh5co-event .event-wrap {
         margin-bottom: 10px; } }
+    #fh5co-counter .event-wrap:hover, #fh5co-counter .event-wrap:active,
+    #fh5co-event .event-wrap:hover,
+    #fh5co-event .event-wrap:active {
+      border: 2px solid rgba(255, 255, 255, 0.8); }
     #fh5co-counter .event-wrap h3,
     #fh5co-event .event-wrap h3 {
       font-size: 20px;
@@ -366,7 +369,7 @@ h1, h2, h3, h4, h5, h6, figure {
     #fh5co-event .event-wrap p,
     #fh5co-event .event-wrap span {
       display: block;
-      color: rgba(255, 255, 255, 0.8); }
+      color: #fff; }
     #fh5co-counter .event-wrap i,
     #fh5co-event .event-wrap i {
       color: white;
@@ -680,7 +683,7 @@ h1, h2, h3, h4, h5, h6, figure {
       content: "\e9af"; }
 
 form label {
-  font-weight: normal !important; }
+  font-weight: normal; }
 
 #fh5co-header .display-tc,
 #fh5co-counter .display-tc,
@@ -917,7 +920,7 @@ form label {
     color: #5d5d5d; }
 
 .fh5co-heading {
-  margin-bottom: 5em; }
+  margin-bottom: 2em; }
   .fh5co-heading.fh5co-heading-sm {
     margin-bottom: 2em; }
   .fh5co-heading h2 {
@@ -1198,13 +1201,11 @@ form label {
   right: 20px;
   z-index: 999;
   opacity: 0;
-  visibility: hidden;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s; }
   .gototop.active {
-    opacity: 1;
-    visibility: visible; }
+    opacity: 1; }
   .gototop a {
     width: 50px;
     height: 50px;

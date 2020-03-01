@@ -1,5 +1,4 @@
 /* chat.html: Chatting widget */
-@import 'https://fonts.googleapis.com/css?family=Raleway';
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -89,7 +88,6 @@
 
 #navbar .nav-animation > li > a {
   text-decoration: none;
-  font-family: Raleway;
   font-size: 14px;
   position: relative;
   z-index: 0;

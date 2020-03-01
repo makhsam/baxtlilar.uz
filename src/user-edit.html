@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>Baxtlilar.uz</title>
+ 
+        <!--Favicon icon-->
+        <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="images/favicon/favicon.ico" type="image/x-icon">
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Marmelad&amp;subset=cyrillic" rel="stylesheet">
+        <!--Google Material Icons-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Font Awesome-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <!--Bootstrap Select-->
+        <link rel="stylesheet" href="css/bootstrap-select.css">
+        <!-- Theme style  -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/user.css">
+        <!--Bootstrap datepicker-->
+        <link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
+        <!--Jasny bootstrap-->
+        <link rel="stylesheet" href="css/jasny-bootstrap.min.css">
+        <!--Image gallery plugin-->
+        <link rel="stylesheet" href="css/ekko-lightbox.css">
+
+        <style>
+            #video-link-wrapper {
+                display: none;
+            }
+        </style>
+
+        <!-- Modernizr JS -->
+        <script src="js/modernizr-2.6.2.min.js"></script>
+        <!-- FOR IE9 below -->
+        <!--[if lt IE 9]>
+        <script src="js/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    
+	<body>	
+	<!-- Fixed navbar -->
+    <nav id="navbar-template" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar top-bar"></span>
+                    <span class="icon-bar middle-bar"></span>
+                    <span class="icon-bar bottom-bar"></span>
+                </button>
+                <a class="navbar-logo" href="index.html">
+                    <img src="images/logo_light.png" style="width: 120px; height: auto"/>
+                </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right nav-animation">
+                    <li><a href="#home">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#about" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Information</a></li>
+                            <li><a href="#">Questions</a></li>
+                            <li><a href="#">Feedback</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#catalog">Catalog</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li class="active"><a href="#cabinet">Cabinet</a></li>
+                    <li><a href="#register">Register</a></li>
+                    <li class="dropdown">
+                        <a href="#about" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-user" style="margin-right:4px"></i><span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#profile">My Profile</a></li>
+                            <li><a href="#logout">Logout</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <select class="selectpicker" data-width="fit" onchange="redirect(this)">
+                            <option data-content='<img src="images/flags/rus.png"> RU'>RU</option>
+                            <option data-content='<img src="images/flags/uzb.png"> UZ'>UZ</option>
+                            <option data-content='<img src="images/flags/eng.png"> EN'>EN</option>
+                        </select>
+                    </li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+
+	<div class="main-wrapper" style="min-height: 1200px;">
+		<div class="container">
+            <div class="row profile">
+                <div class="col-md-3">
+                    <div class="profile-sidebar">
+                        <!-- SIDEBAR USERPIC -->
+                        <div class="profile-userpic">
+                            <!-- <img src="images/user-profile1.jpg" class="img-responsive" alt=""> -->
+                            <a href="https://unsplash.it/1200/768.jpg?image=1027" data-toggle="lightbox" data-gallery="hidden-images">
+                                <img src="https://unsplash.it/200.jpg?image=1027" class="img-responsive" alt="user-profile">
+                            </a>      
+                            <div data-toggle="lightbox" data-gallery="hidden-images" data-remote="https://unsplash.it/1200/768.jpg?image=265"></div>
+                            <div data-toggle="lightbox" data-gallery="hidden-images" data-remote="https://unsplash.it/1200/768.jpg?image=266"></div>
+                        </div> 
+                        <!-- END SIDEBAR USERPIC -->
+                        <!-- SIDEBAR USER TITLE -->
+                        <div class="profile-usertitle">
+                            <div class="profile-usertitle-name">
+                                Chris Marina
+                            </div>
+                            <div class="profile-usertitle-job">
+                                Designer
+                            </div>
+                        </div>
+                        <!-- END SIDEBAR USER TITLE -->
+                        
+                        <!-- SIDEBAR MENU -->
+                        <div class="profile-usermenu">
+                            <ul class="nav">
+                                <li class="active">
+                                    <a href="#">
+                                    <i class="glyphicon glyphicon-home"></i>
+                                    User info </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                    <i class="glyphicon glyphicon-user"></i>
+                                    Services </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank">
+                                    <i class="glyphicon glyphicon-ok"></i>
+                                    Payment page </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                    <i class="glyphicon glyphicon-flag"></i>
+                                    Chat </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                    <i class="glyphicon glyphicon-flag"></i>
+                                    Likes </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- END MENU -->
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <!--Profile Content-->
+                    <div style="padding:30px 40px" class="profile-content">
+                        
+                        <form class="form-horizontal" id="user-form-data" name="user-form-data" action="" method="">
+                            
+                            <style>
+                                .row.mp-1 {
+                                    margin-left: -5px;
+                                    margin-right: -5px;
+                                }
+                                .row.mp-1 > .fileinput {
+                                    padding-left: 5px;
+                                    padding-right: 5px;
+                                    margin-bottom: 10px;
+                                }
+                            </style>
+                            
+                            <!--User profile images-->
+                            <div class="row mp-1">
+                                <div class="fileinput fileinput-new col-md-2 col-sm-4 col-xs-6" data-provides="fileinput">
+                                    <div class="fileinput-new thumbnail">
+                                        <img src="https://unsplash.it/200.jpg?image=1027" alt="jpg/jpeg/png">
+                                    </div>
+                                    <div class="fileinput-preview fileinput-exists thumbnail"></div>
+                                    <div>
+                                        <span class="btn btn-default btn-sm btn-file"><span class="fileinput-new">Select image</span><span class="fileinput-exists">Change</span><input type="file" name="user-image1"></span>
+                                        <a href="#" class="btn btn-default btn-sm fileinput-exists" data-dismiss="fileinput">Remove</a>
+                                    </div>
+                                </div>
+    
+                                <div class="fileinput fileinput-new col-md-2 col-sm-4 col-xs-6" data-provides="fileinput">
+                                    <div class="fileinput-new thumbnail">
+                                        <img src="https://unsplash.it/200.jpg?image=1028" alt="jpg/jpeg/png">
+                                    </div>
+                                    <div class="fileinput-preview fileinput-exists thumbnail"></div>
+                                    <div>
+                                        <span class="btn btn-default btn-sm btn-file"><span class="fileinput-new">Select image</span><span class="fileinput-exists">Change</span><input type="file" name="user-image2"></span>
+                                        <a href="#" class="btn btn-default btn-sm fileinput-exists" data-dismiss="fileinput">Remove</a>
+                                    </div>
+                                </div>
+                                <div class="fileinput fileinput-new col-md-2 col-sm-4 col-xs-6" data-provides="fileinput">
+                                    <div class="fileinput-new thumbnail">
+                                        <img src="https://unsplash.it/200.jpg?image=1029" alt="jpg/jpeg/png">
+                                    </div>
+                                    <div class="fileinput-preview fileinput-exists thumbnail"></div>
+                                    <div>
+                                        <span class="btn btn-default btn-sm btn-file"><span class="fileinput-new">Select image</span><span class="fileinput-exists">Change</span><input type="file" name="user-image3"></span>
+                                        <a href="#" class="btn btn-default btn-sm fileinput-exists" data-dismiss="fileinput">Remove</a>
+                                    </div>
+                                </div>
+                                <div class="fileinput fileinput-new col-md-2 col-sm-4 col-xs-6" data-provides="fileinput">
+                                    <div class="fileinput-new thumbnail">
+                                        <img src="https://unsplash.it/200.jpg?image=1031" alt="jpg/jpeg/png">
+                                    </div>
+                                    <div class="fileinput-preview fileinput-exists thumbnail"></div>
+                                    <div>
+                                        <span class="btn btn-default btn-sm btn-file"><span class="fileinput-new">Select image</span><span class="fileinput-exists">Change</span><input type="file" name="user-image4"></span>
+                                        <a href="#" class="btn btn-default btn-sm fileinput-exists" data-dismiss="fileinput">Remove</a>
+                                    </div>
+                                </div>
+                                <div class="fileinput fileinput-new col-md-2 col-sm-4 col-xs-6" data-provides="fileinput">
+                                    <div class="fileinput-new thumbnail">
+                                        <img src="https://unsplash.it/200.jpg?image=1032" alt="jpg/jpeg/png">
+                                    </div>
+                                    <div class="fileinput-preview fileinput-exists thumbnail"></div>
+                                    <div>
+                                        <span class="btn btn-default btn-sm btn-file"><span class="fileinput-new">Select image</span><span class="fileinput-exists">Change</span><input type="file" name="user-image5"></span>
+                                        <a href="#" class="btn btn-default btn-sm fileinput-exists" data-dismiss="fileinput">Remove</a>
+                                    </div>
+                                </div>
+                                <div id="video-logo" style="cursor:pointer;" class="fileinput fileinput-new col-md-2 col-sm-4 col-xs-6" data-provides="fileinput">
+                                    <div class="fileinput-new thumbnail">
+                                        <img src="images/youtube-logo.png" alt="link to video">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group" id="video-link-wrapper">
+                                <label for="video-link" class="col-sm-2 control-label">Enter video link</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="user-form-control" id="video-link" name="video-link" value="http://youtube.com">
+                                </div>
+                            </div>
+
+
+                            <style>
+                                h4 {
+                                    font-size: 16px;
+                                    color: #005DA6;
+                                    margin-top:20px;
+                                }
+                                h5 {
+                                    margin-top:20px;
+                                }
+                            </style>
+
+
+                            <!--Other user data-->
+                            <h4>1. Скрытые личные данные:</h4>
+                            <div class="form-group">
+                                <label for="fullname" class="col-sm-2 control-label">Ф.И.О.</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="user-form-control" id="fullname" name="fullname" value="Chris Marina">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="birthday" class="col-sm-2 control-label">Дата рождения:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="user-form-control" id="birthday" name="birthday" value="">
+                                </div>
+                            </div>
+
+                            <h5>Место проживания:</h5>
+                            <div class="form-group">
+                                <label for="country" class="col-sm-2 control-label">Страна:</label>
+                                <div class="col-sm-10">
+                                    <select class="user-form-control" id="country" name="country">
+                                        <option value="uzbekistan" selected>Uzbekistan</option>
+                                        <option value="turkey">Turkey</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="city" class="col-sm-2 control-label">Город:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="user-form-control" id="city" name="city" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="address" class="col-sm-2 control-label">Адрес:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="user-form-control" id="address" name="address" value="">
+                                </div>
+                            </div>
+                            
+                            <h5>Контактные данные:</h5>
+                            <div class="form-group">
+                                <label for="tel_number" class="col-sm-2 control-label">Телефон домашний:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="user-form-control" id="tel_number" name="tel_number" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="mobile_number" class="col-sm-2 control-label">Телефон мобильный:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="user-form-control" id="mobile_number" name="mobile_number" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="col-sm-2 control-label">Эл. адрес:</label>
+                                <div class="col-sm-10">
+                                    <input type="email" class="user-form-control" id="email" name="email" value="">
+                                </div>
+                            </div>
+
+                            <h5>Контактные данные близких родственников:</h5>
+                            <div class="form-group">
+                                <label for="tel_parents" class="col-sm-2 control-label">Отец, мать:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="user-form-control" id="tel_parents" name="tel_parents" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="tel_siblings" class="col-sm-2 control-label">Брат, сестра:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="user-form-control" id="tel_siblings" name="tel_siblings" value="">
+                                </div>
+                            </div>
+
+                            <h5>Паспортные данные:</h5>
+                            <div class="form-group">
+                                <label for="passport_serial" class="col-sm-2 control-label">Серия и Номер:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="user-form-control" id="passport_serial" name="passport_serial" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="passport_issued_by" class="col-sm-2 control-label">Кем выдан:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="user-form-control" id="passport_issued_by" name="passport_issued_by" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="passport_when_issued" class="col-sm-2 control-label">Когда выдан:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="user-form-control" id="passport_when_issued" name="passport_when_issued" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="passport_img" class="col-sm-2 control-label">Копия паспорта:</label>
+                                <div class="col-sm-10">
+                                    <input type="file" class="user-form-control" id="passport_img" name="passport_img" value="">
+                                </div>
+                            </div>
+
+
+
+
+
+
+                            <h4>2. Открытые личные данные</h4>
+                            <div class="form-group">
+                                <label for="nickname" class="col-sm-2 control-label">Ник-имя:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="user-form-control" id="nickname" name="nickname" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="user_sex" class="col-sm-2 control-label">Пол:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="user-form-control" id="user_sex" name="user_sex" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="age" class="col-sm-2 control-label">Возраст:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="user-form-control" id="age" name="age" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="birth_place" class="col-sm-2 control-label">Место рождения:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="user-form-control" id="birth_place" name="birth_place" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="nationality" class="col-sm-2 control-label">национальность</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="user-form-control" id="nationality" name="nationality" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="zodiak" class="col-sm-2 control-label">Знак зодиака:</label>
+                                <div class="col-sm-10">
+                                    <select class="user-form-control" id="zodiak" name="zodiak">
+                                        <option value="" selected>Овен</option>
+                                        <option value="">Телец</option>
+                                        <option value="">Близнецы</option>
+                                        <option value="">Рак</option>
+                                        <option value="">Лев</option>
+                                        <option value="">Дева</option>
+                                        <option value="">Весы</option>
+                                        <option value="">Скорпион</option>
+                                        <option value="">Стрелец</option>
+                                        <option value="">Козерог</option>
+                                        <option value="">Водолей</option>
+                                        <option value="">Дева</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="height" class="col-sm-2 control-label">Рост (см):</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="user-form-control" id="height" name="height" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="weight" class="col-sm-2 control-label">Вес (кг):</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="user-form-control" id="weight" name="weight" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="eye_color" class="col-sm-2 control-label">Цвет глаз:</label>
+                                <div class="col-sm-10">
+                                    <select class="user-form-control" id="eye_color" name="eye_color">
+                                        <option value="black" selected>Чёрный</option>
+                                        <option value="brown">Карий</option>
+                                        <option value="grey">Серый</option>
+                                        <option value="blue">Голубой</option>
+                                        <option value="green">Зелёный</option>
+                                    </select>
+                                </div>
+                            </div>
+                           
+                            <div class="form-group">
+                                <label for="citizenship" class="col-sm-2 control-label">Гражданство:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="user-form-control" id="citizenship" name="citizenship" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="religion" class="col-sm-2 control-label">Религия</label>
+                                <div class="col-sm-10">
+                                    <select class="user-form-control" id="religion" name="religion">
+                                        <option value="islam">Ислам</option>
+                                        <option value="christian">Христианство</option>
+                                        <option value="buddhism">Буддизм</option>
+                                        <option value="judaism">Иудаизм</option>
+                                        <option value="other">Другое</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="attitude_to_religion" class="col-sm-2 control-label">Отношение к религии:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="user-form-control" id="attitude_to_religion" name="attitude_to_religion" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="education" class="col-sm-2 control-label">Образование</label>
+                                <div class="col-sm-10">
+                                    <select class="user-form-control" id="education" name="education">
+                                        <option value="">среднее</option>
+                                        <option value="" selected>средне-специальное</option>
+                                        <option value="">высшее-бакалавр</option>
+                                        <option value="">высшее-магистр</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="profession" class="col-sm-2 control-label">Профессия</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="user-form-control" id="profession" name="profession" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="employment" class="col-sm-2 control-label">Занятость</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="user-form-control" id="employment" name="employment" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="hobby" class="col-sm-2 control-label">Хобби</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="user-form-control" id="hobby" name="hobby" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="family_status" class="col-sm-2 control-label">Семейное положение:</label>
+                                <div class="col-sm-10">
+                                    <select class="user-form-control" id="family_status" name="family_status">
+                                        <option value="single" selected>Холост (Не замужем)</option>
+                                        <option value="divorce_process">В процессе развода</option>
+                                        <option value="divorced">Разведен(а)</option>
+                                        <option value="in_relationship">Состою в отношениях</option>
+                                        <option value="widow">Вдовец(ва)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="kids" class="col-sm-2 control-label">Наличие детей:</label>
+                                <div class="col-sm-10">
+                                    <textarea type="text" class="user-form-control" rows="2" id="kids" name="kids"></textarea>
+                                    <span class="help-block">Количество, пол, возраст</span>
+                                </div>
+                            </div>
+
+
+                            <style>
+                                label.col-sm-12 {
+                                    text-align: left !important;
+                                }
+                            </style>
+
+
+                            <h4>3. Открытые личные данные</h4>
+                            <h5>Сведение о близких родственниках</h5>
+                            <div class="form-group">
+                                <label for="dad_info" class="col-sm-12 control-label">Отец:</label>
+                                <div class="col-sm-12">
+                                    <input type="text" class="user-form-control" id="dad_info" name="dad_info" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="mum_info" class="col-sm-12 control-label">Мать:</label>
+                                <div class="col-sm-12">
+                                    <input type="text" class="user-form-control" id="mum_info" name="mum_info" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="brother_info" class="col-sm-12 control-label">Брат:</label>
+                                <div class="col-sm-12">
+                                    <input type="text" class="user-form-control" id="brother_info" name="brother_info" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="sister_info" class="col-sm-12 control-label">Сестра:</label>
+                                <div class="col-sm-12">
+                                    <input type="text" class="user-form-control" id="sister_info" name="sister_info" value="">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="parents_marriage" class="col-sm-12 control-label">Совместный срок родителей в браке:</label>
+                                <div class="col-sm-12">
+                                    <input type="text" class="user-form-control" id="parents_marriage" name="parents_marriage" value="">
+                                </div>
+                            </div>
+                            
+                            <!--This field is optional-->
+                            <div class="form-group">
+                                <label for="conviction" class="col-sm-12 control-label">Судимость: по какой статье?</label>
+                                <div class="col-sm-12">
+                                    <input type="text" class="user-form-control" id="conviction" name="conviction" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="attitude_to_smoking" class="col-sm-12 control-label">Отношение к курению:</label>
+                                <div class="col-sm-12">
+                                    <select class="user-form-control" id="attitude_to_smoking" name="attitude_to_smoking">
+                                        <option value="very-negative" selected>Категорически не приемлю</option>
+                                        <option value="negative">Не курю</option>
+                                        <option value="positive">Курю</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="attitude_to_alcohol" class="col-sm-12 control-label">Отношение к алкоголю:</label>
+                                <div class="col-sm-12">
+                                    <select class="user-form-control" id="attitude_to_alcohol" name="attitude_to_alcohol">
+                                        <option value="very-negative">Категорически не приемлю</option>
+                                        <option value="negative">Не употребляю</option>
+                                        <option value="positive" selected>Употребляю</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="attitude_to_narcotic" class="col-sm-12 control-label">Отношенние к наркотикам:</label>
+                                <div class="col-sm-12">
+                                    <select class="user-form-control" id="attitude_to_narcotic" name="attitude_to_narcotic">
+                                        <option value="very-negative" selected>Категорически не приемлю</option>
+                                        <option value="negative">Не употребляю</option>
+                                        <option value="positive">Употребляю</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="health" class="col-sm-12 control-label">Имеете ли Вы какие либо особенности по состоянию здоровья?</label>
+                                <div class="col-sm-12">
+                                    <textarea type="text" class="user-form-control" name="health" id="health" rows="3"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="financial_situation" class="col-sm-12 control-label">Ваше материальное положение:</label>
+                                <div class="col-sm-12">
+                                    <select class="user-form-control" id="financial_situation" name="financial_situation">
+                                        <option value="wealthy" selected>Состоятельный</option>
+                                        <option value="middle-income">Со средним доходом</option>
+                                        <option value="no-income">Не имею дохода</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="living_space" class="col-sm-12 control-label">Наличие жилплощади:</label>
+                                <div class="col-sm-12">
+                                    <select class="user-form-control" id="living_space" name="living_space">
+                                        <option value="own" selected>Имею собственное жилье</option>
+                                        <option value="rent">Снимаю</option>
+                                        <option value="with-parents">Живу с родителями</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="is_ready_to_live_together" class="col-sm-12 control-label">Готовы ли Вы к совместому проживанию на Вашей территории?</label>
+                                <div class="col-sm-12">
+                                    <select class="user-form-control" id="is_ready_to_live_together" name="is_ready_to_live_together">
+                                        <option value="yes">Да</option>
+                                        <option value="no">Нет</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="about" class="col-sm-12 control-label">О себе:</label>
+                                <div class="col-sm-12">
+                                    <input type="text" class="user-form-control" id="about" name="about" value="">
+                                </div>
+                            </div>
+
+
+
+
+                            <h4>4. Открытые личные данные <br>
+                                <strong>Мои предпочтения</strong>
+                            </h4>
+                            <div class="form-group">
+                                <label for="partner_age_from" class="col-sm-3 control-label">Возраст:</label>
+                                <div class="col-sm-9">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <input type="text" class="user-form-control" id="partner_age_from" name="partner_age_from" value="" placeholder="От">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="user-form-control" id="partner_age_to" name="partner_age_to" value="" placeholder="До">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="partner_country" class="col-sm-3 control-label">Страна</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="user-form-control" id="partner_country" name="partner_country" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="partner_nationality" class="col-sm-3 control-label">Национальность:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="user-form-control" id="partner_nationality" name="partner_nationality" value="">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="partner_religion" class="col-sm-3 control-label">Религия</label>
+                                <div class="col-sm-9">
+                                    <select class="user-form-control" id="partner_religion" name="partner_religion">
+                                        <option value="islam">Ислам</option>
+                                        <option value="christian">Христианство</option>
+                                        <option value="buddhism">Буддизм</option>
+                                        <option value="judaism">Иудаизм</option>
+                                        <option value="no-matter">не имеет значение</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="partner_family_status" class="col-sm-3 control-label">Семейное положение</label>
+                                <div class="col-sm-9">
+                                    <select class="user-form-control" id="partner_family_status" name="partner_family_status">
+                                        <option value="single" selected>холост (не замужем)</option>
+                                        <option value="divorced">разведен(а)</option>
+                                        <option value="no-matter">не имеет значение</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="partner_living_space" class="col-sm-3 control-label">Наличие жилплощади</label>
+                                <div class="col-sm-9">
+                                    <select class="user-form-control" id="partner_living_space" name="partner_living_space">
+                                        <option value="yes">Со своим жильем</option>
+                                        <option value="no">Не имеет значение</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="partner_attitude_to_smoking" class="col-sm-3 control-label">Отношение к курению</label>
+                                <div class="col-sm-9">
+                                    <select class="user-form-control" id="partner_attitude_to_smoking" name="partner_attitude_to_smoking">
+                                        <option value="negative">Интересен(на) не курящий(ая)</option>
+                                        <option value="positive">Интересен(на) курящий(ая)</option>
+                                        <option value="no-matter">Не имеет значение</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="partner_attitude_to_alcohol" class="col-sm-3 control-label">Отношение к алкоголю</label>
+                                <div class="col-sm-9">
+                                    <select class="user-form-control" id="partner_attitude_to_alcohol" name="partner_attitude_to_alcohol">
+                                        <option value="negative">Интересен(на) не употребляющий(ая)</option>
+                                        <option value="positive">Интересен(на) употребляющий(ая)</option>
+                                        <option value="no-matter"> Не имеет значение</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="partner_attitude_to_narcotic" class="col-sm-3 control-label">Отношение к наркотикам</label>
+                                <div class="col-sm-9">
+                                    <select class="user-form-control" id="partner_attitude_to_narcotic" name="partner_attitude_to_narcotic">
+                                        <option value="negative">Категорически против наркотиков</option>
+                                        <option value="no-matter">Не имеет значение</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="partner_finance" class="col-sm-3 control-label">Материальное положение</label>
+                                <div class="col-sm-9">
+                                    <select class="user-form-control" id="partner_finance" name="partner_finance">
+                                        <option value="wealthy">Состоятельный(ая)</option>
+                                        <option value="middle">Со средним доходом</option>
+                                        <option value="no-matter">Не имеет значение</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="partner_height_from" class="col-sm-3 control-label">Рост:</label>
+                                <div class="col-sm-9">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <input type="text" class="user-form-control" id="partner_height_from" name="partner_height_from" value="" placeholder="от">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="user-form-control" id="partner_height_to" name="partner_height_to" value="" placeholder="до">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="partner_weight_from" class="col-sm-3 control-label">Вес:</label>
+                                <div class="col-sm-9">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <input type="text" class="user-form-control" id="partner_weight_from" name="partner_weight_from" value="" placeholder="от">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="user-form-control" id="partner_weight_to" name="partner_weight_to" value="" placeholder="до">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="partner_profession" class="col-sm-12 control-label">Желаемая профессия будущего партнера:</label>
+                                <div class="col-sm-12">
+                                    <input type="text" class="user-form-control" id="partner_profession" name="partner_profession" value="">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="partner_attitude_to_childs" class="col-sm-12 control-label">Отношение к детям будущего партнера:</label>
+                                <div class="col-sm-12">
+                                    <select class="user-form-control" id="partner_attitude_to_childs" name="partner_attitude_to_childs">
+                                        <option value="agree">С детьми</option>
+                                        <option value="disagree">Без детей</option>
+                                        <option value="no-matter">Не имеет значение</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="profile_mode" class="col-sm-12 control-label">Варианты доступа к Вашей анкете:</label>
+                                <div class="col-sm-12">
+                                    <select class="user-form-control" id="profile_mode" name="profile_mode">
+                                        <option value="universal">Универсальная 
+                                            <small>(анкета доступна для просмотра на национальном и международном уровнях)</small>
+                                        </option>
+                                        <option value="international">Международная 
+                                            <small>(анкета доступна для просмотра только за рубежом)</small>
+                                        </option>
+                                        <option value="local">Национальная 
+                                            <small>(анкета доступна для просмотра только в Узбекистане)</small>
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="where_get_us" class="col-sm-12 control-label">Из какого источника Вы узнали о нас?</label>
+                                <div class="col-sm-12">
+                                    <input type="text" class="user-form-control" id="where_get_us" name="where_get_us" value="">
+                                </div>
+                            </div>
+
+                            <h5>Поделитесь шансом стать счастливыми с Вашими близкими</h5>
+                            <!-- Person 1 -->
+                            <div class="form-group">
+                                <div class="col-md-6">
+                                    <label for="relative_name_1" class="control-label">1. Имя близкого человека:</label>
+                                    <input type="text" class="user-form-control" id="relative_name_1" name="relative_name_1" value="">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="relative_email_1" class="control-label">Эл. адрес или мобильный телефон:</label>
+                                    <input type="text" class="user-form-control" id="relative_email_1" name="relative_email_1" value="">
+                                </div>
+                            </div>
+                            <!-- Person 2 -->
+                            <div class="form-group">
+                                <div class="col-md-6">
+                                    <label for="relative_name_2" class="control-label">2. Имя близкого человека:</label>
+                                    <input type="text" class="user-form-control" id="relative_name_2" name="relative_name_2" value="">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="relative_email_2" class="control-label">Эл. адрес или мобильный телефон:</label>
+                                    <input type="text" class="user-form-control" id="relative_email_2" name="relative_email_2" value="">
+                                </div>
+                            </div>
+
+                            <!-- Person 3 -->
+                            <div class="form-group">
+                                <div class="col-md-6">
+                                    <label for="relative_name_3" class="control-label">3. Имя близкого человека:</label>
+                                    <input type="text" class="user-form-control" id="relative_name_3" name="relative_name_3" value="">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="relative_email_3" class="control-label">Эл. адрес или мобильный телефон:</label>
+                                    <input type="text" class="user-form-control" id="relative_email_3" name="relative_email_3" value="">
+                                </div>
+                            </div>
+
+                            <!-- Person 4 -->
+                            <div class="form-group">
+                                <div class="col-md-6">
+                                    <label for="relative_name_4" class="control-label">4. Имя близкого человека:</label>
+                                    <input type="text" class="user-form-control" id="relative_name_4" name="relative_name_4" value="">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="relative_email_4" class="control-label">4. Эл. адрес или мобильный телефон:</label>
+                                    <input type="text" class="user-form-control" id="relative_email_4" name="relative_email_4" value="">
+                                </div>
+                            </div>
+
+                            <!-- Person 5 -->
+                            <div class="form-group">
+                                <div class="col-md-6">
+                                    <label for="relative_name_5" class="control-label">5. Имя близкого человека:</label>
+                                    <input type="text" class="user-form-control" id="relative_name_5" name="relative_name_5" value="">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="relative_email_5" class="control-label">5. Эл. адрес или мобильный телефон:</label>
+                                    <input type="text" class="user-form-control" id="relative_email_5" name="relative_email_5" value="">
+                                </div>
+                            </div>
+
+                            <!--Form submit btn-->
+                            <div class="row submit-btn">
+                                <div class="col-sm-12">
+                                    <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                        
+                    </div>
+                    <!--end profile content-->
+                </div>
+            </div>
+		</div>
+	</div>
+
+	<footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+
+			<div class="row copyright">
+				<div class="col-md-12 text-center">
+					<p>
+						<small class="block">&copy; 2018 Baxtlilar.uz. Все права защищены.</small> 
+					</p>
+					<ul class="fh5co-social-icons">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-telegram"></i></a></li>
+                    </ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+
+	<!--Scroll to top-->
+	<a id="back-to-top" href="#scrollTop" class="scroll-to-top" role="button">
+        <i style="font-size:28px" class="fa fa-angle-up"></i>
+    </a>
+    
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+    <script src="js/jquery.easing.1.3.js"></script>
+    <!-- jQuery Validation -->
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/additional-methods.js"></script>
+    <script type="text/javascript" src="js/custom.user-profile.js"></script>
+	<!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    
+    <!--Select Picker-->
+    <script src="js/bootstrap-select.js"></script>
+    <!--Bootstrap datepicker-->
+    <script src="js/bootstrap-datepicker.min.js"></script>
+    <!--Jasny Bootstrap-->
+    <script src="js/jasny-bootstrap.min.js"></script>
+    <!--Image gallery-->
+    <script src="js/ekko-lightbox.min.js"></script>
+    <script>
+        $(function(){
+            $('.selectpicker').selectpicker();
+            $.fn.selectpicker.Constructor.BootstrapVersion = '3';
+            $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                event.preventDefault();
+                $(this).ekkoLightbox();
+            });
+        });
+
+        $(document).ready(function() {
+            var video_logo = $("#video-logo");
+            var video_wrapper = $("#video-link-wrapper");
+            var video_input = $("#video-link");
+
+            video_logo.click(function() {
+                video_wrapper.fadeIn();
+                video_input.focus();
+            });
+        });
+    </script>
+	<!-- Custom JS -->
+	<script src="js/custom.template.js"></script>
+
+	</body>
+</html>
+
