@@ -6,7 +6,7 @@ Made with Bootstrap framework
 
 [GetTemplates.co](http://gettemplates.co)
 
-Twitter: http://twitter.com/gettemplatesco
+Twitter: http://twitter.com/gettemplatesco <br>
 Facebook: http://facebook.com/gettemplatesco
 
 
