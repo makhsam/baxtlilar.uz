@@ -2,15 +2,15 @@
 
 Made with Bootstrap framework
 
-### Template of this project:
+### Template used in this project:
 
 [GetTemplates.co](http://gettemplates.co)
 
-- Twitter: http://twitter.com/gettemplatesco
-- Facebook: http://facebook.com/gettemplatesco
+Twitter: http://twitter.com/gettemplatesco
+Facebook: http://facebook.com/gettemplatesco
 
 
-### CREDITS:
+### Credits:
 
 - [Bootstrap](http://getbootstrap.com)
 - [jQuery](http://jquery.com)
