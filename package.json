@@ -15,7 +15,7 @@
     "gulp-sass": "^4.0.1"
   },
   "dependencies": {
-    "bootstrap-select": "^1.13.2",
+    "bootstrap-select": "^1.13.6",
     "flag-icon-css": "^3.0.0",
     "jquery-mask-plugin": "^1.14.15",
     "jquery-validation": "^1.17.0"
